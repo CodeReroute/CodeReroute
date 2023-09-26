@@ -28,7 +28,17 @@ jobs:
     # Build job
     build:
         runs-on: ubuntu-latest
+        env:
+            APP_ENV: ${{ secrets.APP_ENV }}
+            GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+            SEND_EMAIL_BASE_URL: ${{ secrets.SEND_EMAIL_BASE_URL }}
         steps:
+            - name: Envs
+              run: |
+                  echo $APP_ENV
+                  echo $GA_TRACKING_ID
+                  echo $SEND_EMAIL_BASE_URL
+
             - name: Checkout
               uses: actions/checkout@v3
             - name: Detect package manager
@@ -73,18 +83,13 @@ jobs:
                       ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
             - name: Install dependencies
               run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
             - name: Build with Next.js
               run: ${{ steps.detect-package-manager.outputs.runner }} next build
-              env:
-                  APP_ENV: ${{ secrets.APP_ENV }}
-                  GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-                  SEND_EMAIL_BASE_URL: ${{ secrets.SEND_EMAIL_BASE_URL }}
+
             - name: Static HTML export with Next.js
               run: ${{ steps.detect-package-manager.outputs.runner }} next export
-              env:
-                  APP_ENV: ${{ secrets.APP_ENV }}
-                  GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-                  SEND_EMAIL_BASE_URL: ${{ secrets.SEND_EMAIL_BASE_URL }}
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               with:
