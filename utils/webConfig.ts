@@ -6,7 +6,7 @@ export const webConfig = {
         'http://localhost:9000/.netlify/functions/api',
     gaTrackingId: process.env.GA_TRACKING_ID,
     calendly: {
-        url: 'https://calendly.com/code-reroute/discoverymeeting',
+        url: 'https://calendly.com/social-reroute/discoverymeeting',
         css: 'https://assets.calendly.com/assets/external/widget.css',
         script: 'https://assets.calendly.com/assets/external/widget.js',
     },
