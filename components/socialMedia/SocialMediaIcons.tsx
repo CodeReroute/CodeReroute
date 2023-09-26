@@ -72,13 +72,13 @@ const StyledDiv = styled.div`
 const animationTime = 0.3;
 const animationDelayTime = 0.2;
 
-interface CodeMediaIconsProps {
+interface SocialMediaIconsProps {
     size: number;
     padding: number;
     className?: string;
 }
 
-const CodeMediaIcons: React.FC<CodeMediaIconsProps> = ({
+const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
     size,
     padding,
     className,
@@ -167,4 +167,4 @@ const CodeMediaIcons: React.FC<CodeMediaIconsProps> = ({
     </StyledDiv>
 );
 
-export default CodeMediaIcons;
+export default SocialMediaIcons;

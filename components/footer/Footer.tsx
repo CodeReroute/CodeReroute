@@ -10,7 +10,7 @@ import {
     tabletBreakPoint,
     white,
 } from '../styles/theme';
-import CodeMediaIcons from '../codeMedia/CodeMediaIcons';
+import SocialMediaIcons from '../socialMedia/SocialMediaIcons';
 import Logo from '../../public/assets/logo.png';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 
@@ -129,7 +129,7 @@ const Footer: React.FC = () => (
                 <div className="centering">
                     <div>
                         <ContentSlideUp>
-                            <CodeMediaIcons
+                            <SocialMediaIcons
                                 size={10}
                                 padding={20}
                                 className="code-icons"

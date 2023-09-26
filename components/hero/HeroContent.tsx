@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import CodeMediaIcons from '../codeMedia/CodeMediaIcons';
+import SocialMediaIcons from '../socialMedia/SocialMediaIcons';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import { FadeIn } from '../styles/animations';
 import { ContentStyles, largerMobileBreakPoint } from '../styles/theme';
@@ -65,7 +65,7 @@ const HeroContent: React.FC = () => {
                     <h2>{heading}</h2>
                     <p>{contentOne}</p>
                     <p>{contentTwo}</p>
-                    <CodeMediaIcons
+                    <SocialMediaIcons
                         className="code-icons"
                         padding={25}
                         size={13}

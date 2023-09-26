@@ -25,8 +25,8 @@ const PrivacyPolicyText: React.FC = () => (
             This Privacy Policy is designed to explain how we collect, use,
             share, and protect the personal information you provide to us when
             you access our website, purchase our goods or services, or engage
-            with us on code media, as well as your own rights to the
-            information we collect.
+            with us on code media, as well as your own rights to the information
+            we collect.
             <br />
             <br />
             Please read this Privacy Policy carefully. We will alert you to any
@@ -40,8 +40,7 @@ const PrivacyPolicyText: React.FC = () => (
             <br />
             <br />
             We encourage you to review this Privacy Policy periodically, when
-            you use our website for any purpose or engage with us on code
-            media.
+            you use our website for any purpose or engage with us on code media.
             <br />
             <br />
             You are deemed to have accepted any changes to any revised Privacy
@@ -162,10 +161,10 @@ const PrivacyPolicyText: React.FC = () => (
             any products or services purchased by you to you; and correspond
             with you; and process payments or refunds; contact you about new
             offerings that we think you will be interested in; andInteract with
-            you via code media; send you a newsletter or other updates about
-            our company or website, and deliver targeted advertising, and
-            request feedback from you; and notify you of updates to our product
-            and service offerings, and resolve disputes and troubleshoot any
+            you via code media; send you a newsletter or other updates about our
+            company or website, and deliver targeted advertising, and request
+            feedback from you; and notify you of updates to our product and
+            service offerings, and resolve disputes and troubleshoot any
             problems, and administer contests or giveaways; and generate a
             profile that is personalized to you, so that future interactions
             with our website will be more personal, and compile anonymous
