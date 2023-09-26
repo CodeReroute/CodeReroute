@@ -22,6 +22,7 @@ jobs:
             - name: Install and Build 🔧
               env:
                   APP_ENV: ${{ secrets.APP_ENV }}
+                  NODE_ENV: ${{ secrets.NODE_ENV }}
               run: |
                   npm install
                   npm run build
