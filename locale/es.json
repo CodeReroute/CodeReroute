@@ -1,0 +1,59 @@
+{
+    "homePage": {
+        "hero": {
+            "heading": "No usamos plantillas.",
+            "contentOne": "Code Reroute es una agencia de soluciones digitales dirigida por mujeres que crea y diseña sitios web con códigos personalizados; la creación de identidades visuales y la prestación de apoyo al desarrollo empresarial.",
+            "contentTwo": "Estamos orgullosos de asociarnos con empresas y organizaciones impulsadas por un propósito que tienen como objetivo generar un impacto positivo. Trabajamos con empresas de propiedad independiente, comunidades indígenas, organizaciones sin fines de lucro, municipalidades y grandes organizaciones."
+        }
+    },
+    "profiles": {
+        "description": "Fundada en 2019, Code Reroute está compuesta por un equipo multidisciplinario de diseñadores, ingenieros y creativos que se unen para brindar las mejores experiencias digitales para nuestros clientes. Ya sea que estemos creando una aplicación, un sitio web de comercio electrónico o brindando soporte para el desarrollo empresarial; Nuestras habilidades combinadas lo posicionarán como líder en su campo."
+    },
+    "about": {
+        "heading": "Sobre nosotros",
+        "descriptionOne": "Nuestra fundadora, Danielle Dufour, tiene una amplia experiencia trabajando en Relaciones Públicas. Algunos de sus proyectos notables incluyen talleres de capacitación para el desarrollo de capacidades para las comunidades de las Primeras Naciones en la isla de Vancouver; proporcionar información estratégica para construir una comunidad en línea de más de 120K; la creación de sitios web para empresas en crecimiento y la dirección de numerosas sesiones de desarrollo empresarial.",
+        "descriptionTwo": "En 2021 unió fuerzas con Hafiz Temuri y juntos lideran un pequeño equipo de diseñadores y desarrolladores. Como inmigrante de primera generación de Pakistán, Hafiz estudió Ciencias de la Computación en la Universidad MacEwan y luego pasó a trabajar como desarrollador de software para varias empresas emergentes en la industria tecnológica. Ahora, Hafiz divide su tiempo entre su rol como ingeniero de software senior en Givelify y como ingeniero de software líder en Code Reroute.",
+        "skillSets": {
+            "programming": "Lenguajes de programación",
+            "frameworks": "Bibliotecas y marcos",
+            "tools": "Herramientas y plataformas"
+        }
+    },
+    "websites": {
+        "heading": "SITIOS WEB CON CODIFICACIÓN PERSONALIZADA",
+        "contents": {
+            "contentOne": "Codificado a medida y diseñado por nosotros (en casa). Nuestros sitios web responden completamente en todos los dispositivos (desde computadoras de escritorio hasta dispositivos móviles) y se crean estratégicamente para brindarle la mejor experiencia digital de alta calidad del mercado.",
+            "contentTwo": "Al invertir en un sitio web con un código personalizado, usted es el propietario del código y puede continuar desarrollándolo a medida que crece su empresa u organización. También ofrecemos un estilo CSS personalizable, lo que significa que en términos de diseño, el cielo es el límite.",
+            "contentThree": "Nuestros sitios web son estéticamente agradables y están diseñados de manera óptima con un software potente. Podemos crear portales de acceso solo para miembros, agregar traducciones instantáneas y brindarle la opción de convertir el sitio web en una aplicación web o móvil en el futuro."
+        },
+        "details": {
+            "detailOne": "Para clientes de comercio electrónico: creamos plantillas personalizadas dentro de Shopify. Somos un socio de Shopify confiable",
+            "detailTwo": "Te sientes más cómodo con WordPress? También nos basamos en esa plataforma y podemos ofrecer una experiencia perfecta y personalizada con WooCommerce."
+        }
+    },
+    "services": {
+        "heading": "SERVICIOS ADICIONALES",
+        "description": "Imagina tenernos en tu bolsillo trasero? Contratarnos como anticipo para estos servicios o como un trato único.",
+        "list": {
+            "one": "fotografía de marca",
+            "two": "publicidad digital",
+            "three": "sesiones de identidad empresarial",
+            "four": "logotipos e identidad visual",
+            "five": "redacción",
+            "six": "entrenamiento de capacidad",
+            "seven": "campañas de correo electrónico",
+            "eight": "diseño gráfico",
+            "nine": "talleres/seminarios"
+        }
+    },
+    "employment": {
+        "heading": "OPORTUNIDADES DE EMPLEO",
+        "paragraphOne": "Trabajar en un ambiente emocionante con un equipo que hace un impacto.",
+        "paragraphTwo": "En Code Reroute nos esforzamos por empoderar y elevar las voces para compartir nuestros conjuntos de habilidades y brindar servicios de alta calidad que realicen un impacto.",
+        "paragraphThree": "Damos la bienvenida a personas de todos los orígenes y edades para llegar a nosotros.",
+        "paragraphFour": "Si cree que tiene algunas habilidades que encajarían muy bien con nuestro equipo, complete el siguiente formulario y adjunte su cartera."
+    },
+    "labels": {
+        "getInTouch": "PONERSE EN CONTACTO"
+    }
+}
