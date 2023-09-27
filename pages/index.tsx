@@ -36,21 +36,21 @@ const Home: React.FC = () => {
             />
             <LanguageProvider>
                 <Hero />
-                <Intro />
-                <Profiles />
+                {/* <Intro /> */}
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="about" />
                 <About />
                 <Websites />
+                <Profiles />
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="contact" />
-                <Services />
+                {/* <Services /> */}
                 <Photography />
-                <Clients />
+                {/* <Clients /> */}
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a id="employment" />
-                <Employment />
-                <Testimonials />
+                {/* <a id="employment" />
+                <Employment /> */}
+                {/* <Testimonials /> */}
                 <Impact />
                 <Footer />
                 <Navigation />

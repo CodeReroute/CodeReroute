@@ -16,6 +16,7 @@ const StyledDiv = styled.div`
         text-align: center;
     }
     .logo {
+        margin-top: 15px;
         text-align: center;
     }
     .text {
@@ -53,8 +54,8 @@ const HeroContent: React.FC = () => {
                 <Image
                     priority
                     src={Logo}
-                    width={240}
-                    height={51}
+                    width={200}
+                    height={27.51}
                     placeholder="blur"
                     alt="Logo"
                     title="Logo"

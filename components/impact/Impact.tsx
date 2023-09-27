@@ -1,16 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
-import { ContentStyles, Heading, lightGray } from '../styles/theme';
+import {
+    ContentStyles,
+    Heading,
+    pictureGradient,
+    white,
+} from '../styles/theme';
+import { webConfig } from '../../utils/webConfig';
 
 const StyledSection = styled.section`
-    background-color: ${lightGray};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: ${white};
+    background-image: ${pictureGradient},
+        url(${webConfig.basePath}/assets/employment-background.jpeg);
     text-align: center;
     .content {
         max-width: 802px;
     }
     hr {
-        border: 1px solid #6b6b6b;
+        border: 1px solid ${white};
         max-width: 58px;
     }
     .no-margin-bottom {
@@ -23,7 +34,7 @@ const Impact: React.FC = () => (
         <ContentStyles padding={100} contentMargin className="content">
             <ContentSlideUp>
                 <Heading className="hide-on-mobile">
-                    ENVIRONMENTAL AND CODE IMPACT
+                    ENVIRONMENTAL AND SOCIAL IMPACT
                 </Heading>
             </ContentSlideUp>
             <ContentSlideUp>
@@ -42,11 +53,10 @@ const Impact: React.FC = () => (
             </ContentSlideUp>
             <ContentSlideUp>
                 <p>
-                    We work closely with our clients to encourage diverse
-                    language, imagery, and copywriting on their websites and in
-                    their brand guidelines. It's our pleasure to provide
-                    resources and be a liaison — forming a strong network of
-                    forward-thinking colleagues and clients.
+                    We respectfully acknowledge that we are located on Treaty 6
+                    territory, a traditional meeting ground and home for many
+                    Indigenous Peoples, including Cree, Saulteaux, Niisitapi
+                    (Blackfoot), Métis, and Nakota Sioux Peoples
                 </p>
             </ContentSlideUp>
             <ContentSlideUp>

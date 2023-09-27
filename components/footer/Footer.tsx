@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
     font-family: ${sanSerifFont};
     letter-spacing: 0.3px;
     .content {
-        padding-bottom: 45px;
+        // padding-bottom: 45px;
     }
     .logo {
         text-align: center;
@@ -70,22 +70,6 @@ const currentYear = new Date().getFullYear();
 const Footer: React.FC = () => (
     <StyledFooter>
         <ContentStyles padding={30} contentMargin className="content">
-            <ContentSlideUp>
-                <div className="logo">
-                    <Link href="/">
-                        <a>
-                            <Image
-                                src={Logo}
-                                width={220}
-                                height={46.88}
-                                placeholder="blur"
-                                alt="Logo"
-                                title="Logo"
-                            />
-                        </a>
-                    </Link>
-                </div>
-            </ContentSlideUp>
             <div className="grid">
                 <div className="links centering">
                     <div>
@@ -99,14 +83,16 @@ const Footer: React.FC = () => (
                             </a>
                         </ContentSlideUp>
                         <ContentSlideUp>
+                            <div>
+                                copyright @ {currentYear} Code Reroute
+                                {/* <br /> */}
+                                {/* designed + developed by Code Reroute */}
+                            </div>
+                        </ContentSlideUp>
+                        {/* <ContentSlideUp>
                             <a href="tel:2502184074">(250) 218 4074</a>
-                        </ContentSlideUp>
-                        <ContentSlideUp>
-                            <a href="mailto:hello@codereroute.com">
-                                hello@codereroute.com
-                            </a>
-                        </ContentSlideUp>
-                        <ContentSlideUp>
+                        </ContentSlideUp> */}
+                        {/* <ContentSlideUp>
                             <a
                                 rel="nofollow noreferrer"
                                 target="_blank"
@@ -114,17 +100,26 @@ const Footer: React.FC = () => (
                             >
                                 video @parmarproductions
                             </a>
-                        </ContentSlideUp>
+                        </ContentSlideUp> */}
                     </div>
                 </div>
                 <ContentSlideUp>
-                    <div>
-                        We respectfully acknowledge that we are located on
-                        Treaty 6 territory, a traditional meeting ground and
-                        home for many Indigenous Peoples, including Cree,
-                        Saulteaux, Niisitapi (Blackfoot), Métis, and Nakota
-                        Sioux Peoples
-                    </div>
+                    <ContentSlideUp>
+                        <div className="logo">
+                            <Link href="/">
+                                <a>
+                                    <Image
+                                        src={Logo}
+                                        width={180}
+                                        height={25}
+                                        placeholder="blur"
+                                        alt="Logo"
+                                        title="Logo"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                    </ContentSlideUp>
                 </ContentSlideUp>
                 <div className="centering">
                     <div>
@@ -135,18 +130,11 @@ const Footer: React.FC = () => (
                                 className="code-icons"
                             />
                         </ContentSlideUp>
-                        <ContentSlideUp>
+                        {/* <ContentSlideUp>
                             <Link href="/privacy-policy/">
                                 <a>privacy policy</a>
                             </Link>
-                        </ContentSlideUp>
-                        <ContentSlideUp>
-                            <div>
-                                copyright @ {currentYear} Code Reroute
-                                <br />
-                                designed + developed by Code Reroute
-                            </div>
-                        </ContentSlideUp>
+                        </ContentSlideUp> */}
                     </div>
                 </div>
             </div>

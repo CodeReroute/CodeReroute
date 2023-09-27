@@ -44,6 +44,8 @@ const Photography: React.FC = () => (
                 </div>
             </ContentStyles>
         </StyledDiv>
+        {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+        <a id="employment" />
         <BusinessIdentity />
     </>
 );

@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
-import {
-    ContentStyles,
-    Heading,
-    photographyBreakPoint,
-    SmallHeading,
-} from '../styles/theme';
+import { ContentStyles, Heading, photographyBreakPoint } from '../styles/theme';
+import { useTranslate } from '../../utils/hooks/useTranslate';
+import FormButton from '../sliderPanel/FormButton';
+import EmploymentFormFields from '../employment/EmploymentFormFields';
 
 const StyledDiv = styled.div`
+    padding-bottom: 100px;
     .content-wrapper {
         padding-bottom: 0;
     }
@@ -38,61 +37,64 @@ const StyledDiv = styled.div`
     }
 `;
 
-const BusinessIdentity: React.FC = () => (
-    <StyledDiv>
-        <ContentStyles padding={100} contentMargin className="content-wrapper">
-            <ContentStyles padding={undefined} className="content">
-                <div>
-                    <ContentSlideUp>
-                        <Heading>BUSINESS IDENTITY SESSIONS</Heading>
-                    </ContentSlideUp>
-                    <ContentSlideUp>
-                        <p>
-                            Join Danielle as she leads your team through our
-                            dedicated 4-hour session created just for you.
-                            Through the session, we will create consistency with
-                            messaging, visual identity, and tone while
-                            uncovering untapped strengths and weaknesses. We
-                            identify a core audience and create an overview of
-                            your local, regional, and national competition.
-                        </p>
-                    </ContentSlideUp>
-                </div>
-            </ContentStyles>
-            <ContentStyles padding={undefined} className="investment-content">
-                <ContentSlideUp>
-                    <SmallHeading className="investment-heading">
-                        INVESTMENT $695
-                    </SmallHeading>
-                </ContentSlideUp>
-                <div className="investment-section">
-                    <div>
+const buttonText = 'APPLY HERE';
+const BusinessIdentity: React.FC = () => {
+    const sectionRef = React.useRef<HTMLDivElement>(null);
+    const formSectionRef = React.useRef<HTMLDivElement>(null);
+    const t = useTranslate();
+    const {
+        heading,
+        paragraphOne,
+        paragraphTwo,
+        paragraphThree,
+        paragraphFour,
+    } = {
+        heading: t('employment.heading'),
+        paragraphOne: t('employment.paragraphOne'),
+        paragraphTwo: t('employment.paragraphTwo'),
+        paragraphThree: t('employment.paragraphThree'),
+        paragraphFour: t('employment.paragraphFour'),
+    };
+
+    return (
+        <>
+            <StyledDiv>
+                <ContentStyles
+                    padding={100}
+                    contentMargin
+                    className="content-wrapper"
+                >
+                    <ContentStyles padding={undefined} className="content">
+                        <div>
+                            <ContentSlideUp>
+                                <Heading>{heading}</Heading>
+                            </ContentSlideUp>
+                            <ContentSlideUp>
+                                <p>{paragraphOne}</p>
+                                <p>{paragraphTwo}</p>
+                                <p>{paragraphThree}</p>
+                                <p>{paragraphFour}</p>
+                            </ContentSlideUp>
+                        </div>
+                    </ContentStyles>
+                    <div className="button-wrapper">
                         <ContentSlideUp>
-                            <p>In the session we work on:</p>
-                        </ContentSlideUp>
-                        <ContentSlideUp>
-                            <ul>
-                                <li>brand vision, mission, and core values</li>
-                                <li>
-                                    <span className="hide-on-mobile">
-                                        identifying{' '}
-                                    </span>
-                                    key strengths and target audience
-                                </li>
-                                <li>creating a brand story</li>
-                                <li>finding your voice</li>
-                                <li>maintaining consistency</li>
-                                <li>analyzing your competition</li>
-                                <li>
-                                    finding ways to establish you as a leader
-                                </li>
-                            </ul>
+                            <FormButton
+                                name="Employment Apply Here Button"
+                                buttonText={buttonText}
+                                sectionRef={sectionRef}
+                                formSectionRef={formSectionRef}
+                            />
                         </ContentSlideUp>
                     </div>
-                </div>
-            </ContentStyles>
-        </ContentStyles>
-    </StyledDiv>
-);
+                </ContentStyles>
+            </StyledDiv>
+            <EmploymentFormFields
+                sectionRef={sectionRef}
+                formSectionRef={formSectionRef}
+            />
+        </>
+    );
+};
 
 export default BusinessIdentity;
