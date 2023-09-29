@@ -35,11 +35,12 @@ const Home: React.FC = () => {
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="contact" />
                 <About />
+                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="investors" />
                 <Websites />
+                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="about" />
                 <Profiles />
-                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 {/* <Services /> */}
                 <Photography />
                 {/* <Clients /> */}

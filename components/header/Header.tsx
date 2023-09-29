@@ -53,7 +53,7 @@ const StyledDiv = styled.div`
 
 const Header: React.FC = () => {
     // eslint-disable-line @typescript-eslint/no-non-null-assertion
-    const ref = useRef<HTMLDivElement | null>(null); // eslint-disable-line
+    const ref = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         if (!ref.current) return;
