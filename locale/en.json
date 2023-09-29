@@ -9,7 +9,8 @@
         }
     },
     "profiles": {
-        "description": "Founded in 2019, Code Reroute is comprised of a multi-disciplinary team of designers, engineers and creatives all coming together to provide the best digital experiences for our clients. Whether we're building an app, an e-commerce website or providing business development support; our combined skill sets will position you as a leader in your field."
+        "descriptionOne": "Currently, Danielle builds the wireframes, app flow, branding and UI/UX design. Her background working in various aspects of tech and social media marketing has converged into a ’Slumdog Millionaire’ scenario— her past experiences perfectly informing the scope of work needed for web and mobile app development.",
+        "descriptionTwo": "Hafiz leads the backend software engineering team— acting as mentor and mastermind behind the technical process. His extensive experience working as a senior software engineer for various startups in the tech industry (and his keen curiosity for solving technical problems in his spare time) has prepared him for this leadership role."
     },
     "about": {
         "heading": "COMPANY UPDATE",
@@ -74,10 +75,8 @@
     },
     "employment": {
         "heading": "EMPLOYMENT OPPORTUNITIES",
-        "paragraphOne": "Work in an exciting atmosphere with a team that makes an impact",
-        "paragraphTwo": "At Code Reroute we strive to empower and elevate voices through sharing our skill sets and providing high quality services.",
-        "paragraphThree": "We welcome people of all backgrounds and ages to reach out to us.",
-        "paragraphFour": "If you think you have some skills that would fit nicely with our team, please fill out the form below."
+        "paragraphOne": "Work in an exciting atmosphere with a team that makes an impact. Fully remote, flexible hours and minimal meetings.",
+        "paragraphTwo": "We welcome people of all backgrounds and ages to reach out to us. If you enjoy working with a small and dedicated team, please fill out the form below."
     },
     "labels": {
         "getInTouch": "GET IN TOUCH"

@@ -18,6 +18,9 @@ const StyledDiv = styled.div`
     visibility: hidden;
     z-index: 999;
     display: flex;
+    .hidden {
+        visibility: hidden;
+    }
     .logo {
         margin-bottom: -5px;
         opacity: 0.6;
@@ -69,13 +72,14 @@ const Header: React.FC = () => {
 
     return (
         <StyledDiv ref={ref}>
+            <Language className="language-selector hidden" />
             <div className="menu-wrapper">
                 <div className="menu">
                     <a href="#about" className="menu-item">
                         <h6>ABOUT US</h6>
                     </a>
-                    <a href="#about" className="menu-item">
-                        <h6>INVESTMENT</h6>
+                    <a href="#investors" className="menu-item">
+                        <h6>INVESTORS</h6>
                     </a>
                     <FadeIn className="logo">
                         <Image

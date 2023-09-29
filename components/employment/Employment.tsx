@@ -46,18 +46,10 @@ const Employment: React.FC = () => {
     const sectionRef = React.useRef<HTMLDivElement>(null);
     const formSectionRef = React.useRef<HTMLDivElement>(null);
     const t = useTranslate();
-    const {
-        heading,
-        paragraphOne,
-        paragraphTwo,
-        paragraphThree,
-        paragraphFour,
-    } = {
+    const { heading, paragraphOne, paragraphTwo } = {
         heading: t('employment.heading'),
         paragraphOne: t('employment.paragraphOne'),
         paragraphTwo: t('employment.paragraphTwo'),
-        paragraphThree: t('employment.paragraphThree'),
-        paragraphFour: t('employment.paragraphFour'),
     };
     return (
         <>
@@ -72,13 +64,6 @@ const Employment: React.FC = () => {
                         </ContentSlideUp>
                         <ContentSlideUp>
                             <p>{paragraphTwo}</p>
-                        </ContentSlideUp>
-                        <ContentSlideUp>
-                            <p className="last-paragraph">
-                                {paragraphThree}
-                                <br />
-                                {paragraphFour}
-                            </p>
                         </ContentSlideUp>
                     </SanText>
                     <div className="button-wrapper">

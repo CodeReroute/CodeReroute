@@ -42,18 +42,10 @@ const BusinessIdentity: React.FC = () => {
     const sectionRef = React.useRef<HTMLDivElement>(null);
     const formSectionRef = React.useRef<HTMLDivElement>(null);
     const t = useTranslate();
-    const {
-        heading,
-        paragraphOne,
-        paragraphTwo,
-        paragraphThree,
-        paragraphFour,
-    } = {
+    const { heading, paragraphOne, paragraphTwo } = {
         heading: t('employment.heading'),
         paragraphOne: t('employment.paragraphOne'),
         paragraphTwo: t('employment.paragraphTwo'),
-        paragraphThree: t('employment.paragraphThree'),
-        paragraphFour: t('employment.paragraphFour'),
     };
 
     return (
@@ -71,9 +63,9 @@ const BusinessIdentity: React.FC = () => {
                             </ContentSlideUp>
                             <ContentSlideUp>
                                 <p>{paragraphOne}</p>
+                            </ContentSlideUp>
+                            <ContentSlideUp>
                                 <p>{paragraphTwo}</p>
-                                <p>{paragraphThree}</p>
-                                <p>{paragraphFour}</p>
                             </ContentSlideUp>
                         </div>
                     </ContentStyles>

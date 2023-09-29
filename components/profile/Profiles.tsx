@@ -68,8 +68,9 @@ const StyledDiv = styled.div`
 
 const Profiles: React.FC = () => {
     const t = useTranslate();
-    const { description } = {
-        description: t('profiles.description'),
+    const { descriptionOne, descriptionTwo } = {
+        descriptionOne: t('profiles.descriptionOne'),
+        descriptionTwo: t('profiles.descriptionTwo'),
     };
     return (
         <StyledDiv>
@@ -98,7 +99,10 @@ const Profiles: React.FC = () => {
                     </FlexCenteredRow>
                 </ContentSlideUp>
                 <ContentSlideUp>
-                    <SanText className="description">{description}</SanText>
+                    <SanText className="description">
+                        <p>{descriptionOne}</p>
+                        <p>{descriptionTwo}</p>
+                    </SanText>
                 </ContentSlideUp>
                 <ContentSlideUp>
                     <FlexCenteredRow className="hafiz">

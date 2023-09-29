@@ -33,12 +33,13 @@ const Home: React.FC = () => {
                 <Hero />
                 {/* <Intro /> */}
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a id="about" />
+                <a id="contact" />
                 <About />
+                <a id="investors" />
                 <Websites />
+                <a id="about" style={{ marginTop: '-50px' }} />
                 <Profiles />
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a id="contact" />
                 {/* <Services /> */}
                 <Photography />
                 {/* <Clients /> */}

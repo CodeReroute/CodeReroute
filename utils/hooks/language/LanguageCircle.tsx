@@ -17,6 +17,7 @@ const StyledDiv = styled.div`
     font-size: 14px;
     color: ${darkBrown};
     margin-right: 8px;
+    margin-left: 8px;
     background-color: ${({ isOpen }: { isOpen: boolean }) =>
         isOpen ? white : darkWhite};
     cursor: pointer;
