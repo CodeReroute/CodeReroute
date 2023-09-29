@@ -14,14 +14,13 @@ const StyledDiv = styled.div`
     font-family: ${sanSerifFont};
     ${buttonBoxShadow};
     border: 1px solid ${darkGray};
-    border-radius: 100%;
     font-size: 14px;
     color: ${darkBrown};
     margin-right: 8px;
     background-color: ${({ isOpen }: { isOpen: boolean }) =>
         isOpen ? white : darkWhite};
     cursor: pointer;
-    width: 35px;
+    width: 78px;
     height: 35px;
     display: flex;
     justify-content: center;

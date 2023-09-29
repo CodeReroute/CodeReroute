@@ -3,22 +3,24 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import Language from './Language';
 import Logo from '../../public/assets/logo-dark.png';
-import { darkGray, darkWhite, photographyBreakPoint } from '../styles/theme';
+import { darkWhite, photographyBreakPoint } from '../styles/theme';
 import { FadeIn } from '../styles/animations';
 
 const StyledDiv = styled.div`
+    padding-top: 12px;
+    padding-bottom: 12px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: ${darkWhite};
-    border-bottom: 2px solid ${darkGray};
+    box-shadow: 0px 1px 38px 0px #ccc;
     visibility: hidden;
     z-index: 999;
     display: flex;
     .logo {
         margin-bottom: -5px;
-        opacity: 0.5;
+        opacity: 0.6;
     }
     .menu-wrapper {
         flex: 1;
