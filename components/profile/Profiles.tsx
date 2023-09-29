@@ -27,7 +27,7 @@ const StyledDiv = styled.div`
     color: ${white};
     text-shadow: ${textShadow};
     .content-wrapper {
-        padding: 0px 100px;
+        padding: 0px 5rem;
     }
     .credit-hafiz {
         text-align: right;

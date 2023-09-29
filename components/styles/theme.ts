@@ -47,8 +47,8 @@ export const ContentStyles = styled.div`
             return `
                 padding-top: ${padding}px;
                 padding-bottom: ${padding}px;
-                padding-left: 8rem;
-                padding-right: 8rem;
+                padding-left: 5rem;
+                padding-right: 5rem;
             `;
         }
         return `
