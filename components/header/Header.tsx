@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Language from './Language';
 import styled from 'styled-components';
 import Logo from '../../public/assets/logo-dark.png';
-import { darkGray, darkWhite } from '../styles/theme';
+import { darkGray, darkWhite, photographyBreakPoint } from '../styles/theme';
 import { FadeIn } from '../styles/animations';
 
 interface HeaderProps {}
@@ -36,6 +36,16 @@ const StyledDiv = styled.div`
             justify-content: space-between;
         }
     }
+    @media only screen and (max-width: ${photographyBreakPoint}px) {
+        .menu-wrapper {
+            .menu {
+                justify-content: center;
+                .menu-item {
+                    display: none;
+                }
+            }
+        }
+    }
 `;
 
 const Header: React.FC<HeaderProps> = () => {
@@ -60,10 +70,10 @@ const Header: React.FC<HeaderProps> = () => {
         <StyledDiv ref={ref}>
             <div className="menu-wrapper">
                 <div className="menu">
-                    <a href="#about">
+                    <a href="#about" className="menu-item">
                         <h6>ABOUT US</h6>
                     </a>
-                    <a href="#about">
+                    <a href="#about" className="menu-item">
                         <h6>INVESTMENT</h6>
                     </a>
                     <FadeIn className="logo">
@@ -77,10 +87,10 @@ const Header: React.FC<HeaderProps> = () => {
                             title="Logo"
                         />
                     </FadeIn>
-                    <a href="#contact">
+                    <a href="#contact" className="menu-item">
                         <h6>CONTACT</h6>
                     </a>
-                    <a href="#employment">
+                    <a href="#employment" className="menu-item">
                         <h6>EMPLOYMENT</h6>
                     </a>
                 </div>
