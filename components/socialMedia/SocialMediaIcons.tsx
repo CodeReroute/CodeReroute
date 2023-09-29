@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { AnimationProps } from '../styles/animations';
+import { FadeInAnimationProps } from '../styles/animations';
 import {
     FacebookIcon,
     InstagramIcon,
@@ -23,11 +23,10 @@ const sideInAnimation = keyframes`
     }
 `;
 
-const SlideUp = styled.div`
+const SlideUp = styled.div<FadeInAnimationProps>`
     animation-fill-mode: forwards;
-    animation: ${sideInAnimation} ${(props: AnimationProps) => props.time}s
-        ease-in;
-    animation-delay: ${(props: AnimationProps) => props.delay}s;
+    animation: ${sideInAnimation} ${({ time }) => time}s ease-in;
+    animation-delay: ${({ delay }) => delay}s;
 `;
 
 interface StyledDivProps {

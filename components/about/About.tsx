@@ -81,10 +81,17 @@ const StyledDiv = styled.div`
 
 const About: React.FC = () => {
     const t = useTranslate();
-    const { heading, descriptionOne, descriptionTwo, getInTouch } = {
+    const {
+        heading,
+        descriptionOne,
+        descriptionTwo,
+        descriptionThree,
+        getInTouch,
+    } = {
         heading: t('about.heading'),
         descriptionOne: t('about.descriptionOne'),
         descriptionTwo: t('about.descriptionTwo'),
+        descriptionThree: t('about.descriptionThree'),
         getInTouch: t('labels.getInTouch'),
     };
     return (
@@ -100,6 +107,9 @@ const About: React.FC = () => {
                         </ContentSlideUp>
                         <ContentSlideUp>
                             <p>{descriptionTwo}</p>
+                        </ContentSlideUp>
+                        <ContentSlideUp>
+                            <p>{descriptionThree}</p>
                         </ContentSlideUp>
                         <ContentSlideUp>
                             <LinkBox

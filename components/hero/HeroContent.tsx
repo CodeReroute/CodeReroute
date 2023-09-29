@@ -11,6 +11,12 @@ const StyledDiv = styled.div`
     display: flex;
     height: 100%;
     flex-direction: column;
+    p.heading-one {
+        margin-bottom: 4px;
+    }
+    p.heading-two {
+        margin-top: 4px;
+    }
     .code-icons {
         margin-top: 30px;
         text-align: center;
@@ -40,14 +46,17 @@ const StyledDiv = styled.div`
 
 const HeroContent: React.FC = () => {
     const t = useTranslate();
-    const { heading, contentOne, contentTwo } = useMemo(
-        () => ({
-            heading: t('homePage.hero.heading'),
-            contentOne: t('homePage.hero.contentOne'),
-            contentTwo: t('homePage.hero.contentTwo'),
-        }),
-        [t],
-    );
+    const { heading, contentOne, contentTwo, contentThree, contentFour } =
+        useMemo(
+            () => ({
+                heading: t('homePage.hero.heading'),
+                contentOne: t('homePage.hero.contentOne'),
+                contentTwo: t('homePage.hero.contentTwo'),
+                contentThree: t('homePage.hero.contentThree'),
+                contentFour: t('homePage.hero.contentFour'),
+            }),
+            [t],
+        );
     return (
         <StyledDiv>
             <FadeIn className="logo">
@@ -64,8 +73,12 @@ const HeroContent: React.FC = () => {
             <ContentStyles padding={0} contentMargin className="text">
                 <FadeIn className="text-content">
                     <h2>{heading}</h2>
-                    <p>{contentOne}</p>
-                    <p>{contentTwo}</p>
+                    <p className="heading-one">{contentOne}</p>
+                    <p className="heading-two">
+                        {contentTwo}
+                        <i>{contentThree}</i>
+                        {contentFour}
+                    </p>
                     <SocialMediaIcons
                         className="code-icons"
                         padding={25}

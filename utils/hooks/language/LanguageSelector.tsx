@@ -1,9 +1,9 @@
 import React, { useCallback, useContext } from 'react';
 import styled from 'styled-components';
 import {
+    darkGray,
     darkWhite,
     sanSerifFont,
-    smallerTextShadow,
 } from '../../../components/styles/theme';
 import {
     Languages,
@@ -12,22 +12,27 @@ import {
 } from './LanguageProvider';
 
 const StyledDiv = styled.div`
-    transform: rotate(90deg);
     font-size: 14px;
-    color: ${darkWhite};
-    text-shadow: ${smallerTextShadow};
     font-family: ${sanSerifFont};
-    margin-top: 10px;
-    margin-bottom: 10px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    background-color: ${darkWhite};
+    border-left: 2px solid ${darkGray};
+    border-bottom: 2px solid ${darkGray};
+    padding: 8px 16px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
     .language {
         cursor: pointer;
-        margin-bottom: 10px;
     }
 `;
 
 const LanguageSelector: React.FC<{
+    className?: string;
     onClick: () => unknown;
-}> = ({ onClick }) => {
+}> = ({ className, onClick }) => {
     const { language, setLanguage } = useContext(LanguageContext);
     const onChange = useCallback(
         (l: Languages) => setLanguage(l),
@@ -35,7 +40,7 @@ const LanguageSelector: React.FC<{
     );
     const others = getOtherLanguages(language);
     return (
-        <StyledDiv>
+        <StyledDiv className={className}>
             {others.map((l, i) => (
                 <div
                     key={l.language}

@@ -1,18 +1,21 @@
 {
     "homePage": {
         "hero": {
-            "heading": "We don't use templates.",
-            "contentOne": "Code Reroute is a female-led digital solutions agency building and designing custom-coded websites; crafting visual identities and providing business development support.",
-            "contentTwo": "We are proud to partner with purpose-driven businesses and organizations that aim to make a positive impact. We work with independently-owned businesses, Indigenous communities, nonprofits, municipalities, and large organizations."
+            "heading": "app launch: 2024",
+            "contentOne": "Code Reroute is a female-led tech company⁣ building innovative web and mobile apps.",
+            "contentTwo": "Stay tuned because we’re ",
+            "contentThree": "cooking",
+            "contentFour": " up something sensational."
         }
     },
     "profiles": {
         "description": "Founded in 2019, Code Reroute is comprised of a multi-disciplinary team of designers, engineers and creatives all coming together to provide the best digital experiences for our clients. Whether we're building an app, an e-commerce website or providing business development support; our combined skill sets will position you as a leader in your field."
     },
     "about": {
-        "heading": "ABOUT US",
-        "descriptionOne": "Our founder, Danielle Dufour, has an extensive background working in Public Relations. Some of her notable projects include building capacity training workshops for First Nations communities across Vancouver Island; providing strategic insight into building an online community of over 120K; building websites for growing companies and leading numerous business development sessions.",
-        "descriptionTwo": "In 2021 she joined forces with Hafiz Temuri and together, they lead a small team of designers and developers. As a first-generation immigrant from Pakistan, Hafiz studied Computer Sciences at MacEwan University and then went on to work as a software developer for various startups in the tech industry. Now, Hafiz splits his time between his role as senior software engineer at Givelify and as the lead software engineer at Code Reroute.",
+        "heading": "COMPANY UPDATE",
+        "descriptionOne": "Founded in 2019, Danielle started this company with an agency framework and vision for working with clients in a variety of arenas— primarily branding, social media marketing and business development support. Despite the pandemic, it was an exciting time of immediate growth and in 2021, she teamed up with her (now) husband to offer full-service app and e-commerce websites to meet client demand. Although this pivot was fruitful, she quickly realized that their combined talents were not geared towards client acquisition but rather, the actual technical work.",
+        "descriptionTwo": "After wrapping up client projects, they took a short break to reflect on their next steps and are happy to report that in the past 6 months they’ve decided to forgo client work and instead focus on building their own self-directed web and mobile application.",
+        "descriptionThree": "They’ve hired a small team of talented software engineers to help share the load of backend development and are eager to see the end-result of their shared vision.",
         "skillSets": {
             "programming": "Programing Languages",
             "frameworks": "Libraries & Frameworks",

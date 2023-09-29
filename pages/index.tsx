@@ -15,6 +15,7 @@ import Clients from '../components/clients/Clients';
 import Impact from '../components/impact/Impact';
 import Footer from '../components/footer/Footer';
 import Testimonials from '../components/testimonials/Testimonials';
+import Header from '../components/header/Header';
 
 const Home: React.FC = () => {
     useEffect(() => {
@@ -53,7 +54,8 @@ const Home: React.FC = () => {
                 {/* <Testimonials /> */}
                 <Impact />
                 <Footer />
-                <Navigation />
+                {/* <Navigation /> */}
+                <Header />
             </LanguageProvider>
         </>
     );

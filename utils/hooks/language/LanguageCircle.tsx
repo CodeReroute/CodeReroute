@@ -17,9 +17,9 @@ const StyledDiv = styled.div`
     border-radius: 100%;
     font-size: 14px;
     color: ${darkBrown};
+    margin-right: 8px;
     background-color: ${({ isOpen }: { isOpen: boolean }) =>
         isOpen ? white : darkWhite};
-    transform: rotate(90deg);
     cursor: pointer;
     width: 35px;
     height: 35px;
