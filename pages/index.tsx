@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                 <About />
                 <a id="investors" />
                 <Websites />
-                <a id="about" style={{ marginTop: '-50px' }} />
+                <a id="about" />
                 <Profiles />
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 {/* <Services /> */}
