@@ -5,9 +5,9 @@ import {
     FacebookIcon,
     InstagramIcon,
     LinkedInIcon,
-    PinterestIcon,
-    SpotifyIcon,
-    TikTokIcon,
+    // PinterestIcon,
+    // SpotifyIcon,
+    // TikTokIcon,
 } from './Icons';
 import { darkWhite } from '../styles/theme';
 

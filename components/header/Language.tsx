@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import LanguageCircle from '../../utils/hooks/language/LanguageCircle';
 import LanguageSelector from '../../utils/hooks/language/LanguageSelector';
@@ -31,10 +31,7 @@ const StyledDiv = styled.div`
 
 const Language: React.FC<LanguageProps> = ({ className }) => {
     const [isSelectorOpen, setSelectorOpen] = useState<boolean>(false);
-    const onOpenSelector = useCallback(
-        () => setSelectorOpen((s) => !s),
-        [useCallback],
-    );
+    const onOpenSelector = () => setSelectorOpen((s) => !s);
     return (
         <StyledDiv className={className}>
             <LanguageCircle isOpen={isSelectorOpen} onClick={onOpenSelector} />

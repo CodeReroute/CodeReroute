@@ -2,20 +2,14 @@ import React, { useEffect } from 'react';
 import LanguageProvider from '../utils/hooks/language/LanguageProvider';
 import Hero from '../components/hero/Hero';
 import MetaTags from '../components/MetaTags';
-import Navigation from '../components/Navigation';
-import Intro from '../components/intro/Intro';
 import Profiles from '../components/profile/Profiles';
 import About from '../components/about/About';
-import { webConfig } from '../utils/webConfig';
 import Websites from '../components/websites/Websites';
-import Services from '../components/services/Services';
 import Photography from '../components/photography/Photography';
-import Employment from '../components/employment/Employment';
-import Clients from '../components/clients/Clients';
 import Impact from '../components/impact/Impact';
 import Footer from '../components/footer/Footer';
-import Testimonials from '../components/testimonials/Testimonials';
 import Header from '../components/header/Header';
+import { webConfig } from '../utils/webConfig';
 
 const Home: React.FC = () => {
     useEffect(() => {

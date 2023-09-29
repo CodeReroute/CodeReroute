@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Language from './Language';
 import styled from 'styled-components';
+import Language from './Language';
 import Logo from '../../public/assets/logo-dark.png';
 import { darkGray, darkWhite, photographyBreakPoint } from '../styles/theme';
 import { FadeIn } from '../styles/animations';
-
-interface HeaderProps {}
 
 const StyledDiv = styled.div`
     position: fixed;
@@ -48,8 +46,9 @@ const StyledDiv = styled.div`
     }
 `;
 
-const Header: React.FC<HeaderProps> = () => {
-    const ref = useRef<HTMLDivElement | null>(null);
+const Header: React.FC = () => {
+    // eslint-disable-line @typescript-eslint/no-non-null-assertion
+    const ref = useRef<HTMLDivElement | null>(null); // eslint-disable-line
 
     useEffect(() => {
         if (!ref.current) return;
@@ -64,7 +63,7 @@ const Header: React.FC<HeaderProps> = () => {
         return () => {
             window.removeEventListener('scroll', listener);
         };
-    }, [ref.current]);
+    }, [ref]);
 
     return (
         <StyledDiv ref={ref}>
