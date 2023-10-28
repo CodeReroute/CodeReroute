@@ -59,8 +59,10 @@ const Header: React.FC = () => {
         if (!ref.current) return;
         const listener = () => {
             if (window.scrollY > window.innerHeight) {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 ref.current!.style.visibility = 'visible';
             } else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 ref.current!.style.visibility = 'hidden';
             }
         };

@@ -70,7 +70,7 @@ export const StyledButton = styled.button<{
     ${styles}
     color: ${darkBrown};
     background-color: ${({ isLight, backgroundColor }) =>
-        backgroundColor ? backgroundColor : isLight ? darkWhite : darkGray};
+        backgroundColor || (isLight ? darkWhite : darkGray)};
     &:hover {
         background-color: ${({ hoverColor }) => hoverColor || lightGray};
     }

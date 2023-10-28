@@ -19,7 +19,6 @@ const FormButton: React.FC<FormButtonProps> = ({
     buttonText,
     sectionRef,
     hoverColor,
-    backgroundColor,
     formSectionRef,
 }) => {
     const [open, setOpen] = useState<boolean>(false);

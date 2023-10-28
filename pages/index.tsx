@@ -6,7 +6,6 @@ import Profiles from '../components/profile/Profiles';
 import About from '../components/about/About';
 import Websites from '../components/websites/Websites';
 import Photography from '../components/photography/Photography';
-import Impact from '../components/impact/Impact';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import { webConfig } from '../utils/webConfig';
