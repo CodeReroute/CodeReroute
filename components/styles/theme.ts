@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const white = '#ffffff';
+export const black = '#000000';
 export const midWhite = '#e7e4df';
 export const darkWhite = '#f6f5f3';
 export const lightGray = '#e2ddd9';
@@ -110,7 +111,7 @@ export const QuoteCredit = styled.div`
 `;
 
 export const Input = styled.input`
-    color: ${darkBrown};
+    color: ${black};
     font-family: ${sanSerifFont};
     letter-spacing: 0.3px;
     border: 0;
@@ -120,12 +121,12 @@ export const Input = styled.input`
     background-color: ${darkWhite};
     padding: 15px 10px;
     ::placeholder {
-        color: #a0a0a0;
+        color: #181818;
     }
     :-ms-input-placeholder {
-        color: #a0a0a0;
+        color: #181818;
     }
     ::-ms-input-placeholder {
-        color: #a0a0a0;
+        color: #181818;
     }
 `;

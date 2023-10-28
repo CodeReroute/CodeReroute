@@ -3,10 +3,13 @@ import { getElementHeight } from '../../utils/elementOperations';
 import { trackEvent } from '../../utils/googleAnalytics';
 import { logError } from '../../utils/logging';
 import { StyledButton } from '../shared/ButtonBox';
+import { lightGray } from '../styles/theme';
 
 interface FormButtonProps {
     name: string;
     buttonText: string;
+    hoverColor?: string;
+    backgroundColor?: string;
     sectionRef: React.RefObject<HTMLDivElement>;
     formSectionRef: React.RefObject<HTMLDivElement>;
 }
@@ -15,6 +18,8 @@ const FormButton: React.FC<FormButtonProps> = ({
     name,
     buttonText,
     sectionRef,
+    hoverColor,
+    backgroundColor,
     formSectionRef,
 }) => {
     const [open, setOpen] = useState<boolean>(false);
@@ -49,6 +54,8 @@ const FormButton: React.FC<FormButtonProps> = ({
     return (
         <StyledButton
             isLight={open}
+            hoverColor={hoverColor}
+            backgroundColor={open ? lightGray : undefined}
             onClick={onInquiryClicked}
             ref={toggleButton}
             className="button"

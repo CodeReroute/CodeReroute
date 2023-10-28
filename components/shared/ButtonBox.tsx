@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { trackEvent } from '../../utils/googleAnalytics';
 import { webConfig } from '../../utils/webConfig';
 import {
+    black,
     darkBrown,
     darkGray,
     darkWhite,
@@ -47,30 +48,31 @@ const styles = `
     border-radius: 36px;
     outline: none;
     border: none;
-    color: ${darkBrown};
+    color: ${black};
     min-width: 182px;
     transition: background-color 0.5s ease-in-out;
 `;
 
-const StyledA = styled.a`
+const StyledA = styled.a<{ isLight: boolean }>`
     ${styles}
-    background-color: ${({ isLight }: { isLight: boolean }) =>
-        isLight ? darkWhite : darkGray};
-    color: ${({ isLight }: { isLight: boolean }) =>
-        isLight ? darkBrown : white};
+    background-color: ${({ isLight }) => (isLight ? darkWhite : darkGray)};
+    color: ${({ isLight }) => (isLight ? black : white)};
     &:hover {
-        background-color: ${({ isLight }: { isLight: boolean }) =>
-            isLight ? white : lightGray};
+        background-color: ${({ isLight }) => (isLight ? white : lightGray)};
     }
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{
+    isLight: boolean;
+    backgroundColor?: string;
+    hoverColor?: string;
+}>`
     ${styles}
     color: ${darkBrown};
-    background-color: ${({ isLight }: { isLight: boolean }) =>
-        isLight ? darkWhite : darkGray};
+    background-color: ${({ isLight, backgroundColor }) =>
+        backgroundColor ? backgroundColor : isLight ? darkWhite : darkGray};
     &:hover {
-        background-color: ${lightGray};
+        background-color: ${({ hoverColor }) => hoverColor || lightGray};
     }
 `;
 
@@ -96,6 +98,8 @@ export const LinkBox: React.FC<LinkBoxProps> = (props) => {
 
 interface ButtonBoxProps extends ButtonHTMLAttributes<HTMLButtonElement>, Box {
     ref?: React.RefObject<HTMLButtonElement>;
+    backgroundColor?: string;
+    hoverColor?: string;
 }
 
 export const ButtonBox: React.FC<ButtonBoxProps> = (props) => {
