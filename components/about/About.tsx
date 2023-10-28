@@ -28,20 +28,20 @@ const StyledDiv = styled.div`
         width: 100%;
         position: absolute;
         left: 0;
-        bottom: 0;
-    }
-    .laptop {
-        width: 110%;
-        transform: translate(3%, 37%);
-    }
-    .mobile {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 9;
-        width: 180px;
-        height: 320px;
-        transform: translate(0, 55%);
+        bottom: -30px;
+        .laptop {
+            width: 120%;
+            transform: translate(3%, 37%);
+        }
+        .mobile {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            z-index: 9;
+            width: 190px;
+            height: auto;
+            transform: translate(0, 55%);
+        }
     }
     @media only screen and (max-width: 1200px) {
         .grid {
