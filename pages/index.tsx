@@ -5,10 +5,11 @@ import MetaTags from '../components/MetaTags';
 import Profiles from '../components/profile/Profiles';
 import About from '../components/about/About';
 import Websites from '../components/websites/Websites';
-import Photography from '../components/photography/Photography';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import { webConfig } from '../utils/webConfig';
+import BusinessIdentity from '../components/photography/BusinessIdentity';
+import OurTeam from '../components/team/OutTeam';
 
 const Home: React.FC = () => {
     useEffect(() => {
@@ -40,8 +41,12 @@ const Home: React.FC = () => {
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="about" />
                 <Profiles />
+                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                <a id="employment" />
+                <BusinessIdentity />
+                <OurTeam />
                 {/* <Services /> */}
-                <Photography />
+                {/* <Photography /> */}
                 {/* <Clients /> */}
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 {/* <a id="employment" />

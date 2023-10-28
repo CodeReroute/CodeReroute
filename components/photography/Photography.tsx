@@ -7,7 +7,6 @@ import {
 } from '../styles/theme';
 import PhotographyText from './PhotographyText';
 import PhotographySlider from './PhotographySlider';
-import BusinessIdentity from './BusinessIdentity';
 
 const StyledDiv = styled.div`
     background-color: ${lightGray};
@@ -33,21 +32,16 @@ const StyledDiv = styled.div`
 `;
 
 const Photography: React.FC = () => (
-    <>
-        <StyledDiv>
-            <ContentStyles padding={100} contentMargin className="content">
-                <div className="grid">
-                    <PhotographyText />
-                    <div className="slider-grid">
-                        <PhotographySlider />
-                    </div>
+    <StyledDiv>
+        <ContentStyles padding={100} contentMargin className="content">
+            <div className="grid">
+                <PhotographyText />
+                <div className="slider-grid">
+                    <PhotographySlider />
                 </div>
-            </ContentStyles>
-        </StyledDiv>
-        {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-        <a id="employment" />
-        <BusinessIdentity />
-    </>
+            </div>
+        </ContentStyles>
+    </StyledDiv>
 );
 
 export default Photography;

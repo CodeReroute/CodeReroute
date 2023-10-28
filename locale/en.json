@@ -78,6 +78,11 @@
         "paragraphOne": "Work in an exciting atmosphere with a team that makes an impact. Fully remote, flexible hours and minimal meetings.",
         "paragraphTwo": "We welcome people of all backgrounds and ages to reach out to us. If you enjoy working with a small and dedicated team, please fill out the form below."
     },
+    "team": {
+        "heading": "MEET OUR TEAM",
+        "paragraphOne": "Work in an exciting atmosphere with a team that makes an impact. Fully remote, flexible hours and minimal meetings.",
+        "paragraphTwo": "We welcome people of all backgrounds and ages to reach out to us. If you enjoy working with a small and dedicated team, please fill out the form below."
+    },
     "labels": {
         "getInTouch": "GET IN TOUCH"
     }

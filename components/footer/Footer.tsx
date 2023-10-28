@@ -19,20 +19,22 @@ const StyledFooter = styled.footer`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: ${white};
     background-image: ${pictureGradient},
         url(${webConfig.basePath}/assets/employment-background.jpeg);
     color: ${white};
     font-size: 16px;
     font-family: ${sanSerifFont};
     letter-spacing: 0.3px;
-    height: 695px;
+    height: 462px;
     display: flex;
     align-items: center;
     .declaration {
-        margin: 50px auto 0 auto;
+        margin: 25px auto 0 auto;
         max-width: 642px;
         text-align: center;
+        p {
+            margin-bottom: 0;
+        }
     }
     .content {
         // padding-bottom: 45px;
