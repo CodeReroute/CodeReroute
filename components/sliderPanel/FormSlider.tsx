@@ -6,13 +6,14 @@ import {
     darkBrown,
     darkWhite,
     largerMobileBreakPoint,
+    lightGray,
     tabletBreakPoint,
     white,
 } from '../styles/theme';
 import FormSubmitButton from './FormSubmitButton';
 
 const StyledDiv = styled.div`
-    background-color: ${darkBrown};
+    background-color: ${lightGray};
     .form-wrapper {
         height: 0;
         overflow: hidden;

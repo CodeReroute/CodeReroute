@@ -38,7 +38,7 @@ const StyledDiv = styled.div`
             left: 0;
             bottom: 0px;
             z-index: 9;
-            width: 220px;
+            width: 200px;
             height: auto;
             transform: translate(0, 55%);
         }
