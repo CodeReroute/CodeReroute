@@ -85,7 +85,7 @@ const Websites: React.FC = () => {
     };
     return (
         <StyledDiv>
-            <ContentStyles padding={100} contentMargin>
+            <ContentStyles padding={147} contentMargin>
                 <div className="equal-grids">
                     <div className="left-grid">
                         <ContentSlideUp>
