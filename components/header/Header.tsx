@@ -98,9 +98,9 @@ const Header: React.FC = () => {
                     <a href="#employment" className="menu-item">
                         <h6>EMPLOYMENT</h6>
                     </a>
+                    <Language className="language-selector" />
                 </div>
             </div>
-            <Language className="language-selector" />
         </StyledDiv>
     );
 };

@@ -28,6 +28,7 @@ const StyledDiv = styled.div`
 interface ContentSlideUpProps {
     rootMargin?: string;
     threshold?: number;
+    className?: string;
     children: React.ReactChildren | React.ReactElement | React.ReactElement[];
 }
 
@@ -35,6 +36,7 @@ export const ContentSlideUp: React.FC<ContentSlideUpProps> = ({
     rootMargin = '0px',
     threshold = 1.0,
     children,
+    className,
 }) => {
     const contentRef = useRef<HTMLDivElement>(null);
     const [mount, setMount] = useState<boolean>(false);
@@ -64,7 +66,7 @@ export const ContentSlideUp: React.FC<ContentSlideUpProps> = ({
     }, [contentRef, rootMargin, threshold]);
 
     return (
-        <StyledDiv ref={contentRef}>
+        <StyledDiv ref={contentRef} className={className}>
             <div className={mount ? 'content-animation' : 'hidden'}>
                 {children}
             </div>

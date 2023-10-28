@@ -91,16 +91,16 @@ const Websites: React.FC = () => {
                         <ContentSlideUp>
                             <Heading>{heading}</Heading>
                         </ContentSlideUp>
-                        <ContentSlideUp>
+                        <ContentSlideUp className="hidden">
                             <p>{contentOne}</p>
                         </ContentSlideUp>
-                        <ContentSlideUp>
+                        <ContentSlideUp className="hidden">
                             <p>{contentTwo}</p>
                         </ContentSlideUp>
-                        <ContentSlideUp>
+                        <ContentSlideUp className="hidden">
                             <p>{contentThree}</p>
                         </ContentSlideUp>
-                        <ContentSlideUp>
+                        <ContentSlideUp className="hidden">
                             <LinkBox
                                 text={getInTouch}
                                 onClick={openCalendly}
@@ -108,7 +108,7 @@ const Websites: React.FC = () => {
                             />
                         </ContentSlideUp>
                     </div>
-                    <SmallText>
+                    <SmallText className="hidden">
                         <div className="details">
                             <div className="equal-grids-right">
                                 <div className="skills">

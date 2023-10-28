@@ -45,8 +45,8 @@ const StyledDiv = styled.div`
     .description {
         text-align: center;
         max-width: 660px;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 25px;
+        margin-bottom: 25px;
         margin-left: auto;
         margin-right: auto;
     }
