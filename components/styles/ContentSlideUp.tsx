@@ -21,7 +21,7 @@ const StyledDiv = styled.div`
         transform: translateY(20px);
     }
     .content-animation {
-        animation: ${slideUpAnimation} 1s ease-in;
+        animation: ${slideUpAnimation} 0.5s ease-in;
     }
 `;
 
