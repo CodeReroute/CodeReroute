@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
     ContentStyles,
-    darkBrown,
     largerMobileBreakPoint,
+    pictureGradient,
     sanSerifFont,
     tabletBreakPoint,
     white,
@@ -13,13 +13,27 @@ import {
 import SocialMediaIcons from '../socialMedia/SocialMediaIcons';
 import Logo from '../../public/assets/logo.png';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
+import { webConfig } from '../../utils/webConfig';
 
 const StyledFooter = styled.footer`
-    background-color: ${darkBrown};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: ${white};
+    background-image: ${pictureGradient},
+        url(${webConfig.basePath}/assets/employment-background.jpeg);
     color: ${white};
     font-size: 16px;
     font-family: ${sanSerifFont};
     letter-spacing: 0.3px;
+    height: 695px;
+    display: flex;
+    align-items: center;
+    .declaration {
+        margin: 50px auto 0 auto;
+        max-width: 642px;
+        text-align: center;
+    }
     .content {
         // padding-bottom: 45px;
     }
@@ -138,6 +152,14 @@ const Footer: React.FC = () => (
                     </div>
                 </div>
             </div>
+            <ContentSlideUp className="declaration">
+                <p>
+                    We respectfully acknowledge that we are located on Treaty 6
+                    territory, a traditional meeting ground and home for many
+                    Indigenous Peoples, including Cree, Saulteaux, Niisitapi
+                    (Blackfoot), Métis, and Nakota Sioux Peoples
+                </p>
+            </ContentSlideUp>
         </ContentStyles>
     </StyledFooter>
 );

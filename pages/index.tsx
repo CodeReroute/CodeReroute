@@ -48,7 +48,7 @@ const Home: React.FC = () => {
                 {/* <a id="employment" />
                 <Employment /> */}
                 {/* <Testimonials /> */}
-                <Impact />
+                {/* <Impact /> */}
                 <Footer />
                 {/* <Navigation /> */}
                 <Header />
