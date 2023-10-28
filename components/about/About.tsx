@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
         width: 100%;
         position: absolute;
         left: 0;
-        bottom: -30px;
+        bottom: -40px;
         .laptop {
             width: 120%;
             transform: translate(3%, 37%);
@@ -36,9 +36,9 @@ const StyledDiv = styled.div`
         .mobile {
             position: absolute;
             left: 0;
-            bottom: -10px;
+            bottom: 0px;
             z-index: 9;
-            width: 190px;
+            width: 220px;
             height: auto;
             transform: translate(0, 55%);
         }
@@ -57,6 +57,8 @@ const StyledDiv = styled.div`
                 transform: translate(0, 11%);
             }
             .mobile {
+                width: 180px;
+                height: 320px;
                 width: 40%;
                 bottom: -80%;
                 left: -3%;
@@ -66,6 +68,7 @@ const StyledDiv = styled.div`
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
         .laptop-container {
+            bottom: 0;
             max-height: 230px;
             .laptop {
                 position: inherit;

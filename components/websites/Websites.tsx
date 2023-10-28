@@ -8,12 +8,14 @@ import {
     SmallText,
     largerBreakPoint,
     largerMobileBreakPoint,
+    darkWhite,
 } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import SkillSet from '../about/SkillSet';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 
 const StyledDiv = styled.div`
+    background-color: ${darkWhite};
     .equal-grids,
     .equal-grids-right {
         display: grid;

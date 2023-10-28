@@ -56,9 +56,6 @@ const StyledA = styled.a`
     ${styles}
     background-color: ${({ isLight }: { isLight: boolean }) =>
         isLight ? darkWhite : darkGray};
-    box-shadow: 3px 3px 0px
-        ${({ isLight }: { isLight: boolean }) =>
-            isLight ? darkGray : darkWhite};
     color: ${({ isLight }: { isLight: boolean }) =>
         isLight ? darkBrown : white};
     &:hover {
@@ -72,9 +69,6 @@ export const StyledButton = styled.button`
     color: ${darkBrown};
     background-color: ${({ isLight }: { isLight: boolean }) =>
         isLight ? darkWhite : darkGray};
-    box-shadow: 3px 3px 0px
-        ${({ isLight }: { isLight: boolean }) =>
-            isLight ? darkGray : darkWhite};
     &:hover {
         background-color: ${lightGray};
     }

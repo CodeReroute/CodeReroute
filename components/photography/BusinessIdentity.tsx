@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
-import { ContentStyles, Heading, photographyBreakPoint } from '../styles/theme';
+import {
+    ContentStyles,
+    Heading,
+    darkWhite,
+    photographyBreakPoint,
+} from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import FormButton from '../sliderPanel/FormButton';
 import EmploymentFormFields from '../employment/EmploymentFormFields';
 
 const StyledDiv = styled.div`
+    background-color: ${darkWhite};
     padding-bottom: 100px;
     .content-wrapper {
         padding-bottom: 0;

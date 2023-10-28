@@ -109,7 +109,7 @@ const Profiles: React.FC = () => {
                         <div className="credit-hafiz">
                             <SmallText className="name">Hafiz Temuri</SmallText>
                             <SmallText bold className="title">
-                                Team Leader
+                                Team Lead
                             </SmallText>
                             <SmallText bold className="role">
                                 Software Engineer
