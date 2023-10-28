@@ -18,8 +18,6 @@ const StyledDiv = styled.div`
     right: 0;
     top: 12px;
     background-color: ${darkWhite};
-    border-left: 2px solid ${darkGray};
-    border-bottom: 2px solid ${darkGray};
     padding: 8px 16px;
     display: flex;
     gap: 8px;

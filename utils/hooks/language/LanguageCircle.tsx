@@ -12,8 +12,8 @@ import { LanguageContext } from './LanguageProvider';
 
 const StyledDiv = styled.div`
     font-family: ${sanSerifFont};
-    ${buttonBoxShadow};
     border: 1px solid ${darkGray};
+    border-radius: 36px;
     font-size: 14px;
     color: ${darkBrown};
     margin-right: 8px;
