@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { fadeInAnimation } from './animations';
 
 const slideUpAnimation = keyframes`
     0% {
@@ -14,14 +15,16 @@ const slideUpAnimation = keyframes`
     }
 `;
 
-const StyledDiv = styled.div`
+type AnimationTypes = typeof fadeInAnimation | typeof slideUpAnimation;
+
+const StyledDiv = styled.div<{ animationType: AnimationTypes }>`
     .hidden {
         opacity: 0;
         visibility: hidden;
         transform: translateY(20px);
     }
     .content-animation {
-        animation: ${slideUpAnimation} 0.5s ease-in;
+        animation: ${({ animationType }) => animationType} 0.5s ease-in;
     }
 `;
 
@@ -29,12 +32,14 @@ interface ContentSlideUpProps {
     rootMargin?: string;
     threshold?: number;
     className?: string;
+    animationType?: AnimationTypes;
     children: React.ReactChildren | React.ReactElement | React.ReactElement[];
 }
 
 export const ContentSlideUp: React.FC<ContentSlideUpProps> = ({
     rootMargin = '0px',
     threshold = 1.0,
+    animationType = fadeInAnimation,
     children,
     className,
 }) => {
@@ -66,7 +71,11 @@ export const ContentSlideUp: React.FC<ContentSlideUpProps> = ({
     }, [contentRef, rootMargin, threshold]);
 
     return (
-        <StyledDiv ref={contentRef} className={className}>
+        <StyledDiv
+            animationType={animationType}
+            ref={contentRef}
+            className={className}
+        >
             <div className={mount ? 'content-animation' : 'hidden'}>
                 {children}
             </div>
