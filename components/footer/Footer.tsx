@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
     ContentStyles,
-    darkGray,
+    black,
     largerMobileBreakPoint,
     lightGray,
     sanSerifFont,
@@ -15,7 +15,7 @@ import Logo from '../../public/assets/logo-dark.png';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 
 const StyledFooter = styled.footer`
-    border-top: 1px solid #ccc;
+    border-top: 1px solid ${black};
     background-color: ${lightGray};
     font-size: 16px;
     font-family: ${sanSerifFont};
@@ -53,8 +53,11 @@ const StyledFooter = styled.footer`
         }
         .social-icons {
             margin-bottom: 5px;
-            svg {
-                fill: ${darkGray};
+            a {
+                background-color: ${black};
+                svg {
+                    fill: ${lightGray};
+                }
             }
         }
     }
