@@ -33,9 +33,6 @@ interface TeamMemberRenderProps {
 
 const StyledDiv = styled(ContentStyles)`
     padding-top: 0;
-    padding-bottom: 80px;
-    padding-left: 80px;
-    padding-right: 80px;
     .icon-wrapper {
         margin-top: 8px;
         cursor: pointer;
@@ -68,7 +65,7 @@ const TeamMemberRender: React.FC<TeamMemberRenderProps> = ({ memberId }) => {
     }, [t, memberId]);
 
     return (
-        <StyledDiv>
+        <StyledDiv padding={80}>
             <ContentSlideUp>
                 <Heading>{name}</Heading>
                 <SmallText>{role}</SmallText>

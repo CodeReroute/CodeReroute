@@ -13,6 +13,7 @@ import {
 } from '../styles/theme';
 import TeamMemberRender, { MemberId } from './TeamMemberRender';
 import { getElementHeight } from '../../utils/elementOperations';
+import { elementIsVisibleInViewport } from '../sliderPanel/utils';
 
 const scrollOptions: ScrollIntoViewOptions = {
     behavior: 'auto',
@@ -62,7 +63,8 @@ const TeamMember = forwardRef<TeamMemberForwardProps, TeamMemberProps>(
                 formElement.setAttribute('style', 'height: 0;');
             } else {
                 setOpen(true);
-                formElement.scrollIntoView(scrollOptions);
+                !elementIsVisibleInViewport(formElement) &&
+                    formElement.scrollIntoView(scrollOptions);
                 const height = getElementHeight(
                     formElement,
                     sectionRef.current,

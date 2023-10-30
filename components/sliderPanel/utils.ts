@@ -1,6 +1,11 @@
 import { getElementHeight } from '../../utils/elementOperations';
 import { logError } from '../../utils/logging';
 
+export const elementIsVisibleInViewport = (element: HTMLElement) => {
+    const { top } = element.getBoundingClientRect();
+    return top <= window.innerHeight - 100;
+};
+
 interface SliderOnClickProps {
     sectionRef: React.RefObject<HTMLDivElement>;
     toggleButton?: {
