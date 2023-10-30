@@ -7,9 +7,9 @@ import About from '../components/about/About';
 import Websites from '../components/websites/Websites';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
-import { webConfig } from '../utils/webConfig';
 import BusinessIdentity from '../components/photography/BusinessIdentity';
 import OurTeam from '../components/team/OurTeam';
+import { webConfig } from '../utils/webConfig';
 
 const Home: React.FC = () => {
     useEffect(() => {
