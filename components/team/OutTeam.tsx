@@ -56,10 +56,18 @@ const OurTeam: React.FC = () => {
     const ref = useRef<TeamMemberForwardProps>(null);
     const memberSectionRef = useRef<HTMLDivElement>(null);
     const t = useTranslate();
-    const { heading, paragraphOne, paragraphTwo } = {
+    const { heading, paragraphOne, paragraphTwo, usman, nabah } = {
         heading: t('team.heading'),
         paragraphOne: t('team.paragraphOne'),
         paragraphTwo: t('team.paragraphTwo'),
+        usman: {
+            name: t('teamMembers.usman.name'),
+            role: t('teamMembers.usman.role'),
+        },
+        nabah: {
+            name: t('teamMembers.nabah.name'),
+            role: t('teamMembers.nabah.role'),
+        },
     };
 
     const onClick = (id: MemberId) => {
@@ -99,8 +107,8 @@ const OurTeam: React.FC = () => {
                                 <ContentSlideUp>
                                     <MemberTitle
                                         id="usman"
-                                        name="Usman Ahmed"
-                                        role="Software Engineer"
+                                        name={usman.name}
+                                        role={usman.role}
                                         onClick={() => null}
                                         className="member-details"
                                     />
@@ -118,8 +126,8 @@ const OurTeam: React.FC = () => {
                                 <ContentSlideUp>
                                     <MemberTitle
                                         id="nabah"
-                                        name="Nabah Sheikh"
-                                        role="Software Engineer"
+                                        name={nabah.name}
+                                        role={nabah.role}
                                         onClick={() => null}
                                         className="member-details"
                                     />
