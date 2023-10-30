@@ -1,7 +1,7 @@
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { ContentStyles, Heading, SanText, SmallText } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
-import { useMemo } from 'react';
 import {
     SocialMediaIconSlideUp,
     StyledSocialMediaDiv,
@@ -87,7 +87,11 @@ const TeamMemberRender: React.FC<TeamMemberRenderProps> = ({ memberId }) => {
             </ContentSlideUp>
             <div className="bio-description-wrapper">
                 {bio.map((b, i) => (
-                    <ContentSlideUp className="bio-description" key={i}>
+                    <ContentSlideUp
+                        className="bio-description"
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={`${i}-${memberId}`}
+                    >
                         <SanText>{b}</SanText>
                     </ContentSlideUp>
                 ))}

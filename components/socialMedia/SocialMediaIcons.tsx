@@ -68,8 +68,8 @@ export const StyledSocialMediaDiv = styled.div<StyledDivProps>`
     }
 `;
 
-export const socialMediaAnimationTime: number = 0.3;
-export const socialMediaAnimationDelayTime: number = 0.2;
+export const socialMediaAnimationTime = 0.3;
+export const socialMediaAnimationDelayTime = 0.2;
 
 interface SocialMediaIconsProps {
     size: number;

@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { lightGray, ContentStyles } from '../styles/theme';
-import {
+import React, {
     forwardRef,
     useEffect,
     useImperativeHandle,
     useRef,
     useState,
 } from 'react';
+import styled from 'styled-components';
+import { lightGray, ContentStyles } from '../styles/theme';
 import TeamMemberRender, { MemberId } from './TeamMemberRender';
 import { getElementHeight } from '../../utils/elementOperations';
 
@@ -35,7 +35,7 @@ const StyledDiv = styled.div`
 `;
 
 const TeamMember = forwardRef<TeamMemberForwardProps, TeamMemberProps>(
-    ({ id }, forwardRef) => {
+    ({ id }, forwardedRef) => {
         const [open, setOpen] = useState<boolean>(false);
         const [memberId, setMemberId] =
             useState<MemberId | undefined>(undefined);
@@ -59,11 +59,12 @@ const TeamMember = forwardRef<TeamMemberForwardProps, TeamMemberProps>(
                 );
                 formElement.setAttribute('style', `height: ${height}px;`);
             }
+            // eslint-disable-next-line  react-hooks/exhaustive-deps
         }, [memberId]);
 
-        useImperativeHandle(forwardRef, () => ({
-            onClick: (id) =>
-                memberId === id ? setMemberId(undefined) : setMemberId(id),
+        useImperativeHandle(forwardedRef, () => ({
+            onClick: (i) =>
+                memberId === i ? setMemberId(undefined) : setMemberId(i),
         }));
 
         return (
@@ -77,5 +78,7 @@ const TeamMember = forwardRef<TeamMemberForwardProps, TeamMemberProps>(
         );
     },
 );
+
+TeamMember.displayName = 'TeamMember';
 
 export default TeamMember;

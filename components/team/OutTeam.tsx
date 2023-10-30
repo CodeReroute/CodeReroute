@@ -96,7 +96,10 @@ const OurTeam: React.FC = () => {
                         </div>
                         <div ref={memberSectionRef} className="members">
                             <div
+                                role="button"
+                                tabIndex={0}
                                 onClick={() => onClick('usman')}
+                                onKeyDown={() => onClick('usman')}
                                 className="member"
                             >
                                 <ContentSlideUp>
@@ -108,14 +111,17 @@ const OurTeam: React.FC = () => {
                                     <MemberTitle
                                         id="usman"
                                         name={usman.name}
-                                        role={usman.role}
+                                        memberRole={usman.role}
                                         onClick={() => null}
                                         className="member-details"
                                     />
                                 </ContentSlideUp>
                             </div>
                             <div
+                                role="button"
+                                tabIndex={0}
                                 onClick={() => onClick('nabah')}
+                                onKeyDown={() => onClick('nabah')}
                                 className="member"
                             >
                                 <ContentSlideUp>
@@ -127,7 +133,7 @@ const OurTeam: React.FC = () => {
                                     <MemberTitle
                                         id="nabah"
                                         name={nabah.name}
-                                        role={nabah.role}
+                                        memberRole={nabah.role}
                                         onClick={() => null}
                                         className="member-details"
                                     />

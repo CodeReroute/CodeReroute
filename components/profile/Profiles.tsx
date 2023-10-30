@@ -93,7 +93,7 @@ const Profiles: React.FC = () => {
                                     </span>
                                 </>
                             }
-                            role="UI/UX Design"
+                            memberRole="UI/UX Design"
                             className="credit-danielle"
                         />
                     </FlexCenteredRow>
@@ -109,7 +109,7 @@ const Profiles: React.FC = () => {
                         <MemberTitle
                             id="hafiz"
                             name="Hafiz Temuri"
-                            role="Software Engineer"
+                            memberRole="Software Engineer"
                             title="Team Lead"
                             className="credit-hafiz"
                         />

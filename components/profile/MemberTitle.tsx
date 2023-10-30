@@ -1,3 +1,4 @@
+import React from 'react';
 import { CircledButton } from '../../utils/hooks/language/LanguageCircle';
 import { SmallText } from '../styles/theme';
 
@@ -5,7 +6,7 @@ interface MemberTitleProps<T = string> {
     id: T;
     name: string;
     title?: JSX.Element | string;
-    role: string;
+    memberRole: string;
     className?: string;
     onClick?: (id: T) => unknown;
 }
@@ -14,7 +15,7 @@ const MemberTitle: React.FC<MemberTitleProps> = ({
     id,
     name,
     title,
-    role,
+    memberRole,
     onClick,
     className,
 }) => {
@@ -30,7 +31,7 @@ const MemberTitle: React.FC<MemberTitleProps> = ({
                 </SmallText>
             )}
             <SmallText bold className="role">
-                {role}
+                {memberRole}
             </SmallText>
             {onClick && (
                 <div className="bio-button-wrapper">

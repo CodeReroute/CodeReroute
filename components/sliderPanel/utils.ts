@@ -35,6 +35,7 @@ export const sliderOnClick = ({
         setOpen(false);
         formElement.setAttribute('style', 'height: 0;');
         if (toggleButton && toggleButton.toggleButtonRef.current) {
+            // eslint-disable-next-line no-param-reassign
             toggleButton.toggleButtonRef.current.innerHTML =
                 toggleButton.buttonText;
         }
