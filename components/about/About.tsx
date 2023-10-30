@@ -30,7 +30,7 @@ const StyledDiv = styled.div`
         left: 0;
         bottom: -40px;
         .laptop {
-            width: 120%;
+            width: 110%;
             transform: translate(3%, 37%);
         }
         .mobile {
@@ -38,7 +38,7 @@ const StyledDiv = styled.div`
             left: 0;
             bottom: 0px;
             z-index: 9;
-            width: 200px;
+            width: 180px;
             height: auto;
             transform: translate(0, 55%);
         }
