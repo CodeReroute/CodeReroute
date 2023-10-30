@@ -68,8 +68,8 @@ const TeamMemberRender: React.FC<TeamMemberRenderProps> = ({ memberId }) => {
     }, [t, memberId]);
 
     return (
-        <ContentSlideUp>
-            <StyledDiv>
+        <StyledDiv>
+            <ContentSlideUp>
                 <Heading>{name}</Heading>
                 <SmallText>{role}</SmallText>
                 <StyledSocialMediaDiv padding={25} size={13}>
@@ -90,19 +90,19 @@ const TeamMemberRender: React.FC<TeamMemberRenderProps> = ({ memberId }) => {
                         </SocialMediaIconSlideUp>
                     )}
                 </StyledSocialMediaDiv>
-                <div className="bio-description-wrapper">
-                    {bio.map((b, i) => (
-                        <div
-                            className="bio-description"
-                            // eslint-disable-next-line react/no-array-index-key
-                            key={`${i}-${memberId}`}
-                        >
-                            {b}
-                        </div>
-                    ))}
-                </div>
-            </StyledDiv>
-        </ContentSlideUp>
+            </ContentSlideUp>
+            <div className="bio-description-wrapper">
+                {bio.map((b, i) => (
+                    <div
+                        className="bio-description"
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={`${i}-${memberId}`}
+                    >
+                        {b}
+                    </div>
+                ))}
+            </div>
+        </StyledDiv>
     );
 };
 

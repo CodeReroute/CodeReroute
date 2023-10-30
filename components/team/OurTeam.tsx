@@ -77,70 +77,64 @@ const OurTeam: React.FC = () => {
     return (
         <>
             <StyledDiv>
-                <ContentStyles
-                    padding={100}
-                    contentMargin
-                    className="content-wrapper"
-                >
-                    <ContentStyles padding={undefined} className="content">
-                        <div>
+                <ContentStyles padding={100} contentMargin className="content">
+                    <div>
+                        <ContentSlideUp>
+                            <Heading>{heading}</Heading>
+                        </ContentSlideUp>
+                        <ContentSlideUp>
+                            <p>{paragraphOne}</p>
+                        </ContentSlideUp>
+                        <ContentSlideUp>
+                            <p>{paragraphTwo}</p>
+                        </ContentSlideUp>
+                    </div>
+                    <div ref={memberSectionRef} className="members">
+                        <div
+                            role="button"
+                            tabIndex={0}
+                            onClick={() => onClick('usman')}
+                            onKeyDown={() => onClick('usman')}
+                            className="member"
+                        >
                             <ContentSlideUp>
-                                <Heading>{heading}</Heading>
+                                <Avatar
+                                    image={`${webConfig.basePath}/assets/team/usman.png`}
+                                />
                             </ContentSlideUp>
                             <ContentSlideUp>
-                                <p>{paragraphOne}</p>
-                            </ContentSlideUp>
-                            <ContentSlideUp>
-                                <p>{paragraphTwo}</p>
+                                <MemberTitle
+                                    id="usman"
+                                    name={usman.name}
+                                    memberRole={usman.role}
+                                    onClick={() => null}
+                                    className="member-details"
+                                />
                             </ContentSlideUp>
                         </div>
-                        <div ref={memberSectionRef} className="members">
-                            <div
-                                role="button"
-                                tabIndex={0}
-                                onClick={() => onClick('usman')}
-                                onKeyDown={() => onClick('usman')}
-                                className="member"
-                            >
-                                <ContentSlideUp>
-                                    <Avatar
-                                        image={`${webConfig.basePath}/assets/team/usman.png`}
-                                    />
-                                </ContentSlideUp>
-                                <ContentSlideUp>
-                                    <MemberTitle
-                                        id="usman"
-                                        name={usman.name}
-                                        memberRole={usman.role}
-                                        onClick={() => null}
-                                        className="member-details"
-                                    />
-                                </ContentSlideUp>
-                            </div>
-                            <div
-                                role="button"
-                                tabIndex={0}
-                                onClick={() => onClick('nabah')}
-                                onKeyDown={() => onClick('nabah')}
-                                className="member"
-                            >
-                                <ContentSlideUp>
-                                    <Avatar
-                                        image={`${webConfig.basePath}/assets/team/nabah.png`}
-                                    />
-                                </ContentSlideUp>
-                                <ContentSlideUp>
-                                    <MemberTitle
-                                        id="nabah"
-                                        name={nabah.name}
-                                        memberRole={nabah.role}
-                                        onClick={() => null}
-                                        className="member-details"
-                                    />
-                                </ContentSlideUp>
-                            </div>
+                        <div
+                            role="button"
+                            tabIndex={0}
+                            onClick={() => onClick('nabah')}
+                            onKeyDown={() => onClick('nabah')}
+                            className="member"
+                        >
+                            <ContentSlideUp>
+                                <Avatar
+                                    image={`${webConfig.basePath}/assets/team/nabah.png`}
+                                />
+                            </ContentSlideUp>
+                            <ContentSlideUp>
+                                <MemberTitle
+                                    id="nabah"
+                                    name={nabah.name}
+                                    memberRole={nabah.role}
+                                    onClick={() => null}
+                                    className="member-details"
+                                />
+                            </ContentSlideUp>
                         </div>
-                    </ContentStyles>
+                    </div>
                 </ContentStyles>
             </StyledDiv>
             <TeamMember

@@ -6,7 +6,11 @@ import React, {
     useState,
 } from 'react';
 import styled from 'styled-components';
-import { lightGray, ContentStyles } from '../styles/theme';
+import {
+    lightGray,
+    ContentStyles,
+    largerMobileBreakPoint,
+} from '../styles/theme';
 import TeamMemberRender, { MemberId } from './TeamMemberRender';
 import { getElementHeight } from '../../utils/elementOperations';
 
@@ -31,6 +35,12 @@ const StyledDiv = styled.div`
         height: 0;
         overflow: hidden;
         transition: all 0.5s ease-in-out;
+    }
+    @media only screen and (max-width: ${largerMobileBreakPoint}px) {
+        .member-wrapper {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 `;
 
