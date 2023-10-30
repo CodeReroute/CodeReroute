@@ -10,6 +10,7 @@ interface AvatarProps {
     image: string;
     marginTop?: string;
     marginBottom?: string;
+    className?: string;
 }
 
 const StyledDiv = styled.div`
@@ -33,11 +34,17 @@ const StyledDiv = styled.div`
     }
 `;
 
-const Avatar: React.FC<AvatarProps> = ({ image, marginTop, marginBottom }) => (
+const Avatar: React.FC<AvatarProps> = ({
+    image,
+    marginTop,
+    marginBottom,
+    className,
+}) => (
     <StyledDiv
         marginTop={marginTop}
         marginBottom={marginBottom}
         image={image}
+        className={className}
     />
 );
 

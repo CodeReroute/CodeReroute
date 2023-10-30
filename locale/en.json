@@ -79,9 +79,27 @@
         "paragraphTwo": "We welcome people of all backgrounds and ages to reach out to us. If you enjoy working with a small and dedicated team, please fill out the form below."
     },
     "team": {
-        "heading": "MEET OUR TEAM",
+        "heading": "OUR TEAM",
         "paragraphOne": "Work in an exciting atmosphere with a team that makes an impact. Fully remote, flexible hours and minimal meetings.",
         "paragraphTwo": "We welcome people of all backgrounds and ages to reach out to us. If you enjoy working with a small and dedicated team, please fill out the form below."
+    },
+    "teamMembers": {
+        "usman": {
+            "linkedIn": "https://www.linkedin.com/in/usman-ahmed-2001/",
+            "name": "Usman Ahmed",
+            "role": "Software Engineer",
+            "bio": [
+                "Usman is a skilled Software Engineer with a passion for tech and innovation. His main experience includes React.js for frontend development and Nest.js for backend work. His proficiency in these technologies has allowed him to create robust, user-friendly web applications. Additionally, he has a keen interested in gaming, e-sports and optimizing PC components."
+            ]
+        },
+        "nabah": {
+            "linkedIn": "https://www.linkedin.com/in/nabah-sheikh-/",
+            "name": "Nabah Sheikh",
+            "role": "Software Engineer",
+            "bio": [
+                "As a recent computer science graduate, Nabah is a brilliant Software Engineer with a passion for artificial intelligence (AI) and machine learning. Her skills include Amazon Web Services (AWS), TypeScript, NestJS, Postman API and API testing. Additionally, she is an active member in the tech community of Karachi, Pakistan earning the prestigious ‘Honorable Mention’ at the UN World Innovation Day Hackathon."
+            ]
+        }
     },
     "labels": {
         "getInTouch": "GET IN TOUCH"

@@ -10,7 +10,7 @@ import {
 } from '../../../components/styles/theme';
 import { LanguageContext } from './LanguageProvider';
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<{ isOpen?: boolean }>`
     font-family: ${sanSerifFont};
     border: 1px solid ${darkGray};
     border-radius: 36px;
@@ -18,8 +18,7 @@ const StyledDiv = styled.div`
     color: ${darkBrown};
     margin-right: 8px;
     margin-left: 8px;
-    background-color: ${({ isOpen }: { isOpen: boolean }) =>
-        isOpen ? white : darkWhite};
+    background-color: ${({ isOpen }) => (isOpen ? white : darkWhite)};
     cursor: pointer;
     width: 78px;
     height: 35px;
@@ -32,12 +31,19 @@ const StyledDiv = styled.div`
     -ms-user-select: none;
 `;
 
-const LanguageCircle: React.FC<{
-    isOpen: boolean;
+interface CircledButtonProps {
+    text: string;
+    isOpen?: boolean;
     className?: string;
     onClick: () => unknown;
-}> = ({ isOpen, onClick, className }) => {
-    const { language } = useContext(LanguageContext);
+}
+
+export const CircledButton: React.FC<CircledButtonProps> = ({
+    text,
+    className,
+    isOpen,
+    onClick,
+}) => {
     return (
         <StyledDiv
             className={className}
@@ -45,8 +51,24 @@ const LanguageCircle: React.FC<{
             isOpen={isOpen}
             unselectable="on"
         >
-            {isOpen ? 'X' : language.toUpperCase()}
+            {text}
         </StyledDiv>
+    );
+};
+
+const LanguageCircle: React.FC<Omit<CircledButtonProps, 'text'>> = ({
+    isOpen,
+    onClick,
+    className,
+}) => {
+    const { language } = useContext(LanguageContext);
+    return (
+        <CircledButton
+            className={className}
+            onClick={onClick}
+            isOpen={isOpen}
+            text={isOpen ? 'X' : language.toUpperCase()}
+        />
     );
 };
 

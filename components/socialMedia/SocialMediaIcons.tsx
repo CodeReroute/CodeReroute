@@ -23,7 +23,7 @@ const sideInAnimation = keyframes`
     }
 `;
 
-const SlideUp = styled.div<FadeInAnimationProps>`
+export const SocialMediaIconSlideUp = styled.div<FadeInAnimationProps>`
     animation-fill-mode: forwards;
     animation: ${sideInAnimation} ${({ time }) => time}s ease-in;
     animation-delay: ${({ delay }) => delay}s;
@@ -34,14 +34,14 @@ interface StyledDivProps {
     padding: number;
 }
 
-const StyledDiv = styled.div`
+export const StyledSocialMediaDiv = styled.div<StyledDivProps>`
     .icon:hover {
         background-color: #e7e7e7;
         transform: translateY(-10%);
     }
     .icon {
-        width: ${({ padding }: StyledDivProps) => padding}px;
-        height: ${({ padding }: StyledDivProps) => padding}px;
+        width: ${({ padding }) => padding}px;
+        height: ${({ padding }) => padding}px;
         border-radius: 50%;
         background-color: ${darkWhite};
         background-origin: content-box;
@@ -51,8 +51,8 @@ const StyledDiv = styled.div`
         transition: all 0.3s ease-in-out;
     }
     .icon svg {
-        width: ${({ size }: StyledDivProps) => size}px;
-        height: ${({ size }: StyledDivProps) => size}px;
+        width: ${({ size }) => size}px;
+        height: ${({ size }) => size}px;
         fill: #5b5b5b;
     }
     .icon-wrapper {
@@ -68,8 +68,8 @@ const StyledDiv = styled.div`
     }
 `;
 
-const animationTime = 0.3;
-const animationDelayTime = 0.2;
+export const socialMediaAnimationTime: number = 0.3;
+export const socialMediaAnimationDelayTime: number = 0.2;
 
 interface SocialMediaIconsProps {
     size: number;
@@ -82,8 +82,11 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
     padding,
     className,
 }) => (
-    <StyledDiv className={className} padding={padding} size={size}>
-        <SlideUp className="icon-wrapper" time={animationTime}>
+    <StyledSocialMediaDiv className={className} padding={padding} size={size}>
+        <SocialMediaIconSlideUp
+            className="icon-wrapper"
+            time={socialMediaAnimationTime}
+        >
             <a
                 href="https://www.instagram.com/code_reroute/"
                 target="_blank"
@@ -92,11 +95,11 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
             >
                 {InstagramIcon}
             </a>
-        </SlideUp>
-        <SlideUp
+        </SocialMediaIconSlideUp>
+        <SocialMediaIconSlideUp
             className="icon-wrapper"
-            time={animationTime}
-            delay={animationDelayTime * 1}
+            time={socialMediaAnimationTime}
+            delay={socialMediaAnimationDelayTime * 1}
         >
             <a
                 href="https://www.facebook.com/codereroute"
@@ -106,11 +109,11 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
             >
                 {FacebookIcon}
             </a>
-        </SlideUp>
-        <SlideUp
+        </SocialMediaIconSlideUp>
+        <SocialMediaIconSlideUp
             className="icon-wrapper"
-            time={animationTime}
-            delay={animationDelayTime * 2}
+            time={socialMediaAnimationTime}
+            delay={socialMediaAnimationDelayTime * 2}
         >
             <a
                 href="https://www.linkedin.com/in/danielle-dufour/"
@@ -120,7 +123,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
             >
                 {LinkedInIcon}
             </a>
-        </SlideUp>
+        </SocialMediaIconSlideUp>
         {/* <SlideUp
             className="icon-wrapper"
             time={animationTime}
@@ -163,7 +166,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
                 {SpotifyIcon}
             </a>
         </SlideUp> */}
-    </StyledDiv>
+    </StyledSocialMediaDiv>
 );
 
 export default SocialMediaIcons;

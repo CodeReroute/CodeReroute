@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { getElementHeight } from '../../utils/elementOperations';
 import { trackEvent } from '../../utils/googleAnalytics';
-import { logError } from '../../utils/logging';
 import { StyledButton } from '../shared/ButtonBox';
 import { lightGray } from '../styles/theme';
+import { sliderOnClick } from './utils';
 
 interface FormButtonProps {
     name: string;
@@ -30,25 +29,15 @@ const FormButton: React.FC<FormButtonProps> = ({
             label: name,
             value: 1,
         });
-        const formElement = formSectionRef.current;
-        if (!sectionRef.current || !formElement || !toggleButton.current) {
-            logError(
-                `did not work' ${sectionRef.current}, ${formElement}, ${toggleButton.current},`,
-            );
-            return;
-        }
-        if (formElement.offsetHeight === 0) {
-            const height = getElementHeight(formElement, sectionRef.current);
-            formElement.setAttribute('style', `height: ${height}px;`);
-            setOpen(true);
-            setTimeout(() => {
-                formElement.querySelector('input')?.focus();
-            }, 500);
-        } else {
-            formElement.setAttribute('style', 'height: 0;');
-            toggleButton.current.innerHTML = buttonText;
-            setOpen(false);
-        }
+        sliderOnClick({
+            formSectionRef,
+            sectionRef,
+            setOpen,
+            toggleButton: {
+                toggleButtonRef: toggleButton,
+                buttonText,
+            },
+        });
     }, [sectionRef, formSectionRef, toggleButton, buttonText, name]);
     return (
         <StyledButton

@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
         transition: all 0.5s ease-in-out;
     }
     form {
-        padding: 80px 50px;
+        padding: 80px 50px 0 50px;
     }
     .button {
         margin-top: 0;

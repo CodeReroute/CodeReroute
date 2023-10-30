@@ -5,7 +5,6 @@ import {
     white,
     ContentStyles,
     FlexCenteredRow,
-    SmallText,
     textShadow,
     SanText,
     largerMobileBreakPoint,
@@ -15,6 +14,7 @@ import { webConfig } from '../../utils/webConfig';
 import Avatar from './Avatar';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
+import MemberTitle from './MemberTitle';
 
 const StyledDiv = styled.div`
     background-image: ${videoGradient},
@@ -81,21 +81,21 @@ const Profiles: React.FC = () => {
                             image={`${webConfig.basePath}/assets/danielle.jpeg`}
                             marginTop="-47px"
                         />
-                        <div className="credit-danielle">
-                            <SmallText className="name">
-                                Danielle Dufour
-                            </SmallText>
-                            <SmallText bold className="title">
-                                Founder
-                                <span className="hide-on-mobile">
-                                    {' '}
-                                    of Code Reroute
-                                </span>
-                            </SmallText>
-                            <SmallText bold className="role">
-                                UI/UX Design
-                            </SmallText>
-                        </div>
+                        <MemberTitle
+                            id="danielle"
+                            name="Danielle Dufour"
+                            title={
+                                <>
+                                    Founder
+                                    <span className="hide-on-mobile">
+                                        {' '}
+                                        of Code Reroute
+                                    </span>
+                                </>
+                            }
+                            role="UI/UX Design"
+                            className="credit-danielle"
+                        />
                     </FlexCenteredRow>
                 </ContentSlideUp>
                 <ContentSlideUp>
@@ -106,15 +106,13 @@ const Profiles: React.FC = () => {
                 </ContentSlideUp>
                 <ContentSlideUp>
                     <FlexCenteredRow className="hafiz">
-                        <div className="credit-hafiz">
-                            <SmallText className="name">Hafiz Temuri</SmallText>
-                            <SmallText bold className="title">
-                                Team Lead
-                            </SmallText>
-                            <SmallText bold className="role">
-                                Software Engineer
-                            </SmallText>
-                        </div>
+                        <MemberTitle
+                            id="hafiz"
+                            name="Hafiz Temuri"
+                            role="Software Engineer"
+                            title="Team Lead"
+                            className="credit-hafiz"
+                        />
                         <Avatar
                             image={`${webConfig.basePath}/assets/hafiz.png`}
                             marginBottom="-47px"
