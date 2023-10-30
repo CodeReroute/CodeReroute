@@ -4,24 +4,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
     ContentStyles,
+    darkGray,
     largerMobileBreakPoint,
-    pictureGradient,
+    lightGray,
     sanSerifFont,
     tabletBreakPoint,
-    white,
 } from '../styles/theme';
 import SocialMediaIcons from '../socialMedia/SocialMediaIcons';
-import Logo from '../../public/assets/logo.png';
+import Logo from '../../public/assets/logo-dark.png';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
-import { webConfig } from '../../utils/webConfig';
 
 const StyledFooter = styled.footer`
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: ${pictureGradient},
-        url(${webConfig.basePath}/assets/employment-background.jpeg);
-    color: ${white};
+    border-top: 1px solid #ccc;
+    background-color: ${lightGray};
     font-size: 16px;
     font-family: ${sanSerifFont};
     letter-spacing: 0.3px;
@@ -29,9 +24,9 @@ const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     .declaration {
-        margin: 25px auto 0 auto;
         max-width: 642px;
         text-align: center;
+        margin: 25px auto 0 auto;
         p {
             margin-bottom: 0;
         }
@@ -56,8 +51,11 @@ const StyledFooter = styled.footer`
             display: flex;
             justify-content: center;
         }
-        .code-icons {
+        .social-icons {
             margin-bottom: 5px;
+            svg {
+                fill: ${darkGray};
+            }
         }
     }
     @media only screen and (max-width: ${tabletBreakPoint}px) {
@@ -89,7 +87,7 @@ const Footer: React.FC = () => (
             <div className="grid">
                 <div className="links centering">
                     <div>
-                        <ContentSlideUp>
+                        {/* <ContentSlideUp>
                             <a
                                 rel="nofollow noreferrer"
                                 target="_blank"
@@ -97,7 +95,7 @@ const Footer: React.FC = () => (
                             >
                                 hype
                             </a>
-                        </ContentSlideUp>
+                        </ContentSlideUp> */}
                         <ContentSlideUp>
                             <div>
                                 copyright @ {currentYear} Code Reroute
@@ -143,7 +141,7 @@ const Footer: React.FC = () => (
                             <SocialMediaIcons
                                 size={10}
                                 padding={20}
-                                className="code-icons"
+                                className="social-icons"
                             />
                         </ContentSlideUp>
                         {/* <ContentSlideUp>

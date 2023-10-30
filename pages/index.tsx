@@ -9,7 +9,7 @@ import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import { webConfig } from '../utils/webConfig';
 import BusinessIdentity from '../components/photography/BusinessIdentity';
-import OurTeam from '../components/team/OutTeam';
+import OurTeam from '../components/team/OurTeam';
 
 const Home: React.FC = () => {
     useEffect(() => {
