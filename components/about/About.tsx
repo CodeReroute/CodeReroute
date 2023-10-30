@@ -117,7 +117,7 @@ const About: React.FC = () => {
                         <ContentSlideUp>
                             <LinkBox
                                 text={getInTouch}
-                                onClick={openCalendly}
+                                href="https://www.linkedin.com/in/danielle-dufour/"
                                 isLight
                             />
                         </ContentSlideUp>

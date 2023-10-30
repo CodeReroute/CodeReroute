@@ -26,9 +26,8 @@
     "websites": {
         "heading": "SEEKING INVESTORS",
         "contents": {
-            "contentOne": "Custom-coded and designed by us (in-house). Our websites are fully responsive across all devices (from desktop to mobile) and strategically created to bring you the best high-quality digital experience on the market.",
-            "contentTwo": "By investing in a custom-coded website, you own the code and can continue to develop it as your business or organization grows. We also offer customizable CSS styling which means that in terms of design, the sky is the limit.",
-            "contentThree": "Our websites are aesthetically pleasing and optimally designed with powerful software. We can create members-only access portals, add instantaneous translations and give you the option to convert the website into a web or mobile app in the future."
+            "contentOne": "We are self-funded and anticipate this to be the case for the majority of the app development phases. However, we will be looking for potential investors and/or mentors primarily in the area of mobile app marketing.",
+            "contentTwo": "Please reach out to learn more. We look forward to connecting with you."
         },
         "details": {
             "detailOne": "For e-commerce clients: we build custom templates within Shopify. We are a trusted Shopify partner.",
@@ -80,8 +79,8 @@
     },
     "team": {
         "heading": "OUR TEAM",
-        "paragraphOne": "Work in an exciting atmosphere with a team that makes an impact. Fully remote, flexible hours and minimal meetings.",
-        "paragraphTwo": "We welcome people of all backgrounds and ages to reach out to us. If you enjoy working with a small and dedicated team, please fill out the form below."
+        "paragraphOne": "We are a nimble group focused on building innovative tech and writing clean code. Together, we are highly collaborative, self-motivated and constantly curious— the dream team!",
+        "paragraphTwo": "We value open communication, helping each other with complex logic and mentoring each other to be the best developers in the industry."
     },
     "teamMembers": {
         "usman": {

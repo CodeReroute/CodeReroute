@@ -34,6 +34,7 @@ const StyledDiv = styled.div`
                     .bio-button-wrapper .bio-button {
                         color: ${black};
                         border-color: ${black};
+                        letter-spacing: 2.5px;
                         background-color: transparent;
                         margin: 8px auto 0 auto;
                     }

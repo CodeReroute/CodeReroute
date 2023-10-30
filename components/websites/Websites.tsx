@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LinkBox, openCalendly } from '../shared/ButtonBox';
+import { LinkBox } from '../shared/ButtonBox';
 import {
     Heading,
     ContentStyles,
     sanSerifFont,
-    SmallText,
     largerBreakPoint,
     largerMobileBreakPoint,
     darkWhite,
+    darkBrown,
 } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
-import SkillSet from '../about/SkillSet';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 
 const StyledDiv = styled.div`
     background-color: ${darkWhite};
+    border-bottom: 1px solid ${darkBrown};
     .equal-grids,
     .equal-grids-right {
         display: grid;
@@ -66,7 +66,6 @@ const Websites: React.FC = () => {
         heading,
         contentOne,
         contentTwo,
-        contentThree,
         getInTouch,
         detailOne,
         detailTwo,
@@ -77,7 +76,6 @@ const Websites: React.FC = () => {
         heading: t('websites.heading'),
         contentOne: t('websites.contents.contentOne'),
         contentTwo: t('websites.contents.contentTwo'),
-        contentThree: t('websites.contents.contentThree'),
         getInTouch: t('labels.getInTouch'),
         detailOne: t('websites.details.detailOne'),
         detailTwo: t('websites.details.detailTwo'),
@@ -93,72 +91,20 @@ const Websites: React.FC = () => {
                         <ContentSlideUp>
                             <Heading>{heading}</Heading>
                         </ContentSlideUp>
-                        <ContentSlideUp className="hidden">
+                        <ContentSlideUp>
                             <p>{contentOne}</p>
                         </ContentSlideUp>
-                        <ContentSlideUp className="hidden">
+                        <ContentSlideUp>
                             <p>{contentTwo}</p>
                         </ContentSlideUp>
-                        <ContentSlideUp className="hidden">
-                            <p>{contentThree}</p>
-                        </ContentSlideUp>
-                        <ContentSlideUp className="hidden">
+                        <ContentSlideUp>
                             <LinkBox
                                 text={getInTouch}
-                                onClick={openCalendly}
+                                href="https://www.linkedin.com/in/danielle-dufour/"
                                 isLight={false}
                             />
                         </ContentSlideUp>
                     </div>
-                    <SmallText className="hidden">
-                        <div className="details">
-                            <div className="equal-grids-right">
-                                <div className="skills">
-                                    <ContentSlideUp>
-                                        <SkillSet
-                                            heading={programming}
-                                            description="JavaScript, TypeScript, HTML5, CSS3, CSS Animations, Sass, C#, C/C++, Python"
-                                        />
-                                    </ContentSlideUp>
-                                    <ContentSlideUp>
-                                        <SkillSet
-                                            heading={frameworks}
-                                            description="React, React Native, NextJS, NodeJS, Express, .NET"
-                                        />
-                                    </ContentSlideUp>
-                                    <ContentSlideUp>
-                                        <SkillSet
-                                            heading={tools}
-                                            description="Shopify, WordPress, Photoshop, Figma, Canva, Lightroom"
-                                        />
-                                    </ContentSlideUp>
-                                </div>
-                                <ContentSlideUp>
-                                    <div className="web-services">
-                                        <div className="bold">
-                                            Website Services
-                                        </div>
-                                        <ul>
-                                            <li>UX/UI design</li>
-                                            <li>web applications</li>
-                                            <li>e-commerce</li>
-                                            <li>payment processors</li>
-                                            <li>graphic design</li>
-                                            <li>forums/support pages</li>
-                                            <li>live chat plugins</li>
-                                            <li>email marketing</li>
-                                        </ul>
-                                    </div>
-                                </ContentSlideUp>
-                            </div>
-                            <ContentSlideUp>
-                                <p>{detailOne}</p>
-                            </ContentSlideUp>
-                            <ContentSlideUp>
-                                <p>{detailTwo}</p>
-                            </ContentSlideUp>
-                        </div>
-                    </SmallText>
                 </div>
             </ContentStyles>
         </StyledDiv>

@@ -90,7 +90,13 @@ interface LinkBoxProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Box {
 export const LinkBox: React.FC<LinkBoxProps> = (props) => {
     const { href, onClick, text, className, ...rest } = props;
     return (
-        <StyledA href={href} onClick={onClick} className={className} {...rest}>
+        <StyledA
+            href={href}
+            target={href ? '_blank' : undefined}
+            onClick={onClick}
+            className={className}
+            {...rest}
+        >
             {text}
         </StyledA>
     );
