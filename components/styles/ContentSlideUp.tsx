@@ -32,14 +32,21 @@ interface ContentSlideUpProps {
     rootMargin?: string;
     threshold?: number;
     className?: string;
+    style?: React.CSSProperties;
     animationType?: AnimationTypes;
-    children: React.ReactChildren | React.ReactElement | React.ReactElement[];
+    children:
+        | React.ReactChildren
+        | React.ReactNodeArray
+        | React.ReactChildren[]
+        | React.ReactElement
+        | React.ReactElement[];
 }
 
 export const ContentSlideUp: React.FC<ContentSlideUpProps> = ({
     rootMargin = '0px',
     threshold = 1.0,
     animationType = fadeInAnimation,
+    style,
     children,
     className,
 }) => {
@@ -74,6 +81,7 @@ export const ContentSlideUp: React.FC<ContentSlideUpProps> = ({
         <StyledDiv
             animationType={animationType}
             ref={contentRef}
+            style={style}
             className={className}
         >
             <div className={mount ? 'content-animation' : 'hidden'}>

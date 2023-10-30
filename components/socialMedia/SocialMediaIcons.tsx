@@ -86,6 +86,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
         <SocialMediaIconSlideUp
             className="icon-wrapper"
             time={socialMediaAnimationTime}
+            delay={socialMediaAnimationDelayTime * 1}
         >
             <a
                 href="https://www.instagram.com/code_reroute/"
@@ -99,7 +100,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
         <SocialMediaIconSlideUp
             className="icon-wrapper"
             time={socialMediaAnimationTime}
-            delay={socialMediaAnimationDelayTime * 1}
+            delay={socialMediaAnimationDelayTime * 2}
         >
             <a
                 href="https://www.facebook.com/codereroute"
@@ -113,7 +114,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
         <SocialMediaIconSlideUp
             className="icon-wrapper"
             time={socialMediaAnimationTime}
-            delay={socialMediaAnimationDelayTime * 2}
+            delay={socialMediaAnimationDelayTime * 3}
         >
             <a
                 href="https://www.linkedin.com/in/danielle-dufour/"
@@ -127,7 +128,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
         {/* <SlideUp
             className="icon-wrapper"
             time={animationTime}
-            delay={animationDelayTime * 3}
+            delay={animationDelayTime * 4}
         >
             <a
                 href="https://www.tiktok.com/@code_reroute"
@@ -141,7 +142,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
         <SlideUp
             className="icon-wrapper"
             time={animationTime}
-            delay={animationDelayTime * 4}
+            delay={animationDelayTime * 5}
         >
             <a
                 href="https://www.pinterest.ca/codereroute/_saved/"
@@ -155,7 +156,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
         <SlideUp
             className="icon-wrapper"
             time={animationTime}
-            delay={animationDelayTime * 5}
+            delay={animationDelayTime * 6}
         >
             <a
                 href="https://open.spotify.com/user/ut2zfaiznmcd6a19pii8yqnt2?si=SQiRxsrvTrKmGH1ZKAnOkA"
