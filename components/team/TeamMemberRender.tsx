@@ -1,6 +1,12 @@
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
-import { ContentStyles, Heading, SanText, SmallText } from '../styles/theme';
+import {
+    ContentStyles,
+    Heading,
+    SanText,
+    SmallText,
+    lightGray,
+} from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import {
     SocialMediaIconSlideUp,
@@ -36,7 +42,7 @@ const StyledDiv = styled(ContentStyles)`
     .icon-wrapper {
         cursor: pointer;
         svg {
-            fill: transparent;
+            fill: ${lightGray};
         }
     }
     .bio-description-wrapper {
