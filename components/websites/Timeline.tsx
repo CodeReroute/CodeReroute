@@ -28,11 +28,13 @@ const StyledDiv = styled.div`
     display: flex;
     position: relative;
     justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
     .line {
         height: 1px;
         width: 100vw;
         position: absolute;
-        left: -5rem;
+        left: 0;
         top: 50%;
         background-color: ${black};
     }
@@ -80,9 +82,8 @@ const StyledDiv = styled.div`
         }
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
-        .line {
-            left: 20px;
-        }
+        padding-left: 20px;
+        padding-right: 20px;
     }
 `;
 

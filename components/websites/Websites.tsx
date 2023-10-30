@@ -81,6 +81,9 @@ const phases: TimelinePhase[] = [
 
 const StyledDiv = styled.div`
     background-color: ${darkWhite};
+    .content {
+        padding-bottom: 0;
+    }
     .equal-grids,
     .equal-grids-right {
         display: grid;
@@ -110,8 +113,8 @@ const StyledDiv = styled.div`
         padding-left: 19px;
     }
     .timeline {
-        margin-top: 180px;
-        margin-bottom: 160px;
+        padding-top: 160px;
+        padding-bottom: 220px;
     }
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .equal-grids {
@@ -139,7 +142,7 @@ const Websites: React.FC = () => {
     };
     return (
         <StyledDiv>
-            <ContentStyles padding={100} contentMargin>
+            <ContentStyles padding={100} contentMargin className="content">
                 <div className="equal-grids">
                     <div className="left-grid">
                         <ContentSlideUp>
@@ -160,8 +163,10 @@ const Websites: React.FC = () => {
                         </ContentSlideUp>
                     </div>
                 </div>
-                <Timeline phases={phases} className="timeline" />
             </ContentStyles>
+            <div className="timeline">
+                <Timeline phases={phases} />
+            </div>
         </StyledDiv>
     );
 };
