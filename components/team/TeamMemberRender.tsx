@@ -32,14 +32,12 @@ interface TeamMemberRenderProps {
 }
 
 const StyledDiv = styled(ContentStyles)`
-    padding-top: 4px;
+    padding-top: 0;
     padding-bottom: 80px;
     padding-left: 80px;
     padding-right: 80px;
-    h4 {
-        margin-top: 8px;
-    }
     .icon-wrapper {
+        margin-top: 8px;
         cursor: pointer;
         svg {
             fill: ${lightGray};
@@ -66,43 +64,41 @@ const TeamMemberRender: React.FC<TeamMemberRenderProps> = ({ memberId }) => {
     }, [t, memberId]);
 
     return (
-        <StyledDiv>
-            <StyledSocialMediaDiv padding={25} size={13}>
-                {linkedin && (
-                    <SocialMediaIconSlideUp
-                        className="icon-wrapper"
-                        time={socialMediaAnimationTime}
-                        delay={socialMediaAnimationDelayTime * 2}
-                    >
-                        <a
-                            href={linkedin}
-                            target="_blank"
-                            className="icon-margin-right icon"
-                            rel="noreferrer"
-                        >
-                            {LinkedInIcon}
-                        </a>
-                    </SocialMediaIconSlideUp>
-                )}
-            </StyledSocialMediaDiv>
-            <ContentSlideUp>
+        <ContentSlideUp>
+            <StyledDiv>
                 <Heading>{name}</Heading>
-            </ContentSlideUp>
-            <ContentSlideUp>
                 <SmallText>{role}</SmallText>
-            </ContentSlideUp>
-            <div className="bio-description-wrapper">
-                {bio.map((b, i) => (
-                    <ContentSlideUp
-                        className="bio-description"
-                        // eslint-disable-next-line react/no-array-index-key
-                        key={`${i}-${memberId}`}
-                    >
-                        <SanText>{b}</SanText>
-                    </ContentSlideUp>
-                ))}
-            </div>
-        </StyledDiv>
+                <StyledSocialMediaDiv padding={25} size={13}>
+                    {linkedin && (
+                        <SocialMediaIconSlideUp
+                            className="icon-wrapper"
+                            time={socialMediaAnimationTime}
+                            delay={socialMediaAnimationDelayTime * 2}
+                        >
+                            <a
+                                href={linkedin}
+                                target="_blank"
+                                className="icon-margin-right icon"
+                                rel="noreferrer"
+                            >
+                                {LinkedInIcon}
+                            </a>
+                        </SocialMediaIconSlideUp>
+                    )}
+                </StyledSocialMediaDiv>
+                <div className="bio-description-wrapper">
+                    {bio.map((b, i) => (
+                        <div
+                            className="bio-description"
+                            // eslint-disable-next-line react/no-array-index-key
+                            key={`${i}-${memberId}`}
+                        >
+                            {b}
+                        </div>
+                    ))}
+                </div>
+            </StyledDiv>
+        </ContentSlideUp>
     );
 };
 
