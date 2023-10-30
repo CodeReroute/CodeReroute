@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                     <a href="#investors" className="menu-item">
                         <h6>INVESTORS</h6>
                     </a>
-                    <a href="#home" className="menu-item">
+                    <a href="#home">
                         <FadeIn className="logo">
                             <Image
                                 priority
