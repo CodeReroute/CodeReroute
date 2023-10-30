@@ -8,14 +8,79 @@ import {
     largerBreakPoint,
     largerMobileBreakPoint,
     darkWhite,
-    darkBrown,
 } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
+import Timeline, { TimelinePhase } from './Timeline';
+
+const phases: TimelinePhase[] = [
+    {
+        id: '1',
+        title: 'PHASE 1',
+        above: true,
+        description: 'MARKET RESEARCH',
+        width: 141,
+    },
+    {
+        id: '2',
+        title: 'PHASE 2',
+        above: false,
+        description: 'PROTOTYPING (USER FLOWS)',
+        width: 130,
+        addIcon: true,
+    },
+    {
+        id: '3',
+        title: 'PHASE 3',
+        above: true,
+        description: 'UI/UX DESIGN',
+        width: 105,
+    },
+    {
+        id: '4',
+        title: 'PHASE 4',
+        above: false,
+        width: 169,
+        description: (
+            <>
+                FRONTEND + BACKEND
+                <br />
+                DEVELOPMENT
+            </>
+        ),
+    },
+    {
+        id: '5',
+        title: 'PHASE 5',
+        above: true,
+        description: 'USER TESTING',
+        width: 105,
+    },
+    {
+        id: '6',
+        title: 'PHASE 6',
+        above: false,
+        description: 'SYSTEM STRESS TESTING',
+        width: 120,
+    },
+    {
+        id: '7',
+        title: 'PHASE 7',
+        above: true,
+        description: 'PRE-RELEASE',
+        width: 100,
+    },
+    {
+        id: '8',
+        title: 'PHASE 8',
+        above: false,
+        description: 'POST-RELEASE',
+        width: 109,
+    },
+];
 
 const StyledDiv = styled.div`
     background-color: ${darkWhite};
-    border-bottom: 1px solid ${darkBrown};
     .equal-grids,
     .equal-grids-right {
         display: grid;
@@ -43,6 +108,10 @@ const StyledDiv = styled.div`
     ul {
         margin-top: 3px;
         padding-left: 19px;
+    }
+    .timeline {
+        margin-top: 180px;
+        margin-bottom: 160px;
     }
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .equal-grids {
@@ -85,7 +154,7 @@ const Websites: React.FC = () => {
     };
     return (
         <StyledDiv>
-            <ContentStyles padding={147} contentMargin>
+            <ContentStyles padding={100} contentMargin>
                 <div className="equal-grids">
                     <div className="left-grid">
                         <ContentSlideUp>
@@ -106,6 +175,7 @@ const Websites: React.FC = () => {
                         </ContentSlideUp>
                     </div>
                 </div>
+                <Timeline phases={phases} className="timeline" />
             </ContentStyles>
         </StyledDiv>
     );

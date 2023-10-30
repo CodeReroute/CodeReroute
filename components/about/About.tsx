@@ -27,10 +27,10 @@ const StyledDiv = styled.div`
     .laptop-container {
         width: 100%;
         position: absolute;
-        left: 0;
-        bottom: -40px;
+        left: 20px;
+        bottom: -80px;
         .laptop {
-            width: 110%;
+            width: 100%;
             transform: translate(3%, 37%);
         }
         .mobile {
@@ -38,7 +38,7 @@ const StyledDiv = styled.div`
             left: 0;
             bottom: 0px;
             z-index: 9;
-            width: 180px;
+            width: 150px;
             height: auto;
             transform: translate(0, 55%);
         }
