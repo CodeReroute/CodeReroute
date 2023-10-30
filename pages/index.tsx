@@ -30,6 +30,8 @@ const Home: React.FC = () => {
                 description="Code Reroute is a creative marketing agency building & designing custom-coded websites; crafting visual identities and providing business development support"
             />
             <LanguageProvider>
+                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                <a id="home" />
                 <Hero />
                 {/* <Intro /> */}
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}

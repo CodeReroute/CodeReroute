@@ -83,17 +83,19 @@ const Header: React.FC = () => {
                     <a href="#investors" className="menu-item">
                         <h6>INVESTORS</h6>
                     </a>
-                    <FadeIn className="logo">
-                        <Image
-                            priority
-                            src={Logo}
-                            width={200}
-                            height={27.51}
-                            placeholder="blur"
-                            alt="Logo"
-                            title="Logo"
-                        />
-                    </FadeIn>
+                    <a href="#home" className="menu-item">
+                        <FadeIn className="logo">
+                            <Image
+                                priority
+                                src={Logo}
+                                width={200}
+                                height={27.51}
+                                placeholder="blur"
+                                alt="Logo"
+                                title="Logo"
+                            />
+                        </FadeIn>
+                    </a>
                     <a href="#contact" className="menu-item">
                         <h6>CONTACT</h6>
                     </a>
