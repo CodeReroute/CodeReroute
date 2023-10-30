@@ -6,7 +6,7 @@ import {
     ContentStyles,
     largerMobileBreakPoint,
 } from '../styles/theme';
-import { LinkBox, openCalendly } from '../shared/ButtonBox';
+import { LinkBox } from '../shared/ButtonBox';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import LaptopImage from '../../public/assets/about/laptop.png';
 import MobileImage from '../../public/assets/about/mobile.svg';

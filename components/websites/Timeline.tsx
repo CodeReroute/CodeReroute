@@ -86,43 +86,39 @@ const StyledDiv = styled.div`
     }
 `;
 
-const Timeline: React.FC<TimelineProps> = ({ phases, className }) => {
-    return (
-        <StyledDiv className={className}>
-            <div className="line" />
-            {phases.map((p, i) => {
-                return (
-                    <div key={p.id} id={p.id} className="dot-wrapper">
-                        <ContentSlideUp
-                            style={{ width: p.width, left: p.left }}
-                            className={p.above ? 'text above' : 'text below'}
-                        >
-                            <h6 className="bold">{p.title}</h6>
-                            <h6>{p.description}</h6>
-                            {p.addIcon && <h6 className="bold">WE ARE HERE</h6>}
-                        </ContentSlideUp>
-                        {p.addIcon && (
-                            <ContentSlideUp>
-                                <div
-                                    className={
-                                        p.above
-                                            ? 'arrow-icon icon-above'
-                                            : 'arrow-icon icon-below'
-                                    }
-                                />
-                            </ContentSlideUp>
-                        )}
-                        <SocialMediaIconSlideUp
-                            time={socialMediaAnimationTime}
-                            delay={socialMediaAnimationDelayTime * (i + 1)}
-                        >
-                            <div className="dot" />
-                        </SocialMediaIconSlideUp>
-                    </div>
-                );
-            })}
-        </StyledDiv>
-    );
-};
+const Timeline: React.FC<TimelineProps> = ({ phases, className }) => (
+    <StyledDiv className={className}>
+        <div className="line" />
+        {phases.map((p, i) => (
+            <div key={p.id} id={p.id} className="dot-wrapper">
+                <ContentSlideUp
+                    style={{ width: p.width, left: p.left }}
+                    className={p.above ? 'text above' : 'text below'}
+                >
+                    <h6 className="bold">{p.title}</h6>
+                    <h6>{p.description}</h6>
+                    {p.addIcon && <h6 className="bold">WE ARE HERE</h6>}
+                </ContentSlideUp>
+                {p.addIcon && (
+                    <ContentSlideUp>
+                        <div
+                            className={
+                                p.above
+                                    ? 'arrow-icon icon-above'
+                                    : 'arrow-icon icon-below'
+                            }
+                        />
+                    </ContentSlideUp>
+                )}
+                <SocialMediaIconSlideUp
+                    time={socialMediaAnimationTime}
+                    delay={socialMediaAnimationDelayTime * (i + 1)}
+                >
+                    <div className="dot" />
+                </SocialMediaIconSlideUp>
+            </div>
+        ))}
+    </StyledDiv>
+);
 
 export default Timeline;

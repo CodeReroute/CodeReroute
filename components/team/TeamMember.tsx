@@ -63,8 +63,9 @@ const TeamMember = forwardRef<TeamMemberForwardProps, TeamMemberProps>(
                 formElement.setAttribute('style', 'height: 0;');
             } else {
                 setOpen(true);
-                !elementIsVisibleInViewport(formElement) &&
+                if (!elementIsVisibleInViewport(formElement)) {
                     formElement.scrollIntoView(scrollOptions);
+                }
                 const height = getElementHeight(
                     formElement,
                     sectionRef.current,

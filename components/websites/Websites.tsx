@@ -131,26 +131,11 @@ const StyledDiv = styled.div`
 
 const Websites: React.FC = () => {
     const t = useTranslate();
-    const {
-        heading,
-        contentOne,
-        contentTwo,
-        getInTouch,
-        detailOne,
-        detailTwo,
-        programming,
-        frameworks,
-        tools,
-    } = {
+    const { heading, contentOne, contentTwo, getInTouch } = {
         heading: t('websites.heading'),
         contentOne: t('websites.contents.contentOne'),
         contentTwo: t('websites.contents.contentTwo'),
         getInTouch: t('labels.getInTouch'),
-        detailOne: t('websites.details.detailOne'),
-        detailTwo: t('websites.details.detailTwo'),
-        programming: t('about.skillSets.programming'),
-        frameworks: t('about.skillSets.frameworks'),
-        tools: t('about.skillSets.tools'),
     };
     return (
         <StyledDiv>
