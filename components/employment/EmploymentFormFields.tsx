@@ -16,7 +16,7 @@ const EmploymentFormFields: React.FC<FormFieldsProps> = (props) => (
             required
             type="text"
             id="name"
-            autoFocus={true}
+            autoFocus
             placeholder="first name + last name + pronouns"
         />
         <Input required type="email" id="email" placeholder="email address" />
