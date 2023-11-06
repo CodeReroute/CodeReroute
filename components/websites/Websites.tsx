@@ -113,8 +113,8 @@ const StyledDiv = styled.div`
         padding-left: 19px;
     }
     .timeline {
-        padding-top: 160px;
-        padding-bottom: 220px;
+        padding-top: 168px;
+        padding-bottom: 238px;
     }
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .equal-grids {

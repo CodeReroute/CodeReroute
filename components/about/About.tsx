@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
         width: 100%;
         position: absolute;
         left: 20px;
-        bottom: -80px;
+        bottom: -54px;
         .laptop {
             width: 100%;
             transform: translate(3%, 37%);
