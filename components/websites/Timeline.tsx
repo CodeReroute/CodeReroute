@@ -4,10 +4,10 @@ import { black, largerMobileBreakPoint } from '../styles/theme';
 import { webConfig } from '../../utils/webConfig';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 import {
-    SocialMediaIconSlideUp,
     socialMediaAnimationDelayTime,
     socialMediaAnimationTime,
 } from '../socialMedia/SocialMediaIcons';
+import SocialMediaAnimation from '../socialMedia/SocialMediaAnimation';
 
 export interface TimelinePhase {
     id: string;
@@ -118,12 +118,10 @@ const Timeline: React.FC<TimelineProps> = ({ phases, className }) => (
                             />
                         </ContentSlideUp>
                     )}
-                    <SocialMediaIconSlideUp
+                    <SocialMediaAnimation
                         time={socialMediaAnimationTime}
                         delay={socialMediaAnimationDelayTime * (i + 1)}
-                    >
-                        <div className="dot" />
-                    </SocialMediaIconSlideUp>
+                    />
                 </div>
             ))}
         </div>

@@ -11,7 +11,7 @@ import {
 } from './Icons';
 import { darkWhite } from '../styles/theme';
 
-const sideInAnimation = keyframes`
+export const sideInAnimation = keyframes`
     0% {
         transform: translateY(0%);
     }
