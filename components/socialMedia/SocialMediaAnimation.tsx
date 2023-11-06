@@ -52,7 +52,7 @@ const SocialMediaAnimation: React.FC<SocialMediaAnimationProps> = ({
         return () => {
             if (ref) return contentObserver.unobserve(ref);
         };
-    }, [contentRef, rootMargin, threshold]);
+    }, [contentRef]);
 
     return (
         <SocialMediaIconSlideUp time={time} delay={delay} ref={contentRef}>
