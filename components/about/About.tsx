@@ -118,7 +118,7 @@ const About: React.FC = () => {
                         <ContentSlideUp>
                             <LinkBox
                                 text={getInTouch}
-                                href="https://www.linkedin.com/company/64694790/admin/feed/posts/"
+                                href="https://www.linkedin.com/company/social-reroute"
                                 isLight
                             />
                         </ContentSlideUp>

@@ -117,7 +117,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
             delay={socialMediaAnimationDelayTime * 3}
         >
             <a
-                href="https://www.linkedin.com/company/64694790/admin/feed/posts/"
+                href="https://www.linkedin.com/company/social-reroute"
                 target="_blank"
                 className="icon-margin-right icon"
                 rel="noreferrer"
