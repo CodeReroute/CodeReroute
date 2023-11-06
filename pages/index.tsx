@@ -11,6 +11,11 @@ import BusinessIdentity from '../components/photography/BusinessIdentity';
 import OurTeam from '../components/team/OurTeam';
 import { webConfig } from '../utils/webConfig';
 
+const description =
+    'Code Reroute is a female-led tech company building innovative web and mobile apps.';
+const keywords =
+    'software development, canada, agency, edmonton, alberta, consultations, web design, software engineering, digital, app development, communications, web application, mobile application';
+
 const Home: React.FC = () => {
     useEffect(() => {
         const link = document.createElement('link');
@@ -26,8 +31,8 @@ const Home: React.FC = () => {
         <>
             <MetaTags
                 title="Code Reroute"
-                keywords="marketing, communications, canada, agency, edmonton, alberta, consultations, photography, graphic design, web design, websites, digital, branding, local, indigenous, organizations, nonprofit"
-                description="Code Reroute is a creative marketing agency building & designing custom-coded websites; crafting visual identities and providing business development support"
+                keywords={keywords}
+                description={description}
             />
             <LanguageProvider>
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}

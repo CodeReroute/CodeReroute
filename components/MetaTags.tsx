@@ -29,10 +29,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
         <meta itemProp="description" content={description} />
         <meta itemProp="image" content={favIconUrl} />
         {/* <!-- Facebook Meta Tags --> */}
-        <meta
-            property="og:url"
-            content="https://temurih.github.io/CodeReroute"
-        />
+        <meta property="og:url" content="https://codereroute.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -41,10 +38,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
         <meta property="fb:app_id" content="811203999437355" />
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            property="twitter:url"
-            content="https://temurih.github.io/CodeReroute/"
-        />
+        <meta property="twitter:url" content="https://codereroute.com" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:image" content={favIconUrl} />
         <meta property="twitter:description" content={description} />
