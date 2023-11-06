@@ -9,6 +9,7 @@ import {
     darkWhite,
     lightGray,
     sanSerifFont,
+    tabletBreakPoint,
     white,
 } from '../styles/theme';
 
@@ -51,6 +52,13 @@ const styles = `
     color: ${black};
     min-width: 182px;
     transition: background-color 0.5s ease-in-out;
+    @media screen and (max-width: ${tabletBreakPoint}px) {
+        display: block;
+        margin-top: 30px;
+        max-width: 201px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 const StyledA = styled.a<{ isLight: boolean }>`

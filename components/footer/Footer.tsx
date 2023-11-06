@@ -49,6 +49,7 @@ const StyledFooter = styled.footer`
         }
         .centering {
             display: flex;
+            justify-self: center;
             justify-content: center;
         }
         .social-icons {

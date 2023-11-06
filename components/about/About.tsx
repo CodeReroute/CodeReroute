@@ -68,7 +68,8 @@ const StyledDiv = styled.div`
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
         .laptop-container {
-            bottom: 0;
+            left: 0;
+            bottom: -10px;
             max-height: 230px;
             .laptop {
                 position: inherit;

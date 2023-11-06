@@ -52,6 +52,10 @@ const StyledDiv = styled.div`
         margin: 68px auto 0 auto;
     }
     @media only screen and (max-width: ${tabletBreakPoint}px) {
+        form {
+            padding-left: 0;
+            padding-right: 0;
+        }
         .form-fields {
             grid-template-columns: 1fr 1fr;
         }

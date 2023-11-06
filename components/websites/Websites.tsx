@@ -123,6 +123,9 @@ const StyledDiv = styled.div`
         }
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
+        .content {
+            padding-top: 100px;
+        }
         .equal-grids-right {
             grid-template-columns: 1fr;
             .web-services {
@@ -164,8 +167,10 @@ const Websites: React.FC = () => {
                     </div>
                 </div>
             </ContentStyles>
-            <div className="timeline">
-                <Timeline phases={phases} />
+            <div className="timeline-wrapper">
+                <div className="timeline">
+                    <Timeline phases={phases} />
+                </div>
             </div>
         </StyledDiv>
     );

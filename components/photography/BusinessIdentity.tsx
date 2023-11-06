@@ -6,6 +6,7 @@ import {
     Heading,
     darkWhite,
     photographyBreakPoint,
+    tabletBreakPoint,
 } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import FormButton from '../sliderPanel/FormButton';
@@ -18,8 +19,7 @@ const StyledDiv = styled.div`
         padding-bottom: 0;
     }
     .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        max-width: 640px;
     }
     .investment-section {
         display: grid;
@@ -29,16 +29,17 @@ const StyledDiv = styled.div`
         margin-top: 20px;
     }
     @media only screen and (max-width: ${photographyBreakPoint}px) {
-        .investment-section,
-        .content {
+        .investment-section {
             display: block;
-        }
-        .content {
-            padding-bottom: 0;
         }
         .investment-content {
             padding-top: 0;
             padding-bottom: 0;
+        }
+    }
+    @media screen and (max-width: ${tabletBreakPoint}px) {
+        .content {
+            padding-top: 30px;
         }
     }
 `;
@@ -62,19 +63,17 @@ const BusinessIdentity: React.FC = () => {
                     contentMargin
                     className="content-wrapper"
                 >
-                    <ContentStyles padding={undefined} className="content">
-                        <div>
-                            <ContentSlideUp>
-                                <Heading>{heading}</Heading>
-                            </ContentSlideUp>
-                            <ContentSlideUp>
-                                <p>{paragraphOne}</p>
-                            </ContentSlideUp>
-                            <ContentSlideUp>
-                                <p>{paragraphTwo}</p>
-                            </ContentSlideUp>
-                        </div>
-                    </ContentStyles>
+                    <div className="content">
+                        <ContentSlideUp>
+                            <Heading>{heading}</Heading>
+                        </ContentSlideUp>
+                        <ContentSlideUp>
+                            <p>{paragraphOne}</p>
+                        </ContentSlideUp>
+                        <ContentSlideUp>
+                            <p>{paragraphTwo}</p>
+                        </ContentSlideUp>
+                    </div>
                     <div className="button-wrapper">
                         <ContentSlideUp>
                             <FormButton
