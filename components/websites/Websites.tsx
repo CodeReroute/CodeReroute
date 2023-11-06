@@ -160,7 +160,7 @@ const Websites: React.FC = () => {
                         <ContentSlideUp>
                             <LinkBox
                                 text={getInTouch}
-                                href="https://www.linkedin.com/in/danielle-dufour/"
+                                href="https://www.linkedin.com/company/64694790/admin/feed/posts/"
                                 isLight={false}
                             />
                         </ContentSlideUp>
