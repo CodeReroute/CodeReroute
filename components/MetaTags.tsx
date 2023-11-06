@@ -7,8 +7,7 @@ interface MetaTagsProps {
     keywords: string;
 }
 
-const favIconUrl =
-    'https://temurih.github.io/CodeReroute/assets/sharing-meta-image.png';
+const favIconUrl = 'https://codereroute.com/assets/sharing-meta-image.png';
 
 const MetaTags: React.FC<MetaTagsProps> = ({
     title,
