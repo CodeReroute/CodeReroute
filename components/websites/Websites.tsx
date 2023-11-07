@@ -8,6 +8,7 @@ import {
     largerBreakPoint,
     largerMobileBreakPoint,
     darkWhite,
+    tabletBreakPoint,
 } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
@@ -112,7 +113,7 @@ const StyledDiv = styled.div`
         margin-top: 3px;
         padding-left: 19px;
     }
-    .timeline {
+    .website-timeline {
         padding-top: 168px;
         padding-bottom: 238px;
     }
@@ -130,6 +131,31 @@ const StyledDiv = styled.div`
             grid-template-columns: 1fr;
             .web-services {
                 justify-self: left;
+            }
+        }
+    }
+    @media screen and (max-width: ${tabletBreakPoint}px) {
+        .website-timeline-wrapper {
+            display: flex;
+            height: 1000px;
+            margin-top: 60px;
+            align-items: center;
+            padding-bottom: 122px;
+            justify-content: center;
+            .website-timeline {
+                width: 850px;
+                padding-top: 0;
+                padding-bottom: 0;
+                transform: rotate(90deg);
+                & > div {
+                    width: 850px;
+                }
+                .line {
+                    width: 100%;
+                }
+                .timeline-wrapper {
+                    width: 850px;
+                }
             }
         }
     }
@@ -167,8 +193,8 @@ const Websites: React.FC = () => {
                     </div>
                 </div>
             </ContentStyles>
-            <div className="timeline-wrapper">
-                <div className="timeline">
+            <div className="website-timeline-wrapper">
+                <div className="website-timeline">
                     <Timeline phases={phases} />
                 </div>
             </div>
