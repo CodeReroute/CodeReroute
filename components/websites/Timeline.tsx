@@ -43,6 +43,11 @@ const StyledDiv = styled.div`
         justify-content: space-between;
         padding-left: 5rem;
         padding-right: 5rem;
+        .dot-wrapper:nth-child(8) {
+            .text.below h6.bold {
+                margin-bottom: 0;
+            }
+        }
         .dot-wrapper {
             text-align: center;
             position: relative;

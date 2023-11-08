@@ -155,6 +155,48 @@ const StyledDiv = styled.div`
                 }
                 .timeline-wrapper {
                     width: 850px;
+                    .dot-wrapper {
+                        .text {
+                            transform: translate(-50%) rotate(-90deg);
+                        }
+                        .arrow-icon {
+                            transform: rotate(-90deg);
+                        }
+                        .text.above {
+                            text-align: left;
+                            margin-bottom: 66px;
+                            bottom: 15px;
+                        }
+                        .text.below {
+                            text-align: right;
+                            margin-top: 33px;
+                            top: 70px;
+                        }
+                    }
+                    .dot-wrapper:nth-child(1) .text.above {
+                        bottom: 28px;
+                    }
+                    .dot-wrapper:nth-child(2) .text.below {
+                        top: 37px;
+                    }
+                    .dot-wrapper:nth-child(3) .text.above {
+                        bottom: 13px;
+                    }
+                    .dot-wrapper:nth-child(4) .text.below {
+                        top: 72px;
+                    }
+                    .dot-wrapper:nth-child(5) .text.above {
+                        bottom: 13px;
+                    }
+                    .dot-wrapper:nth-child(6) .text.below {
+                        top: 47px;
+                    }
+                    .dot-wrapper:nth-child(7) .text.above {
+                        bottom: 12px;
+                    }
+                    .dot-wrapper:nth-child(8) .text.below {
+                        top: 47px;
+                    }
                 }
             }
         }
