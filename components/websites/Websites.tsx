@@ -193,7 +193,8 @@ const StyledDiv = styled.div`
                         bottom: 13px;
                     }
                     .dot-wrapper:nth-child(4) .text.below {
-                        top: 72px;
+                        top: 50px;
+                        width: 111px !important;
                         h6 {
                             display: block;
                         }
