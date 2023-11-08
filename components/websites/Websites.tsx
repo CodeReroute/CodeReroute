@@ -44,9 +44,16 @@ const phases: TimelinePhase[] = [
         width: 169,
         description: (
             <>
-                FRONTEND + BACKEND
-                <br />
-                DEVELOPMENT
+                <span className="phase-four-desktop">
+                    FRONTEND + BACKEND
+                    <br />
+                    DEVELOPMENT
+                </span>
+                <span className="phase-four-mobile">
+                    FRONTEND +
+                    <br />
+                    BACKEND DEV
+                </span>
             </>
         ),
     },
@@ -117,6 +124,9 @@ const StyledDiv = styled.div`
         padding-top: 168px;
         padding-bottom: 238px;
     }
+    .phase-four-mobile {
+        display: none;
+    }
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .equal-grids {
             grid-template-columns: 1fr;
@@ -184,6 +194,15 @@ const StyledDiv = styled.div`
                     }
                     .dot-wrapper:nth-child(4) .text.below {
                         top: 72px;
+                        h6 {
+                            display: block;
+                        }
+                        .phase-four-desktop {
+                            display: none;
+                        }
+                        .phase-four-mobile {
+                            display: block;
+                        }
                     }
                     .dot-wrapper:nth-child(5) .text.above {
                         bottom: 13px;
