@@ -1,57 +1,100 @@
 {
     "homePage": {
         "hero": {
-            "heading": "Nous n'utilisons pas de modèles.",
-            "contentOne": "Code Reroute est une agence de solutions numériques dirigée par des femmes qui crée et conçoit des sites Web personnalisés ; création d'identités visuelles et accompagnement au développement commercial.",
-            "contentTwo": "Nous sommes fiers de nous associer à des entreprises et des organisations motivées qui visent à avoir un impact positif. Nous travaillons avec des entreprises indépendantes, des communautés autochtones, des organismes sans but lucratif, des municipalités et de grandes organisations."
+            "heading": "lancement de l'application : 2024",
+            "contentOne": "Code Reroute est une entreprise technologique dirigée par des femmes qui crée des applications Web et mobiles innovantes.",
+            "contentTwo": "Restez à l'écoute parce que nous sommes ",
+            "contentThree": "cuisson",
+            "contentFour": " quelque chose de sensationnel."
         }
     },
     "profiles": {
-        "description": "Fondé en 2019, Code Reroute est composé d'une équipe multidisciplinaire de designers, d'ingénieurs et de créatifs réunis pour offrir les meilleures expériences numériques à nos clients. Qu'il s'agisse de créer une application, un site Web de commerce électronique ou de fournir une assistance au développement commercial ; nos compétences combinées vous positionneront comme un leader dans votre domaine."
+        "descriptionOne": "Actuellement, Danielle crée les wireframes, le flux des applications, l'image de marque et la conception UI/UX. Son expérience dans divers aspects de la technologie et du marketing des médias sociaux a convergé vers un scénario de « Slumdog Millionaire » : ses expériences passées éclairent parfaitement l'étendue du travail nécessaire au développement d'applications Web et mobiles.",
+        "descriptionTwo": "Hafiz dirige l'équipe d'ingénierie logicielle back-end, agissant en tant que mentor et cerveau derrière le processus technique. Sa vaste expérience de travail en tant qu'ingénieur logiciel senior pour diverses startups du secteur technologique (et sa vive curiosité pour la résolution de problèmes techniques pendant son temps libre) l'ont préparé à ce rôle de direction."
     },
     "about": {
-        "heading": "À PROPOS DE NOUS",
-        "descriptionOne": "Notre fondatrice, Danielle Dufour, possède une vaste expérience en relations publiques. Certains de ses projets notables comprennent des ateliers de formation sur le renforcement des capacités pour les communautés des Premières Nations de l'île de Vancouver; fournir un aperçu stratégique de la création d'une communauté en ligne de plus de 120 000 ; création de sites Web pour des entreprises en croissance et animation de nombreuses sessions de développement commercial.",
-        "descriptionTwo": "En 2021, elle s'associe à Hafiz Temuri et ensemble, ils dirigent une petite équipe de designers et de développeurs. En tant qu'immigrant de première génération originaire du Pakistan, Hafiz a étudié les sciences informatiques à l'Université MacEwan, puis a travaillé comme développeur de logiciels pour diverses startups de l'industrie technologique. Maintenant, Hafiz partage son temps entre son rôle d'ingénieur logiciel senior chez Givelify et celui d'ingénieur logiciel en chef chez Code Reroute",
+        "heading": "MISE À JOUR DE L'ENTREPRISE",
+        "descriptionOne": "Fondée en 2019, Danielle a lancé Code Reroute (anciennement Social Reroute) avec un cadre d'agence et une mission de travailler avec des clients dans divers domaines, principalement l'image de marque, le marketing sur les réseaux sociaux et le soutien au développement commercial. Malgré la pandémie, ce fut une période passionnante de croissance immédiate et en 2021, elle s’est associée à son (maintenant) mari pour proposer des applications complètes et des sites Web de commerce électronique afin de répondre à la demande des clients. Bien que ce pivot ait été fructueux, elle s’est rendu compte que leur énergie créative combinée les incitait à explorer les possibilités de travailler sur leur propre projet.",
+        "descriptionTwo": "Après avoir terminé les projets clients, ils ont pris une courte pause pour réfléchir aux prochaines étapes et sont heureux d'annoncer qu'au cours des 6 derniers mois, ils ont décidé de créer leur propre application Web et mobile autonome.",
+        "descriptionThree": "Ils ont embauché une petite équipe d’ingénieurs logiciels talentueux pour les aider à partager la charge de développement back-end et sont impatients de voir le résultat final de leur vision commune.",
         "skillSets": {
-            "programming": "Langages de programmation",
-            "frameworks": "Bibliothèques et frameworks",
-            "tools": "Outils et plateformes"
+            "programming": "Programming Languages",
+            "frameworks": "Libraries & Frameworks",
+            "tools": "Tools & Platforms"
         }
     },
     "websites": {
-        "heading": "SITES WEB CODÉS SUR MESURE",
+        "heading": "RECHERCHE D'INVESTISSEURS",
         "contents": {
-            "contentOne": "Codé sur mesure et conçu par nos soins (en interne). Nos sites Web sont entièrement réactifs sur tous les appareils (du bureau au mobile) et créés stratégiquement pour vous offrir la meilleure expérience numérique de haute qualité sur le marché.",
-            "contentTwo": "En investissant dans un site Web codé sur mesure, vous possédez le code et pouvez continuer à le développer au fur et à mesure que votre entreprise ou votre organisation se développe. Nous proposons également un style CSS personnalisable, ce qui signifie qu'en termes de conception, le ciel est la limite.",
-            "contentThree": "Nos sites Web sont esthétiques et conçus de manière optimale avec un logiciel puissant. Nous pouvons créer des portails d'accès réservés aux membres, ajouter des traductions instantanées et vous donner la possibilité de convertir le site Web en une application Web ou mobile à l'avenir."
-        },
-        "details": {
-            "detailOne": "Pour les clients e-commerce : nous créons des modèles personnalisés dans Shopify. Nous sommes un partenaire Shopify de confiance",
-            "detailTwo": "Êtes-vous plus à l'aise avec WordPress ? Nous nous appuyons également sur cette plate-forme et pouvons offrir une expérience transparente et personnalisée à l'aide de WooCommerce."
+            "contentOne": "Nous sommes autofinancés et prévoyons que ce soit le cas pour la majorité des phases de développement d'applications. Cependant, nous rechercherons des investisseurs potentiels et/ou des mentors principalement dans le domaine du marketing d’applications mobiles.",
+            "contentTwo": "Veuillez nous contacter pour en savoir plus. Nous sommes impatients de communiquer avec vous."
         }
     },
     "services": {
-        "heading": "DES SERVICES SUPPLÉMENTAIRES",
-        "description": "Imaginez nous avoir dans votre poche arrière ? Embauchez-nous sur provision pour ces services ou en tant que contrat unique.",
+        "heading": "ADDITIONAL SERVICES",
+        "description": "Imagine having us in your back pocket? Hire us on retainer for these services or as a one-time deal.",
         "list": {
-            "one": "photographie de marque",
-            "two": "le marketing numérique",
-            "three": "séances d'identité d'entreprise",
-            "four": "logos + identité visuelle",
-            "five": "rédaction",
-            "six": "capacité de formation",
-            "seven": "campagnes d'e-mails",
-            "eight": "conception graphique",
-            "nine": "ateliers/séminaires"
+            "one": "brand photography",
+            "two": "digital marketing",
+            "three": "business identity",
+            "four": "logos + visual identity",
+            "five": "workshops/seminars",
+            "six": "capacity training",
+            "seven": "email campaigns",
+            "eight": "graphic design",
+            "nine": "copywriting"
+        }
+    },
+    "photography": {
+        "0": {
+            "heading": "BRAND PHOTOGRAPHY",
+            "smallHeading": "INVESTMENT $550",
+            "paragraphOne": "If you're investing in a website, don't forget about the importance of photography. Our in-house photographers have strong insight into which type of photography will serve you best.",
+            "paragraphTwo": "Photography should communicate a story to an audience and we are skilled at curating a portfolio of images that can be used for digital or print media.",
+            "paragraphThree": "3 hours on-site producing 25-30 high-quality images."
+        },
+        "1": {
+            "heading": "LOGOS & VISUAL IDENTITIES",
+            "smallHeading": "Providing straightforward guidelines for you and your team",
+            "paragraphOne": "Crafting a visual identity (or refreshing an existing one) is the starting point from which all other projects can stem from.",
+            "paragraphTwo": "Having a strong visual identity (and also knowing your mission, vision, values and brand story) is essential for being able to communicate effectively to your audience.",
+            "paragraphThree": "We work closely with our clients to draft up a comprehensive visual identity and provide support for integrating the guidelines seamlessly into an existing workflow."
+        },
+        "2": {
+            "heading": "STRATEGIC MARKETING FRAMEWORK",
+            "smallHeading": "Putting all the moving pieces together",
+            "paragraphOne": "With a background in marketing & communications, Danielle has the skills for developing a strategic marketing plan.",
+            "paragraphTwo": "Defining goals, identifying audiences, and finding appropriate marketing channels is the first step in the process.",
+            "paragraphThree": "With the proper planning in place, we guide our clients towards their vision, purpose and goals."
         }
     },
     "employment": {
         "heading": "OPPORTUNITÉS D'EMPLOI",
-        "paragraphOne": "Travailler dans une atmosphère passionnante avec une équipe qui a un impact",
-        "paragraphTwo": "Chez Code Reroute, nous nous efforçons d'autonomiser et d'élever des voix en partageant nos compétences et fournissant des services de haute qualité qui ont un impact.",
-        "paragraphThree": "Nous accueillons des personnes de tous les antécédents et des âges pour nous contacter.",
-        "paragraphFour": "Si vous pensez avoir des compétences qui conviendront bien avec notre équipe, veuillez remplir le formulaire ci-dessous et joindre votre portefeuille."
+        "paragraphOne": "Travaillez dans une atmosphère passionnante avec une équipe qui a un impact. Entièrement à distance, horaires flexibles et réunions minimales.",
+        "paragraphTwo": "Nous invitons les personnes de tous horizons et de tous âges à nous contacter. Si vous aimez travailler avec une petite équipe dévouée, veuillez remplir le formulaire ci-dessous."
+    },
+    "team": {
+        "heading": "NOTRE ÉQUIPE",
+        "paragraphOne": "Nous sommes un groupe agile axé sur la création de technologies innovantes et l’écriture de code propre. Ensemble, nous sommes très collaboratifs, motivés et constamment curieux : l'équipe de rêve!",
+        "paragraphTwo": "Nous valorisons la communication ouverte, nous entraidons dans une logique complexe et nous encadrons mutuellement pour devenir les meilleurs développeurs du secteur."
+    },
+    "teamMembers": {
+        "usman": {
+            "linkedIn": "https://www.linkedin.com/in/usman-ahmed-2001/",
+            "name": "Usman Ahmed",
+            "role": "Ingénieur logiciel junior",
+            "bio": [
+                "Usman est un ingénieur logiciel qualifié passionné par la technologie et l’innovation. Son expérience principale inclut React.js pour le développement frontend et Nest.js pour le travail backend. Sa maîtrise de ces technologies lui a permis de créer des applications Web robustes et conviviales. De plus, il s'intéresse vivement aux jeux, aux sports électroniques et à l'optimisation des composants PC."
+            ]
+        },
+        "nabah": {
+            "linkedIn": "https://www.linkedin.com/in/nabah-sheikh-/",
+            "name": "Nabah Sheikh",
+            "role": "Ingénieur logiciel junior",
+            "bio": [
+                "Récemment diplômé en informatique, Nabah est un brillant ingénieur logiciel passionné par l’intelligence artificielle (IA) et l’apprentissage automatique. Ses compétences incluent Amazon Web Services (AWS), TypeScript, NestJS, Postman API et les tests d'API. De plus, elle est un membre actif de la communauté technologique de Karachi, au Pakistan, et a reçu la prestigieuse ‘Mention honorable’ lors du hackathon de la Journée mondiale de l'innovation des Nations Unies."
+            ]
+        }
     },
     "labels": {
         "getInTouch": "ENTRER EN CONTACT"
