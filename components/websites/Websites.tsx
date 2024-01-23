@@ -249,7 +249,7 @@ const Websites: React.FC = () => {
                         <ContentSlideUp>
                             <LinkBox
                                 text={getInTouch}
-                                href="https://www.linkedin.com/company/social-reroute"
+                                href="https://www.linkedin.com/in/danielle-dufour/"
                                 isLight={false}
                                 hoverColor={black}
                                 hoverTextColor={darkWhite}

@@ -13,10 +13,10 @@
         "descriptionTwo": "Hafiz dirige l'équipe d'ingénierie logicielle back-end, agissant en tant que mentor et cerveau derrière le processus technique. Sa vaste expérience de travail en tant qu'ingénieur logiciel senior pour diverses startups du secteur technologique (et sa vive curiosité pour la résolution de problèmes techniques pendant son temps libre) l'ont préparé à ce rôle de direction."
     },
     "about": {
-        "heading": "MISE À JOUR DE L'ENTREPRISE",
-        "descriptionOne": "Fondée en 2019, Danielle a lancé Code Reroute (anciennement Social Reroute) avec un cadre d'agence et une mission de travailler avec des clients dans divers domaines, principalement l'image de marque, le marketing sur les réseaux sociaux et le soutien au développement commercial. Malgré la pandémie, ce fut une période passionnante de croissance immédiate et en 2021, elle s’est associée à son (maintenant) mari pour proposer des applications complètes et des sites Web de commerce électronique afin de répondre à la demande des clients. Bien que ce pivot ait été fructueux, elle s’est rendu compte que leur énergie créative combinée les incitait à explorer les possibilités de travailler sur leur propre projet.",
-        "descriptionTwo": "Après avoir terminé les projets clients, ils ont pris une courte pause pour réfléchir aux prochaines étapes et sont heureux d'annoncer qu'au cours des 6 derniers mois, ils ont décidé de créer leur propre application Web et mobile autonome.",
-        "descriptionThree": "Ils ont embauché une petite équipe d’ingénieurs logiciels talentueux pour les aider à partager la charge de développement back-end et sont impatients de voir le résultat final de leur vision commune.",
+        "heading": "CRÉER UNE APPLICATION",
+        "descriptionOne": "C'est vrai les amis, nous construisons une application. Alors que nous sécurisons notre propriété intellectuelle (propriété intellectuelle), nos lèvres sont fermées sur les fonctionnalités réelles que nous développons, mais sachez simplement : c'est génial.",
+        "descriptionTwo": "Fondée en 2019, Danielle a lancé Code Reroute avec pour mission de travailler avec des clients dans divers domaines. Grâce à son travail, elle s'est découvert une aptitude pour le design UI (+ business development). Pendant cette période, elle a rencontré par hasard un ingénieur logiciel talentueux qui est devenu plus tard son mari. Ils ont rapidement réalisé la synergie de l'énergie créative et les possibilités de ce qu'ils pouvaient créer ensemble. Danielle a donc décidé de ne plus se concentrer sur le travail sur des projets clients mais sur son propre projet.",
+        "descriptionThree": "Ils ont embauché une incroyable équipe d'ingénieurs logiciels talentueux pour les aider à partager la charge de développement back-end et sont impatients de révéler le résultat final de leur vision commune.",
         "skillSets": {
             "programming": "Programming Languages",
             "frameworks": "Libraries & Frameworks",
@@ -97,6 +97,7 @@
         }
     },
     "labels": {
+        "linkedIn": "LINKEDIN",
         "getInTouch": "ENTRER EN CONTACT"
     }
 }

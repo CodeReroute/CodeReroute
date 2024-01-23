@@ -23,6 +23,7 @@ const StyledDiv = styled.div<{ isOpen?: boolean }>`
     width: 78px;
     height: 35px;
     display: flex;
+    letter-spacing: 2px;
     justify-content: center;
     align-items: center;
     user-select: none;
@@ -67,7 +68,7 @@ const LanguageCircle: React.FC<Omit<CircledButtonProps, 'text'>> = ({
             className={className}
             onClick={onClick}
             isOpen={isOpen}
-            text={isOpen ? 'X' : language.toUpperCase()}
+            text={isOpen ? 'CLOSE' : language.toUpperCase()}
         />
     );
 };

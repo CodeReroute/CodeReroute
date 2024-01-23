@@ -51,6 +51,7 @@ const styles = `
     border: none;
     color: ${black};
     min-width: 182px;
+    text-align: center;
     @media screen and (max-width: ${tabletBreakPoint}px) {
         display: block;
         margin-top: 30px;

@@ -7,10 +7,11 @@ import {
     largerMobileBreakPoint,
     black,
     darkWhite,
+    largerBreakPoint,
 } from '../styles/theme';
 import { LinkBox } from '../shared/ButtonBox';
 import { useTranslate } from '../../utils/hooks/useTranslate';
-import LaptopImage from '../../public/assets/about/laptop.png';
+// import LaptopImage from '../../public/assets/about/laptop.png';
 import MobileImage from '../../public/assets/about/mobile.svg';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 
@@ -29,8 +30,8 @@ const StyledDiv = styled.div`
     .laptop-container {
         width: 100%;
         position: absolute;
-        left: 20px;
-        bottom: -54px;
+        left: 50%;
+        bottom: 10px;
         .laptop {
             width: 100%;
             transform: translate(3%, 37%);
@@ -40,46 +41,37 @@ const StyledDiv = styled.div`
             left: 0;
             bottom: 0px;
             z-index: 9;
-            width: 150px;
+            width: 350px;
             height: auto;
-            transform: translate(0, 55%);
+            transform: translate(-50%, 55%);
         }
     }
-    @media only screen and (max-width: 1200px) {
-        .grid {
-            grid-template-columns: 1fr;
-            grid-gap: 50px;
-        }
+    @media only screen and (max-width: ${largerBreakPoint}px) {
         .laptop-container {
-            position: inherit;
-            max-height: 250px;
-            .laptop {
-                width: 100%;
-                max-width: 600px;
-                transform: translate(0, 11%);
-            }
             .mobile {
-                width: 180px;
-                height: 320px;
-                width: 40%;
-                bottom: -80%;
-                left: -3%;
-                transform: translate(-20%, -20%);
+                width: 250px;
             }
         }
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
+        .grid {
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+        }
         .laptop-container {
             left: 0;
             bottom: -10px;
-            max-height: 230px;
+            max-height: 320px;
+            position: inherit;
+            text-align: center;
             .laptop {
                 position: inherit;
                 margin-bottom: -26%;
                 transform: translate(0, 0);
             }
             .mobile {
-                display: none;
+                position: inherit;
+                transform: translate(0, 0);
             }
         }
     }
@@ -98,7 +90,7 @@ const About: React.FC = () => {
         descriptionOne: t('about.descriptionOne'),
         descriptionTwo: t('about.descriptionTwo'),
         descriptionThree: t('about.descriptionThree'),
-        getInTouch: t('labels.getInTouch'),
+        getInTouch: t('labels.linkedIn'),
     };
     return (
         <StyledDiv>
@@ -120,7 +112,7 @@ const About: React.FC = () => {
                         <ContentSlideUp>
                             <LinkBox
                                 text={getInTouch}
-                                href="https://www.linkedin.com/company/social-reroute"
+                                href="https://www.linkedin.com/in/danielle-dufour/"
                                 isLight
                                 hoverColor={black}
                                 hoverTextColor={darkWhite}
@@ -130,12 +122,6 @@ const About: React.FC = () => {
                     </div>
                     <div className="laptop-grid">
                         <div className="laptop-container">
-                            <img
-                                src={LaptopImage.src}
-                                alt="Laptop"
-                                title="Laptop"
-                                className="laptop"
-                            />
                             <img
                                 src={MobileImage.src}
                                 alt="Mobile"

@@ -13,10 +13,10 @@
         "descriptionTwo": "Hafiz lidera el equipo de ingeniería de software backend y actúa como mentor y cerebro detrás del proceso técnico. Su amplia experiencia trabajando como ingeniero de software senior para varias nuevas empresas en la industria tecnológica (y su gran curiosidad por resolver problemas técnicos en su tiempo libre) lo han preparado para este rol de liderazgo."
     },
     "about": {
-        "heading": "ACTUALIZACIÓN DE LA EMPRESA",
-        "descriptionOne": "Fundada en 2019, Danielle inició Code Reroute (anteriormente Social Reroute) con un marco de agencia y la misión de trabajar con clientes en una variedad de áreas, principalmente branding, marketing en redes sociales y apoyo al desarrollo empresarial. A pesar de la pandemia, fue una época emocionante de crecimiento inmediato y, en 2021, se asoció con su (ahora) esposo para ofrecer aplicaciones de servicio completo y sitios web de comercio electrónico para satisfacer la demanda de los clientes. Aunque este giro fue fructífero, se dio cuenta de que su energía creativa combinada estaba pidiendo a gritos explorar las posibilidades de trabajar en su propio proyecto.",
-        "descriptionTwo": "Después de concluir los proyectos de los clientes, se tomaron un breve descanso para reflexionar sobre sus próximos pasos y están felices de informar que en los últimos 6 meses decidieron crear su propia aplicación web y móvil autodirigida.",
-        "descriptionThree": "Han contratado un pequeño equipo de ingenieros de software talentosos para ayudar a compartir la carga del desarrollo backend y están ansiosos por ver el resultado final de su visión compartida.",
+        "heading": "CREANDO UNA APLICACIÓN",
+        "descriptionOne": "Así es, amigos, estamos creando una aplicación. A medida que protegemos nuestra propiedad intelectual (PI), nuestros labios se cierran sobre las características reales que estamos desarrollando, pero sepan: es increíble.",
+        "descriptionTwo": "Fundada en 2019, Danielle inició Code Reroute con la misión de trabajar con clientes en una variedad de ámbitos. A través de su trabajo, descubrió una aptitud para el diseño de UI (+ desarrollo empresarial). Durante este tiempo, conoció por casualidad a un talentoso ingeniero de software que más tarde se convirtió en su marido. Rápidamente se dieron cuenta de la sinergia de la energía creativa y las posibilidades de lo que podían crear juntos, por lo que Danielle decidió cambiar el enfoque de trabajar en proyectos de clientes a trabajar en su propio proyecto.",
+        "descriptionThree": "Han contratado un equipo increíble de ingenieros de software talentosos para ayudar a compartir la carga del desarrollo backend y están ansiosos por revelar el resultado final de su visión compartida.",
         "skillSets": {
             "programming": "Programming Languages",
             "frameworks": "Libraries & Frameworks",
@@ -97,6 +97,7 @@
         }
     },
     "labels": {
+        "linkedIn": "LINKEDIN",
         "getInTouch": "PONERSE EN CONTACTO"
     }
 }
