@@ -17,8 +17,7 @@ import { ContentSlideUp } from '../styles/ContentSlideUp';
 import MemberTitle from './MemberTitle';
 
 const StyledDiv = styled.div`
-    background-image: ${videoGradient},
-        url(${webConfig.basePath}/assets/laptop-table.png);
+    background-image: url(${webConfig.basePath}/assets/laptop-table.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
