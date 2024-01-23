@@ -51,7 +51,6 @@ const styles = `
     border: none;
     color: ${black};
     min-width: 182px;
-    transition: background-color 0.5s ease-in-out;
     @media screen and (max-width: ${tabletBreakPoint}px) {
         display: block;
         margin-top: 30px;

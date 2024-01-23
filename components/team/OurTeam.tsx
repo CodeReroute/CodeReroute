@@ -37,7 +37,6 @@ const StyledDiv = styled.div`
                         letter-spacing: 2.5px;
                         background-color: transparent;
                         margin: 8px auto 0 auto;
-                        transition: background-color 0.5s ease-in-out;
                         &:hover {
                             color: ${lightGray};
                             background-color: ${black};
