@@ -9,6 +9,8 @@ import {
     textShadow,
     largerBreakPoint,
     mobileBreakPoint,
+    black,
+    darkWhite,
 } from '../styles/theme';
 import { webConfig } from '../../utils/webConfig';
 import { useTranslate } from '../../utils/hooks/useTranslate';
@@ -147,6 +149,9 @@ const Services: React.FC = () => {
                         <ContentSlideUp>
                             <FormButton
                                 name="Services Inquiry Button"
+                                hoverColor={black}
+                                hoverTextColor={darkWhite}
+                                backgroundColor={darkWhite}
                                 buttonText={buttonText}
                                 sectionRef={sectionRef}
                                 formSectionRef={formSectionRef}

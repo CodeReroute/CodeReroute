@@ -2,7 +2,7 @@
     "homePage": {
         "hero": {
             "heading": "app launch: 2024",
-            "contentOne": "Code Reroute is a female-led tech company building innovative web and mobile apps.",
+            "contentOne": "Code Reroute is a female-led tech company building an (in-house) mobile app.",
             "contentTwo": "Stay tuned because we’re ",
             "contentThree": "cooking",
             "contentFour": " up something sensational."
@@ -26,8 +26,8 @@
     "websites": {
         "heading": "SEEKING INVESTORS",
         "contents": {
-            "contentOne": "We are self-funded and anticipate this to be the case for the majority of the app development phases. However, we will be looking for potential investors and/or mentors primarily in the area of mobile app marketing.",
-            "contentTwo": "Please reach out to learn more. We look forward to connecting with you."
+            "contentOne": "We are searching for investors and/or mentors primarily in the area of mobile app marketing. If that sounds like you, please reach out to learn more.",
+            "contentTwo": "We look forward to connecting with you."
         }
     },
     "services": {

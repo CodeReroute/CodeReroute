@@ -8,6 +8,8 @@ import {
     LighterHeading,
     SanText,
     textShadow,
+    black,
+    darkWhite,
 } from '../styles/theme';
 import { webConfig } from '../../utils/webConfig';
 import { useTranslate } from '../../utils/hooks/useTranslate';
@@ -70,6 +72,9 @@ const Employment: React.FC = () => {
                         <ContentSlideUp>
                             <FormButton
                                 name="Employment Apply Here Button"
+                                hoverColor={black}
+                                hoverTextColor={darkWhite}
+                                backgroundColor={darkWhite}
                                 buttonText={buttonText}
                                 sectionRef={sectionRef}
                                 formSectionRef={formSectionRef}

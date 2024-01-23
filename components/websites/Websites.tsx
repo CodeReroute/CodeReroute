@@ -9,6 +9,7 @@ import {
     largerMobileBreakPoint,
     darkWhite,
     tabletBreakPoint,
+    black,
 } from '../styles/theme';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
@@ -250,6 +251,9 @@ const Websites: React.FC = () => {
                                 text={getInTouch}
                                 href="https://www.linkedin.com/company/social-reroute"
                                 isLight={false}
+                                hoverColor={black}
+                                hoverTextColor={darkWhite}
+                                backgroundColor={darkWhite}
                             />
                         </ContentSlideUp>
                     </div>

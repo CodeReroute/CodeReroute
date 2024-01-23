@@ -5,6 +5,8 @@ import {
     Heading,
     ContentStyles,
     largerMobileBreakPoint,
+    black,
+    darkWhite,
 } from '../styles/theme';
 import { LinkBox } from '../shared/ButtonBox';
 import { useTranslate } from '../../utils/hooks/useTranslate';
@@ -120,6 +122,9 @@ const About: React.FC = () => {
                                 text={getInTouch}
                                 href="https://www.linkedin.com/company/social-reroute"
                                 isLight
+                                hoverColor={black}
+                                hoverTextColor={darkWhite}
+                                backgroundColor={lightGray}
                             />
                         </ContentSlideUp>
                     </div>

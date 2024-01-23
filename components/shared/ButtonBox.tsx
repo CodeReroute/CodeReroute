@@ -55,18 +55,26 @@ const styles = `
     @media screen and (max-width: ${tabletBreakPoint}px) {
         display: block;
         margin-top: 30px;
-        max-width: 201px;
+        max-width: 205px;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
 `;
 
-const StyledA = styled.a<{ isLight: boolean }>`
+const StyledA = styled.a<{
+    isLight: boolean;
+    backgroundColor?: string;
+    hoverColor?: string;
+    hoverTextColor?: string;
+}>`
     ${styles}
-    background-color: ${({ isLight }) => (isLight ? darkWhite : darkGray)};
-    color: ${({ isLight }) => (isLight ? black : white)};
+    color: ${black};
+    background-color: ${({ backgroundColor }) => backgroundColor};
+    border: 1px solid ${black};
     &:hover {
-        background-color: ${({ isLight }) => (isLight ? white : lightGray)};
+        background-color: ${({ hoverColor }) => hoverColor};
+        color: ${({ hoverTextColor }) => hoverTextColor || lightGray};
     }
 `;
 
@@ -74,13 +82,15 @@ export const StyledButton = styled.button<{
     isLight: boolean;
     backgroundColor?: string;
     hoverColor?: string;
+    hoverTextColor?: string;
 }>`
     ${styles}
-    color: ${darkBrown};
-    background-color: ${({ isLight, backgroundColor }) =>
-        backgroundColor || (isLight ? darkWhite : darkGray)};
+    color: ${black};
+    background-color: ${({ backgroundColor }) => backgroundColor};
+    border: 1px solid ${black};
     &:hover {
-        background-color: ${({ hoverColor }) => hoverColor || lightGray};
+        background-color: ${({ hoverColor }) => hoverColor};
+        color: ${({ hoverTextColor }) => hoverTextColor || lightGray};
     }
 `;
 
@@ -92,6 +102,9 @@ interface Box {
 
 interface LinkBoxProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Box {
     href?: string;
+    backgroundColor?: string;
+    hoverColor?: string;
+    hoverTextColor?: string;
     onClick?: () => unknown;
 }
 
@@ -114,6 +127,7 @@ interface ButtonBoxProps extends ButtonHTMLAttributes<HTMLButtonElement>, Box {
     ref?: React.RefObject<HTMLButtonElement>;
     backgroundColor?: string;
     hoverColor?: string;
+    hoverTextColor?: string;
 }
 
 export const ButtonBox: React.FC<ButtonBoxProps> = (props) => {

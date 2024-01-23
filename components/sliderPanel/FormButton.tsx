@@ -8,6 +8,7 @@ interface FormButtonProps {
     name: string;
     buttonText: string;
     hoverColor?: string;
+    hoverTextColor?: string;
     backgroundColor?: string;
     sectionRef: React.RefObject<HTMLDivElement>;
     formSectionRef: React.RefObject<HTMLDivElement>;
@@ -18,6 +19,8 @@ const FormButton: React.FC<FormButtonProps> = ({
     buttonText,
     sectionRef,
     hoverColor,
+    hoverTextColor,
+    backgroundColor,
     formSectionRef,
 }) => {
     const [open, setOpen] = useState<boolean>(false);
@@ -43,7 +46,8 @@ const FormButton: React.FC<FormButtonProps> = ({
         <StyledButton
             isLight={open}
             hoverColor={hoverColor}
-            backgroundColor={open ? lightGray : undefined}
+            hoverTextColor={hoverTextColor}
+            backgroundColor={backgroundColor}
             onClick={onInquiryClicked}
             ref={toggleButton}
             className="button"

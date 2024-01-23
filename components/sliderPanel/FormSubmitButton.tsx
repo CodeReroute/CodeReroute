@@ -2,7 +2,7 @@ import React from 'react';
 import { RequestStateType } from '../../utils/hooks/useApi';
 import { ButtonBox } from '../shared/ButtonBox';
 import Loading from '../shared/Loading';
-import { darkGray, darkWhite } from '../styles/theme';
+import { black, lightGray } from '../styles/theme';
 
 interface FormSubmitButtonProps {
     type: RequestStateType;
@@ -16,8 +16,9 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = ({ type }) => {
             return (
                 <ButtonBox
                     isLight={false}
-                    backgroundColor={darkWhite}
-                    hoverColor={darkGray}
+                    backgroundColor={lightGray}
+                    hoverColor={black}
+                    hoverTextColor={lightGray}
                     type="submit"
                     id="form-button"
                     className="form-button"

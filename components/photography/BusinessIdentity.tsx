@@ -4,6 +4,7 @@ import { ContentSlideUp } from '../styles/ContentSlideUp';
 import {
     ContentStyles,
     Heading,
+    black,
     darkWhite,
     photographyBreakPoint,
     tabletBreakPoint,
@@ -78,6 +79,9 @@ const BusinessIdentity: React.FC = () => {
                         <ContentSlideUp>
                             <FormButton
                                 name="Employment Apply Here Button"
+                                hoverColor={black}
+                                hoverTextColor={darkWhite}
+                                backgroundColor={darkWhite}
                                 buttonText={buttonText}
                                 sectionRef={sectionRef}
                                 formSectionRef={formSectionRef}

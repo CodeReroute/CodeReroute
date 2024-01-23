@@ -2,7 +2,7 @@
     "homePage": {
         "hero": {
             "heading": "lancement de l'application : 2024",
-            "contentOne": "Code Reroute est une entreprise technologique dirigée par des femmes qui crée des applications Web et mobiles innovantes.",
+            "contentOne": "Code Reroute est une entreprise technologique dirigée par des femmes qui crée une application mobile (interne).",
             "contentTwo": "Restez à l'écoute parce que nous sommes ",
             "contentThree": "cuisson",
             "contentFour": " quelque chose de sensationnel."
@@ -26,8 +26,8 @@
     "websites": {
         "heading": "RECHERCHE D'INVESTISSEURS",
         "contents": {
-            "contentOne": "Nous sommes autofinancés et prévoyons que ce soit le cas pour la majorité des phases de développement d'applications. Cependant, nous rechercherons des investisseurs potentiels et/ou des mentors principalement dans le domaine du marketing d’applications mobiles.",
-            "contentTwo": "Veuillez nous contacter pour en savoir plus. Nous sommes impatients de communiquer avec vous."
+            "contentOne": "Nous recherchons des investisseurs et/ou des mentors principalement dans le domaine du marketing d'applications mobiles. Si cela vous ressemble, contactez-nous pour en savoir plus.",
+            "contentTwo": "Nous sommes impatients de communiquer avec vous."
         }
     },
     "services": {
