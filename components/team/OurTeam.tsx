@@ -29,6 +29,7 @@ const StyledDiv = styled.div`
             flex-wrap: wrap;
             .member {
                 cursor: pointer;
+                text-align: center;
                 .member-details {
                     text-align: center;
                     .bio-button-wrapper .bio-button {
