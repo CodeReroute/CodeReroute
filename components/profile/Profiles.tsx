@@ -55,6 +55,7 @@ const StyledDiv = styled.div`
             .description {
                 padding-left: 12px;
                 padding-right: 12px;
+                font-weight: 500;
             }
         }
     }

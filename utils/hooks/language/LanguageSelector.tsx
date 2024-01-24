@@ -15,12 +15,13 @@ const StyledDiv = styled.div`
     font-size: 14px;
     font-family: ${sanSerifFont};
     position: absolute;
-    right: 0;
+    right: -6px;
     top: 12px;
     background-color: ${darkWhite};
     padding: 8px 16px;
     display: flex;
     gap: 8px;
+    letter-spacing: 2px;
     flex-direction: column;
     .language {
         cursor: pointer;

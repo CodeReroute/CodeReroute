@@ -30,7 +30,7 @@ const StyledDiv = styled.div`
     .laptop-container {
         width: 100%;
         position: absolute;
-        left: 50%;
+        left: 66%;
         bottom: 10px;
         .laptop {
             width: 100%;
