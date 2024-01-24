@@ -15,7 +15,7 @@ const StyledDiv = styled.div`
     font-size: 14px;
     font-family: ${sanSerifFont};
     position: absolute;
-    right: -6px;
+    right: -5px;
     top: 12px;
     background-color: ${darkWhite};
     padding: 8px 16px;

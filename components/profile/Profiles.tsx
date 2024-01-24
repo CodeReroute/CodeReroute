@@ -50,11 +50,11 @@ const StyledDiv = styled.div`
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
         .content-wrapper {
+            font-weight: 300;
             padding: 0px 20px;
             .description {
                 padding-left: 12px;
                 padding-right: 12px;
-                font-weight: 500;
             }
         }
     }

@@ -76,6 +76,10 @@ const StyledA = styled.a<{
         background-color: ${({ hoverColor }) => hoverColor};
         color: ${({ hoverTextColor }) => hoverTextColor || lightGray};
     }
+    &:active {
+        color: ${black};
+        background-color: ${({ backgroundColor }) => backgroundColor};
+    }
 `;
 
 export const StyledButton = styled.button<{
@@ -91,6 +95,10 @@ export const StyledButton = styled.button<{
     &:hover {
         background-color: ${({ hoverColor }) => hoverColor};
         color: ${({ hoverTextColor }) => hoverTextColor || lightGray};
+    }
+    &:active {
+        color: ${black};
+        background-color: ${({ backgroundColor }) => backgroundColor};
     }
 `;
 
