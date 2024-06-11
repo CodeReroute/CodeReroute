@@ -18,7 +18,7 @@ export const smallerTextShadow = '1px 1px 2px #343434';
 export const buttonBoxShadow = `box-shadow: 2px 2px 0px ${darkGray}`;
 
 export const serifFont = "'Cormorant Garamond', serif";
-export const sanSerifFont = "'Neue Einstellung', sans-serif";
+export const sanSerifFont = "'Mulish', sans-serif";
 
 export const pictureGradient =
     'linear-gradient(rgba(94,88,88, 0.6), rgba(94,88,88, 0.6))';
