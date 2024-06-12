@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import AuthorName from './AuthorName';
 import styled from 'styled-components';
+import AuthorName from './AuthorName';
 import { StyledImage } from '../profile/Avatar';
 import { black, darkWhite, white } from '../styles/theme';
 import { LinkBox } from '../shared/ButtonBox';
@@ -43,31 +43,27 @@ const StyledDiv = styled(StyledPostWrapper)`
     }
 `;
 
-const PostRow: React.FC<Post> = ({ author, title, summary, image, slug }) => {
-    return (
-        <StyledDiv>
-            {image && (
-                <StyledImage {...image.summary} className="featured-image" />
-            )}
-            <div className="post-summary">
-                <h1>{title}</h1>
-                <div className="summary">{summary}</div>
-                <div className="author-and-read-more author-flex">
-                    <AuthorName author={author} />
-                    <Link href={`/blog/${slug}`} passHref>
-                        <LinkBox
-                            isLight={true}
-                            hoverColor={black}
-                            noNewTab={true}
-                            hoverTextColor={darkWhite}
-                            text="READ MORE"
-                            className="read-more"
-                        />
-                    </Link>
-                </div>
+const PostRow: React.FC<Post> = ({ author, title, summary, image, slug }) => (
+    <StyledDiv>
+        {image && <StyledImage {...image.summary} className="featured-image" />}
+        <div className="post-summary">
+            <h1>{title}</h1>
+            <div className="summary">{summary}</div>
+            <div className="author-and-read-more author-flex">
+                <AuthorName author={author} />
+                <Link href={`/blog/${slug}`} passHref>
+                    <LinkBox
+                        isLight
+                        hoverColor={black}
+                        noNewTab
+                        hoverTextColor={darkWhite}
+                        text="READ MORE"
+                        className="read-more"
+                    />
+                </Link>
             </div>
-        </StyledDiv>
-    );
-};
+        </div>
+    </StyledDiv>
+);
 
 export default PostRow;

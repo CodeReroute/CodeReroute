@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const postSummary: { [id: string]: JSX.Element } = {
     'react-native-windows-setup': (
         <>

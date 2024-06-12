@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { webConfig } from '../../utils/webConfig';
 
@@ -29,6 +30,8 @@ export const postContent: { [id: string]: JSX.Element } = {
             <Link href="https://nodejs.org/en/download" passHref>
                 <a target="_blank">
                     <img
+                        alt="Step 1"
+                        title="Step 1"
                         style={fullWidthStyle}
                         src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/1.png`}
                     />
@@ -40,36 +43,50 @@ export const postContent: { [id: string]: JSX.Element } = {
             >
                 <a target="_blank">
                     <img
+                        alt="Step 2"
+                        title="Step 2"
                         style={fullWidthStyle}
                         src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/2.png`}
                     />
                 </a>
             </Link>
             <img
+                alt="Step 3"
+                title="Step 3"
                 style={fullWidthStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/3.png`}
             />
             <img
+                alt="Step 4"
+                title="Step 4"
                 style={fullWidthStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/4.png`}
             />
             <Link href="https://developer.android.com/studio" passHref>
                 <a target="_blank">
                     <img
+                        alt="Step 5"
+                        title="Step 5"
                         style={fullWidthStyle}
                         src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/5.png`}
                     />
                 </a>
             </Link>
             <img
+                alt="Step 6"
+                title="Step 6"
                 style={fullWidthStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/6.png`}
             />
             <img
+                alt="Step 7"
+                title="Step 7"
                 style={fullWidthStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/7.png`}
             />
             <img
+                alt="Step 8"
+                title="Step 8"
                 style={fullWidthStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/8.png`}
             />

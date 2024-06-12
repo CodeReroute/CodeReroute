@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Avatar from '../profile/Avatar';
 import styled from 'styled-components';
+import Avatar from '../profile/Avatar';
 import { Author } from './authors';
 
 interface AuthorNameProps {
@@ -25,33 +25,31 @@ const StyledDiv = styled.div<{ borderWidth?: number }>`
     }
 `;
 
-const AuthorComponent: React.FC<AuthorNameProps> = ({ author }) => {
-    return (
-        <StyledDiv borderWidth={author.borderWidth}>
-            <Avatar
-                image={author.url}
-                title={author.name}
-                className="author-avatar"
-            />
-            <div>
-                <h6 className="author-name">
-                    <span className="author-full-name">
-                        {author.name.toUpperCase()}
-                    </span>
-                    {author.title && (
-                        <>
-                            <br />
-                            {author.title.toUpperCase()}
-                        </>
-                    )}
-                </h6>
-            </div>
-        </StyledDiv>
-    );
-};
+const AuthorComponent: React.FC<AuthorNameProps> = ({ author }) => (
+    <StyledDiv borderWidth={author.borderWidth}>
+        <Avatar
+            image={author.url}
+            title={author.name}
+            className="author-avatar"
+        />
+        <div>
+            <h6 className="author-name">
+                <span className="author-full-name">
+                    {author.name.toUpperCase()}
+                </span>
+                {author.title && (
+                    <>
+                        <br />
+                        {author.title.toUpperCase()}
+                    </>
+                )}
+            </h6>
+        </div>
+    </StyledDiv>
+);
 
-const AuthorName: React.FC<AuthorNameProps> = ({ author }) => {
-    return author.link ? (
+const AuthorName: React.FC<AuthorNameProps> = ({ author }) =>
+    author.link ? (
         <Link href={author.link} passHref>
             <a
                 target="_blank"
@@ -64,6 +62,5 @@ const AuthorName: React.FC<AuthorNameProps> = ({ author }) => {
     ) : (
         <AuthorComponent author={author} />
     );
-};
 
 export default AuthorName;

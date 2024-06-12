@@ -1,6 +1,6 @@
 import React from 'react';
-import AuthorName from '../AuthorName';
 import styled from 'styled-components';
+import AuthorName from '../AuthorName';
 import { Post } from '../posts';
 import { StyledImage } from '../../profile/Avatar';
 
@@ -22,22 +22,20 @@ const StyledDiv = styled.div`
     }
 `;
 
-const IndividualPost: React.FC<IndividualPostProps> = ({ post }) => {
-    return (
-        <StyledDiv>
-            {post.image && (
-                <StyledImage
-                    {...(post.image.post || post.image.summary)}
-                    className="featured-image"
-                />
-            )}
-            <h1 className="post-content-wrapper">{post.title}</h1>
-            {post.content}
-            <div className="post-content-wrapper">
-                <AuthorName author={post.author} />
-            </div>
-        </StyledDiv>
-    );
-};
+const IndividualPost: React.FC<IndividualPostProps> = ({ post }) => (
+    <StyledDiv>
+        {post.image && (
+            <StyledImage
+                {...(post.image.post || post.image.summary)}
+                className="featured-image"
+            />
+        )}
+        <h1 className="post-content-wrapper">{post.title}</h1>
+        {post.content}
+        <div className="post-content-wrapper">
+            <AuthorName author={post.author} />
+        </div>
+    </StyledDiv>
+);
 
 export default IndividualPost;

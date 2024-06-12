@@ -1,3 +1,4 @@
+import React from 'react';
 import { webConfig } from '../../utils/webConfig';
 import { StyledImageProps } from '../profile/Avatar';
 import { Author, authors } from './authors';
