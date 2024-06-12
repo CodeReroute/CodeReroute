@@ -81,6 +81,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ slug, title }) => {
                 }
                 keywords="code reroute, blog, posts"
                 description="Code Reroute - Blog Posts"
+                featuredImage={
+                    post?.image?.post?.url || post?.image?.summary.url
+                }
             />
             <PlainHeader link="/blog" />
             <StyledContentStyles contentMargin>
