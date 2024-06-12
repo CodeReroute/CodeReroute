@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import ReactDOMServer from 'react-dom/server';
-import { useRouter } from 'next/router';
 import { posts } from '../../components/blog/posts';
 import PostNotFound from '../../components/blog/PostNotFound';
 import MetaTags from '../../components/MetaTags';
