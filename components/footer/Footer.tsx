@@ -131,8 +131,8 @@ const Footer: React.FC = () => (
                                         width={180}
                                         height={25}
                                         placeholder="blur"
-                                        alt="Logo"
-                                        title="Logo"
+                                        alt="Code Reroute"
+                                        title="Code Reroute"
                                     />
                                 </a>
                             </Link>

@@ -7,7 +7,7 @@ import Logo from '../../public/assets/logo.png';
 
 const StyledDiv = styled.div`
     background-color: ${darkBrown};
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 `;
 
@@ -18,11 +18,11 @@ const PlainHeader: React.FC = () => (
                 <Image
                     priority
                     src={Logo}
-                    width={220}
-                    height={46.88}
+                    width={178}
+                    height={24.49}
                     placeholder="blur"
-                    alt="Logo"
-                    title="Logo"
+                    alt="Code Reroute"
+                    title="Code Reroute"
                 />
             </a>
         </Link>

@@ -91,8 +91,8 @@ const Header: React.FC = () => {
                                 width={200}
                                 height={27.51}
                                 placeholder="blur"
-                                alt="Logo"
-                                title="Logo"
+                                alt="Code Reroute"
+                                title="Code Reroute"
                             />
                         </FadeIn>
                     </a>

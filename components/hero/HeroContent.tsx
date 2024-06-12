@@ -66,8 +66,8 @@ const HeroContent: React.FC = () => {
                     width={200}
                     height={27.51}
                     placeholder="blur"
-                    alt="Logo"
-                    title="Logo"
+                    alt="Code Reroute"
+                    title="Code Reroute"
                 />
             </FadeIn>
             <ContentStyles padding={0} contentMargin className="text">
