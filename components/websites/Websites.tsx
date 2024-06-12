@@ -29,7 +29,6 @@ const phases: TimelinePhase[] = [
         above: false,
         description: 'PROTOTYPING (USER FLOWS)',
         width: 130,
-        addIcon: true,
     },
     {
         id: '3',
@@ -42,6 +41,7 @@ const phases: TimelinePhase[] = [
         id: '4',
         title: 'PHASE 4',
         above: false,
+        addIcon: true,
         width: 169,
         description: (
             <>
