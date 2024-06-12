@@ -30,9 +30,9 @@ const Blog: React.FC = () => {
     return (
         <>
             <MetaTags
-                title="Blog Posts | Code Reroute"
+                title="Blog | Code Reroute"
                 keywords="code reroute, blog, posts"
-                description="Code Reroute - Blog Posts"
+                description="Code Reroute - Blog"
             />
             <PlainHeader />
             <StyledContentStyles contentMargin>
