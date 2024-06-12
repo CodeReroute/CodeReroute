@@ -15,6 +15,35 @@ import {
     sanSerifFont,
 } from '../../components/styles/theme';
 import { StyledPostWrapper } from '../../components/blog/PostRow';
+import { GetServerSideProps } from 'next';
+
+interface BlogPostProps {
+    title: string | undefined;
+    slug: string | undefined;
+}
+
+export const getServerSideProps: GetServerSideProps<BlogPostProps> = async (
+    context,
+) => {
+    const { params } = context;
+    if (!params) {
+        return {
+            props: {
+                title: undefined,
+                slug: undefined,
+            },
+        };
+    }
+    const { slug } = params;
+    const slugString = typeof slug === 'string' ? slug : undefined;
+    const post = slugString ? posts[slugString] : undefined;
+    return {
+        props: {
+            title: post?.titleString,
+            slug: slugString,
+        },
+    };
+};
 
 const StyledContentStyles = styled(ContentStyles)`
     max-width: 800px;
@@ -27,12 +56,8 @@ const StyledContentStyles = styled(ContentStyles)`
     }
 `;
 
-const BlogPost: React.FC = () => {
-    const router = useRouter();
-    const post =
-        typeof router.query.slug === 'string'
-            ? posts[router.query.slug]
-            : undefined;
+const BlogPost: React.FC<BlogPostProps> = ({ slug, title }) => {
+    const post = slug ? posts[slug] : undefined;
 
     useEffect(() => {
         document.body.style.backgroundColor = lightGray;
@@ -46,7 +71,7 @@ const BlogPost: React.FC = () => {
             <MetaTags
                 title={
                     post
-                        ? `${post.titleString} | Code Reroute`
+                        ? `${title} | Code Reroute`
                         : 'Post Not Found | Code Reroute'
                 }
                 keywords="code reroute, blog, posts"
@@ -58,7 +83,7 @@ const BlogPost: React.FC = () => {
                     {post ? (
                         <IndividualPost post={post} />
                     ) : (
-                        <PostNotFound slug={router.query.slug} />
+                        <PostNotFound slug={slug} />
                     )}
                 </StyledPostWrapper>
             </StyledContentStyles>
