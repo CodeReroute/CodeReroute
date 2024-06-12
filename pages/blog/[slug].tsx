@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { posts } from '../../components/blog/posts';
 import PostNotFound from '../../components/blog/PostNotFound';
 import MetaTags from '../../components/MetaTags';
@@ -20,7 +20,7 @@ interface BlogPostProps {
     slug: string | undefined;
 }
 
-export const getServerSideProps: GetServerSideProps<BlogPostProps> = async (
+export const getStaticProps: GetStaticProps<BlogPostProps> = async (
     context,
 ) => {
     const { params } = context;
@@ -41,6 +41,13 @@ export const getServerSideProps: GetServerSideProps<BlogPostProps> = async (
             slug: slugString,
         },
     };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    const paths = Object.keys(posts).map((slug) => ({
+        params: { slug },
+    }));
+    return { paths, fallback: false };
 };
 
 const StyledContentStyles = styled(ContentStyles)`
