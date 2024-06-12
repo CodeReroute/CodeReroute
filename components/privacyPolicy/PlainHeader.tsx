@@ -11,9 +11,9 @@ const StyledDiv = styled.div`
     text-align: center;
 `;
 
-const PlainHeader: React.FC = () => (
+const PlainHeader: React.FC<{ link?: string }> = ({ link = '/' }) => (
     <StyledDiv>
-        <Link href="/">
+        <Link href={link}>
             <a>
                 <Image
                     priority

@@ -8,20 +8,38 @@ import {
 
 interface AvatarProps {
     image: string;
+    title?: string;
     marginTop?: string;
     marginBottom?: string;
     className?: string;
 }
 
-const StyledDiv = styled.div`
+export interface StyledImageProps {
+    url?: string;
+    height: number;
+    positionHorizontal?: string;
+    positionVertical?: string;
+}
+
+export const StyledImage = styled.div<StyledImageProps>`
+    background-image: url(${({ url }) => url});
+    background-size: cover;
+    background-position: ${({ positionHorizontal }) =>
+            positionHorizontal || 'center'}
+        ${({ positionVertical }) => positionVertical || 'center'};
+    width: 100%;
+    height: ${({ height }) => (height ? `${height}px` : 'auto')};
+`;
+
+const StyledDiv = styled.div<AvatarProps>`
     border-radius: 100%;
     border: 4px solid ${midWhite} !important;
-    margin-top: ${(props: AvatarProps) => props.marginTop} !important;
-    margin-bottom: ${(props: AvatarProps) =>
+    margin-top: ${(props) => props.marginTop} !important;
+    margin-bottom: ${(props) =>
         props.marginBottom && `${props.marginBottom} !important`};
     width: 250px;
     height: 250px;
-    background-image: url(${(props: AvatarProps) => props.image});
+    background-image: url(${(props) => props.image});
     background-size: cover;
     display: inline-block;
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
@@ -35,6 +53,7 @@ const StyledDiv = styled.div`
 `;
 
 const Avatar: React.FC<AvatarProps> = ({
+    title,
     image,
     marginTop,
     marginBottom,
@@ -45,6 +64,7 @@ const Avatar: React.FC<AvatarProps> = ({
         marginBottom={marginBottom}
         image={image}
         className={className}
+        title={title}
     />
 );
 

@@ -110,6 +110,7 @@ interface Box {
 
 interface LinkBoxProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Box {
     href?: string;
+    noNewTab?: boolean;
     backgroundColor?: string;
     hoverColor?: string;
     hoverTextColor?: string;
@@ -117,11 +118,11 @@ interface LinkBoxProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Box {
 }
 
 export const LinkBox: React.FC<LinkBoxProps> = (props) => {
-    const { href, onClick, text, className, ...rest } = props;
+    const { href, onClick, text, noNewTab, className, ...rest } = props;
     return (
         <StyledA
             href={href}
-            target={href ? '_blank' : undefined}
+            target={href && !noNewTab ? '_blank' : undefined}
             onClick={onClick}
             className={className}
             {...rest}
