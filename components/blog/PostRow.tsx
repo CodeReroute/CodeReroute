@@ -3,12 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import AuthorName from './AuthorName';
 import { StyledImage } from '../profile/Avatar';
-import {
-    black,
-    darkWhite,
-    largerMobileBreakPoint,
-    white,
-} from '../styles/theme';
+import { black, darkWhite, tabletBreakPoint, white } from '../styles/theme';
 import { LinkBox } from '../shared/ButtonBox';
 import { Post } from './posts';
 
@@ -44,7 +39,7 @@ const StyledDiv = styled(StyledPostWrapper)`
         align-items: center;
         justify-content: space-between;
     }
-    @media screen and (max-width: ${largerMobileBreakPoint}px) {
+    @media screen and (max-width: ${tabletBreakPoint}px) {
         .author-flex {
             flex-direction: column-reverse;
         }

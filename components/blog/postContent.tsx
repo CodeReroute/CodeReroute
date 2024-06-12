@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { webConfig } from '../../utils/webConfig';
 
-const fullWidthStyle = { width: '100%' };
+const fullWidthStackedImagesStyle = { width: '100%', marginTop: -4 };
 export const postContent: { [id: string]: JSX.Element } = {
     'react-native-windows-setup': (
         <>
@@ -32,7 +32,7 @@ export const postContent: { [id: string]: JSX.Element } = {
                     <img
                         alt="Step 1"
                         title="Step 1"
-                        style={fullWidthStyle}
+                        style={fullWidthStackedImagesStyle}
                         src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/1.png`}
                     />
                 </a>
@@ -45,7 +45,7 @@ export const postContent: { [id: string]: JSX.Element } = {
                     <img
                         alt="Step 2"
                         title="Step 2"
-                        style={fullWidthStyle}
+                        style={fullWidthStackedImagesStyle}
                         src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/2.png`}
                     />
                 </a>
@@ -53,13 +53,13 @@ export const postContent: { [id: string]: JSX.Element } = {
             <img
                 alt="Step 3"
                 title="Step 3"
-                style={fullWidthStyle}
+                style={fullWidthStackedImagesStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/3.png`}
             />
             <img
                 alt="Step 4"
                 title="Step 4"
-                style={fullWidthStyle}
+                style={fullWidthStackedImagesStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/4.png`}
             />
             <Link href="https://developer.android.com/studio" passHref>
@@ -67,7 +67,7 @@ export const postContent: { [id: string]: JSX.Element } = {
                     <img
                         alt="Step 5"
                         title="Step 5"
-                        style={fullWidthStyle}
+                        style={fullWidthStackedImagesStyle}
                         src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/5.png`}
                     />
                 </a>
@@ -75,19 +75,19 @@ export const postContent: { [id: string]: JSX.Element } = {
             <img
                 alt="Step 6"
                 title="Step 6"
-                style={fullWidthStyle}
+                style={fullWidthStackedImagesStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/6.png`}
             />
             <img
                 alt="Step 7"
                 title="Step 7"
-                style={fullWidthStyle}
+                style={fullWidthStackedImagesStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/7.png`}
             />
             <img
                 alt="Step 8"
                 title="Step 8"
-                style={fullWidthStyle}
+                style={fullWidthStackedImagesStyle}
                 src={`${webConfig.basePath}/assets/blog/react-native-windows-setup/8.png`}
             />
         </>

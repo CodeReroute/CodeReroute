@@ -18,6 +18,7 @@ const StyledDiv = styled.div<{ borderWidth?: number }>`
             borderWidth ? `border-width: ${borderWidth}px !important;` : ''}
     }
     .author-name {
+        flex: 1;
         margin-left: 8px;
         .author-full-name {
             font-weight: 600;
@@ -32,19 +33,17 @@ const AuthorComponent: React.FC<AuthorNameProps> = ({ author }) => (
             title={author.name}
             className="author-avatar"
         />
-        <div>
-            <h6 className="author-name">
-                <span className="author-full-name">
-                    {author.name.toUpperCase()}
-                </span>
-                {author.title && (
-                    <>
-                        <br />
-                        {author.title.toUpperCase()}
-                    </>
-                )}
-            </h6>
-        </div>
+        <h6 className="author-name">
+            <span className="author-full-name">
+                {author.name.toUpperCase()}
+            </span>
+            {author.title && (
+                <>
+                    <br />
+                    {author.title.toUpperCase()}
+                </>
+            )}
+        </h6>
     </StyledDiv>
 );
 
