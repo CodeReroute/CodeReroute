@@ -46,9 +46,7 @@ const BlogPost: React.FC = () => {
             <MetaTags
                 title={
                     post
-                        ? `${ReactDOMServer.renderToStaticMarkup(
-                              post.title,
-                          )} | Code Reroute`
+                        ? `${post.titleString} | Code Reroute`
                         : 'Post Not Found | Code Reroute'
                 }
                 keywords="code reroute, blog, posts"

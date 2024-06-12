@@ -7,6 +7,7 @@ import { postSummary } from './postSummary';
 
 export interface Post {
     slug: string;
+    titleString: string;
     title: JSX.Element;
     summary: JSX.Element;
     content: JSX.Element;
@@ -22,6 +23,7 @@ export const posts: { [id: string]: Post | undefined } = {
         slug: 'react-native-windows-setup',
         author: authors.ahmed,
         title: <>React Native Setup On Windows</>,
+        titleString: 'React Native Setup On Windows',
         summary: postSummary['react-native-windows-setup'],
         content: postContent['react-native-windows-setup'],
         image: {
