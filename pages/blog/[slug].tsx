@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { GetServerSideProps } from 'next';
 import { posts } from '../../components/blog/posts';
 import PostNotFound from '../../components/blog/PostNotFound';
 import MetaTags from '../../components/MetaTags';
@@ -13,7 +14,6 @@ import {
     sanSerifFont,
 } from '../../components/styles/theme';
 import { StyledPostWrapper } from '../../components/blog/PostRow';
-import { GetServerSideProps } from 'next';
 
 interface BlogPostProps {
     title: string | undefined;
