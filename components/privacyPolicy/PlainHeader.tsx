@@ -9,6 +9,10 @@ const StyledDiv = styled.div`
     background-color: ${darkBrown};
     padding: 10px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 `;
 
 const PlainHeader: React.FC<{ link?: string }> = ({ link = '/' }) => (

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import PlainHeader from '../../components/privacyPolicy/PlainHeader';
+import MetaTags from '../../components/MetaTags';
 import Footer from '../../components/footer/Footer';
+import PlainHeader from '../../components/privacyPolicy/PlainHeader';
 import {
     ContentStyles,
     lightGray,
@@ -9,9 +10,6 @@ import {
 } from '../../components/styles/theme';
 import PostRow from '../../components/blog/PostRow';
 import { ContentSlideUp } from '../../components/styles/ContentSlideUp';
-import MetaTags from '../../components/MetaTags';
-import { authors } from '../../components/blog/authors';
-import { webConfig } from '../../utils/webConfig';
 import { postKeys, posts } from '../../components/blog/posts';
 
 interface BlogProps {}
@@ -19,7 +17,7 @@ interface BlogProps {}
 const StyledContentStyles = styled(ContentStyles)`
     max-width: 800px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 150px 20px 100px 20px;
     font-size: 17px;
     font-family: ${sanSerifFont};
 `;
@@ -44,7 +42,7 @@ const Blog: React.FC<BlogProps> = () => {
                     const post = posts[p];
                     return (
                         post && (
-                            <ContentSlideUp key={p}>
+                            <ContentSlideUp rootMargin="50px" key={p}>
                                 <PostRow {...post} />
                             </ContentSlideUp>
                         )

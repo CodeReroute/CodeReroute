@@ -18,7 +18,7 @@ import { StyledPostWrapper } from '../../components/blog/PostRow';
 const StyledContentStyles = styled(ContentStyles)`
     max-width: 800px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 150px 20px 100px 20px;
     font-size: 17px;
     font-family: ${sanSerifFont};
 `;
