@@ -5,6 +5,7 @@ import Footer from '../../components/footer/Footer';
 import PlainHeader from '../../components/privacyPolicy/PlainHeader';
 import {
     ContentStyles,
+    largerMobileBreakPoint,
     lightGray,
     sanSerifFont,
 } from '../../components/styles/theme';
@@ -18,6 +19,9 @@ const StyledContentStyles = styled(ContentStyles)`
     padding: 150px 20px 100px 20px;
     font-size: 17px;
     font-family: ${sanSerifFont};
+    @media screen and (max-width: ${largerMobileBreakPoint}px) {
+        padding: 100px 10px 80px 10px;
+    }
 `;
 
 const Blog: React.FC = () => {
@@ -40,7 +44,7 @@ const Blog: React.FC = () => {
                     const post = posts[p];
                     return (
                         post && (
-                            <ContentSlideUp rootMargin="50px" key={p}>
+                            <ContentSlideUp rootMargin="150px" key={p}>
                                 <PostRow {...post} />
                             </ContentSlideUp>
                         )

@@ -3,7 +3,12 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import AuthorName from './AuthorName';
 import { StyledImage } from '../profile/Avatar';
-import { black, darkWhite, white } from '../styles/theme';
+import {
+    black,
+    darkWhite,
+    largerMobileBreakPoint,
+    white,
+} from '../styles/theme';
 import { LinkBox } from '../shared/ButtonBox';
 import { Post } from './posts';
 
@@ -39,7 +44,14 @@ const StyledDiv = styled(StyledPostWrapper)`
         align-items: center;
         justify-content: space-between;
     }
-    .author-and-read-more {
+    @media screen and (max-width: ${largerMobileBreakPoint}px) {
+        .author-flex {
+            flex-direction: column-reverse;
+        }
+        .read-more {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
     }
 `;
 
