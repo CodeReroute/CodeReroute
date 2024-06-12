@@ -4,13 +4,9 @@ import { trackEvent } from '../../utils/googleAnalytics';
 import { webConfig } from '../../utils/webConfig';
 import {
     black,
-    darkBrown,
-    darkGray,
-    darkWhite,
     lightGray,
     sanSerifFont,
     tabletBreakPoint,
-    white,
 } from '../styles/theme';
 
 declare global {

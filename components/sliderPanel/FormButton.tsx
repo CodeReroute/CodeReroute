@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { trackEvent } from '../../utils/googleAnalytics';
 import { StyledButton } from '../shared/ButtonBox';
-import { lightGray } from '../styles/theme';
 import { sliderOnClick } from './utils';
 
 interface FormButtonProps {

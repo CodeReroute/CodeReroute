@@ -12,8 +12,6 @@ import PostRow from '../../components/blog/PostRow';
 import { ContentSlideUp } from '../../components/styles/ContentSlideUp';
 import { postKeys, posts } from '../../components/blog/posts';
 
-interface BlogProps {}
-
 const StyledContentStyles = styled(ContentStyles)`
     max-width: 800px;
     margin: 0 auto;
@@ -22,7 +20,7 @@ const StyledContentStyles = styled(ContentStyles)`
     font-family: ${sanSerifFont};
 `;
 
-const Blog: React.FC<BlogProps> = () => {
+const Blog: React.FC = () => {
     useEffect(() => {
         document.body.style.backgroundColor = lightGray;
         return () => {
