@@ -64,7 +64,7 @@ const Home: React.FC = () => {
                 <Footer />
                 {/* <Navigation /> */}
                 <Header />
-                <ReCaptchaV3 hideText={true} />
+                <ReCaptchaV3 hideText />
             </LanguageProvider>
         </>
     );
