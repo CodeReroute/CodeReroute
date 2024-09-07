@@ -1,4 +1,5 @@
 export const webConfig = {
+    recaptchaV3Key: process.env.GOOGLE_API_KEY,
     isProduction: process.env.APP_ENV === 'production',
     basePath: process.env.CODE_REROUTE_BASE_PATH || '',
     sendEmailBaseUrl:

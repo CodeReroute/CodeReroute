@@ -24,7 +24,7 @@ export const sendEmail = <T>({
     };
     httpClient.open(
         'POST',
-        `${webConfig.sendEmailBaseUrl}/social-reroute/emails/form-submission`,
+        `${webConfig.sendEmailBaseUrl}/code-reroute/emails/employment`,
         true,
     );
     httpClient.setRequestHeader('Content-type', 'application/json');

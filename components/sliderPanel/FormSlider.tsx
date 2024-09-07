@@ -11,6 +11,7 @@ import {
     white,
 } from '../styles/theme';
 import FormSubmitButton from './FormSubmitButton';
+import { requestRecaptchaV3Token } from '../../utils/ReCaptchaV3';
 
 const StyledDiv = styled.div`
     background-color: ${lightGray};
@@ -94,7 +95,12 @@ const FormSlider: React.FC<FormSliderProps> = ({
             fields.forEach((f) => {
                 result[f.id] = f.value;
             });
-            makeRequest(result);
+            requestRecaptchaV3Token((captchaToken: string | undefined) => {
+                if (captchaToken) {
+                    result['recaptcha'] = captchaToken;
+                }
+                makeRequest(result);
+            });
         },
         [makeRequest],
     );
