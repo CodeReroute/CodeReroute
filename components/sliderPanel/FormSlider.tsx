@@ -97,7 +97,7 @@ const FormSlider: React.FC<FormSliderProps> = ({
             });
             requestRecaptchaV3Token((captchaToken: string | undefined) => {
                 if (captchaToken) {
-                    result['recaptcha'] = captchaToken;
+                    result.recaptcha = captchaToken;
                 }
                 makeRequest(result);
             });
