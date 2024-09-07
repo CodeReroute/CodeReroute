@@ -10,6 +10,7 @@ import Header from '../components/header/Header';
 import BusinessIdentity from '../components/photography/BusinessIdentity';
 import OurTeam from '../components/team/OurTeam';
 import { webConfig } from '../utils/webConfig';
+import ReCaptchaV3 from '../utils/ReCaptchaV3';
 
 const description =
     'Code Reroute is a female-led tech company building innovative web and mobile apps.';
@@ -63,6 +64,7 @@ const Home: React.FC = () => {
                 <Footer />
                 {/* <Navigation /> */}
                 <Header />
+                <ReCaptchaV3 hideText={true} />
             </LanguageProvider>
         </>
     );
