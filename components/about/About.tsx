@@ -12,7 +12,8 @@ import {
 import { LinkBox } from '../shared/ButtonBox';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 // import LaptopImage from '../../public/assets/about/laptop.png';
-import MobileImage from '../../public/assets/about/mobile.svg';
+// import MobileImage from '../../public/assets/about/mobile.svg';
+import MobileImage from '../../public/assets/about/mobile.png';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
 
 const StyledDiv = styled.div`
@@ -40,15 +41,15 @@ const StyledDiv = styled.div`
             left: 0;
             bottom: 0px;
             z-index: 9;
-            width: 350px;
-            height: auto;
+            width: auto;
+            height: 600px;
             transform: translate(-50%, 55%);
         }
     }
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .laptop-container {
             .mobile {
-                width: 250px;
+                height: 444px;
             }
         }
     }
