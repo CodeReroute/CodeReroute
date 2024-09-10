@@ -21,6 +21,7 @@ const StyledDiv = styled.div`
     p.heading-one {
         font-weight: 200;
         margin-bottom: 4px;
+        max-width: 460px;
     }
     p.heading-two {
         margin-top: 4px;
