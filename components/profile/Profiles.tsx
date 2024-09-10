@@ -43,7 +43,7 @@ const StyledDiv = styled.div`
     }
     .description {
         text-align: center;
-        max-width: 505px;
+        max-width: 575px;
         margin-left: auto;
         margin-right: auto;
     }
