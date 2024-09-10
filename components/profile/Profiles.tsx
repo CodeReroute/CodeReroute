@@ -65,7 +65,7 @@ const StyledDiv = styled.div`
     }
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .description {
-            margin: 50px 0;
+            margin: 50px auto;
         }
     }
 `;
