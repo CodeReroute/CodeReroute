@@ -14,17 +14,19 @@ import { webConfig } from '../../utils/webConfig';
 import MemberTitle from '../profile/MemberTitle';
 import TeamMember, { TeamMemberForwardProps } from './TeamMember';
 import { MemberId } from './TeamMemberRender';
+import Member from './Member';
 
 const StyledDiv = styled.div`
     background-color: ${lightGray};
     .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
+        .members-content {
+            max-width: 630px;
+        }
         .members {
+            margin-top: 60px;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-between;
             gap: 30px;
             flex-wrap: wrap;
             .member {
@@ -62,18 +64,10 @@ const OurTeam: React.FC = () => {
     const ref = useRef<TeamMemberForwardProps>(null);
     const memberSectionRef = useRef<HTMLDivElement>(null);
     const t = useTranslate();
-    const { heading, paragraphOne, paragraphTwo, usman, nabah } = {
+    const { heading, paragraphOne, paragraphTwo } = {
         heading: t('team.heading'),
         paragraphOne: t('team.paragraphOne'),
         paragraphTwo: t('team.paragraphTwo'),
-        usman: {
-            name: t('teamMembers.usman.name'),
-            role: t('teamMembers.usman.role'),
-        },
-        nabah: {
-            name: t('teamMembers.nabah.name'),
-            role: t('teamMembers.nabah.role'),
-        },
     };
 
     const onClick = (id: MemberId) => {
@@ -84,7 +78,7 @@ const OurTeam: React.FC = () => {
         <>
             <StyledDiv>
                 <ContentStyles padding={100} contentMargin className="content">
-                    <div>
+                    <div className="members-content">
                         <ContentSlideUp>
                             <Heading>{heading}</Heading>
                         </ContentSlideUp>
@@ -96,50 +90,10 @@ const OurTeam: React.FC = () => {
                         </ContentSlideUp>
                     </div>
                     <div ref={memberSectionRef} className="members">
-                        <div
-                            role="button"
-                            tabIndex={0}
-                            onClick={() => onClick('usman')}
-                            onKeyDown={() => onClick('usman')}
-                            className="member"
-                        >
-                            <ContentSlideUp>
-                                <Avatar
-                                    image={`${webConfig.basePath}/assets/team/usman.png`}
-                                />
-                            </ContentSlideUp>
-                            <ContentSlideUp>
-                                <MemberTitle
-                                    id="usman"
-                                    name={usman.name}
-                                    memberRole={usman.role}
-                                    onClick={() => null}
-                                    className="member-details"
-                                />
-                            </ContentSlideUp>
-                        </div>
-                        <div
-                            role="button"
-                            tabIndex={0}
-                            onClick={() => onClick('nabah')}
-                            onKeyDown={() => onClick('nabah')}
-                            className="member"
-                        >
-                            <ContentSlideUp>
-                                <Avatar
-                                    image={`${webConfig.basePath}/assets/team/nabah.png`}
-                                />
-                            </ContentSlideUp>
-                            <ContentSlideUp>
-                                <MemberTitle
-                                    id="nabah"
-                                    name={nabah.name}
-                                    memberRole={nabah.role}
-                                    onClick={() => null}
-                                    className="member-details"
-                                />
-                            </ContentSlideUp>
-                        </div>
+                        <Member onClick={onClick} memberId="usman" />
+                        <Member onClick={onClick} memberId="ahmed" />
+                        <Member onClick={onClick} memberId="bilal" />
+                        <Member onClick={onClick} memberId="haseeb" />
                     </div>
                 </ContentStyles>
             </StyledDiv>

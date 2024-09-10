@@ -16,10 +16,11 @@ import { ContentSlideUp } from '../styles/ContentSlideUp';
 import MemberTitle from './MemberTitle';
 
 const StyledDiv = styled.div`
-    background-image: url(${webConfig.basePath}/assets/laptop-table.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(${webConfig.basePath}/assets/laptop-table.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     letter-spacing: 1.5px;
     font-weight: 200;
     color: ${white};
@@ -42,11 +43,15 @@ const StyledDiv = styled.div`
     }
     .description {
         text-align: center;
-        max-width: 660px;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        max-width: 505px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .margin-top-0 {
+        margin-top: 0;
+    }
+    .margin-bottom-0 {
+        margin-bottom: 0;
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
         .content-wrapper {
@@ -67,9 +72,10 @@ const StyledDiv = styled.div`
 
 const Profiles: React.FC = () => {
     const t = useTranslate();
-    const { descriptionOne, descriptionTwo } = {
+    const { descriptionOne, descriptionTwo, descriptionThree } = {
         descriptionOne: t('profiles.descriptionOne'),
         descriptionTwo: t('profiles.descriptionTwo'),
+        descriptionThree: t('profiles.descriptionThree'),
     };
     return (
         <StyledDiv>
@@ -92,15 +98,16 @@ const Profiles: React.FC = () => {
                                     </span>
                                 </>
                             }
-                            memberRole="UI/UX Design"
+                            memberRole="Business Development"
                             className="credit-danielle"
                         />
                     </FlexCenteredRow>
                 </ContentSlideUp>
                 <ContentSlideUp>
                     <SanText className="description">
-                        <p>{descriptionOne}</p>
+                        <p className="margin-top-0">{descriptionOne}</p>
                         <p>{descriptionTwo}</p>
+                        <p className="margin-bottom-0">{descriptionThree}</p>
                     </SanText>
                 </ContentSlideUp>
                 <ContentSlideUp>

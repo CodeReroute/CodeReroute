@@ -4,14 +4,22 @@ import styled from 'styled-components';
 import SocialMediaIcons from '../socialMedia/SocialMediaIcons';
 import { useTranslate } from '../../utils/hooks/useTranslate';
 import { FadeIn } from '../styles/animations';
-import { ContentStyles, largerMobileBreakPoint } from '../styles/theme';
+import {
+    ContentStyles,
+    largerMobileBreakPoint,
+    serifFont,
+} from '../styles/theme';
 import Logo from '../../public/assets/logo.png';
 
 const StyledDiv = styled.div`
     display: flex;
     height: 100%;
     flex-direction: column;
+    h2 {
+        font-family: ${serifFont};
+    }
     p.heading-one {
+        font-weight: 200;
         margin-bottom: 4px;
     }
     p.heading-two {
@@ -46,17 +54,16 @@ const StyledDiv = styled.div`
 
 const HeroContent: React.FC = () => {
     const t = useTranslate();
-    const { heading, contentOne, contentTwo, contentThree, contentFour } =
-        useMemo(
-            () => ({
-                heading: t('homePage.hero.heading'),
-                contentOne: t('homePage.hero.contentOne'),
-                contentTwo: t('homePage.hero.contentTwo'),
-                contentThree: t('homePage.hero.contentThree'),
-                contentFour: t('homePage.hero.contentFour'),
-            }),
-            [t],
-        );
+    const { heading, contentOne } = useMemo(
+        () => ({
+            heading: t('homePage.hero.heading'),
+            contentOne: t('homePage.hero.contentOne'),
+            contentTwo: t('homePage.hero.contentTwo'),
+            contentThree: t('homePage.hero.contentThree'),
+            contentFour: t('homePage.hero.contentFour'),
+        }),
+        [t],
+    );
     return (
         <StyledDiv>
             <FadeIn className="logo">
@@ -74,11 +81,11 @@ const HeroContent: React.FC = () => {
                 <FadeIn className="text-content">
                     <h2>{heading}</h2>
                     <p className="heading-one">{contentOne}</p>
-                    <p className="heading-two">
+                    {/* <p className="heading-two">
                         {contentTwo}
                         <i>{contentThree}</i>
                         {contentFour}
-                    </p>
+                    </p> */}
                     <SocialMediaIcons
                         className="code-icons"
                         padding={25}

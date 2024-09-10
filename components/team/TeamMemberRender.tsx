@@ -24,7 +24,7 @@ const defaultDetails = {
     bio: [],
 };
 
-export type MemberId = 'usman' | 'nabah';
+export type MemberId = 'usman' | 'nabah' | 'ahmed' | 'bilal' | 'haseeb';
 
 interface TeamMemberRenderProps {
     open: boolean;

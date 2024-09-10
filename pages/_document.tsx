@@ -50,33 +50,45 @@ class MyDocument extends Document {
                         rel="android-chrome"
                         sizes="512x512"
                         href={`${webConfig.basePath}/android-chrome-512x512.png`}
+                        media="(prefers-color-scheme: light)"
                     />
                     <link
                         rel="android-chrome"
                         sizes="192x192"
                         href={`${webConfig.basePath}/android-chrome-192x192.png`}
+                        media="(prefers-color-scheme: light)"
                     />
                     <link
                         rel="apple-touch-icon"
                         sizes="180x180"
                         href={`${webConfig.basePath}/apple-touch-icon.png`}
+                        media="(prefers-color-scheme: light)"
                     />
                     <link
                         rel="icon"
                         type="image/png"
                         sizes="32x32"
                         href={`${webConfig.basePath}/favicon-32x32.png`}
+                        media="(prefers-color-scheme: light)"
                     />
                     <link
                         rel="icon"
                         type="image/png"
                         sizes="16x16"
                         href={`${webConfig.basePath}/favicon-16x16.png`}
+                        media="(prefers-color-scheme: light)"
                     />
                     <link
                         rel="icon"
                         type="image/x-icon"
                         href={`${webConfig.basePath}/favicon.ico`}
+                        media="(prefers-color-scheme: light)"
+                    />
+                    <link
+                        rel="icon"
+                        type="image/x-icon"
+                        href={`${webConfig.basePath}/arrow-icon-light.png`}
+                        media="(prefers-color-scheme: dark)"
                     />
                     <link
                         rel="manifest"

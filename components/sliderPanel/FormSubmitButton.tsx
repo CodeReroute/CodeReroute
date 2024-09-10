@@ -30,9 +30,9 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = ({ type }) => {
         case 'REQUEST_SUCCESS':
             return (
                 <div className="form-success">
-                    Thanks for reaching out!
+                    Thank you for your interest in joining our team!
                     <br />
-                    We’ll contact you within 2 business days
+                    We will reach out when a relevant position opens up.
                 </div>
             );
     }

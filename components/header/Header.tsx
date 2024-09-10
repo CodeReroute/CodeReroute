@@ -80,8 +80,8 @@ const Header: React.FC = () => {
                     <a href="#about" className="menu-item">
                         <h6>ABOUT US</h6>
                     </a>
-                    <a href="#investors" className="menu-item">
-                        <h6>INVESTORS</h6>
+                    <a href="#restaurateurs" className="menu-item">
+                        <h6>RESTAURATEURS</h6>
                     </a>
                     <a href="#home">
                         <FadeIn className="logo">

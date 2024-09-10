@@ -44,7 +44,7 @@ const Home: React.FC = () => {
                 <a id="contact" />
                 <About />
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a id="investors" />
+                <a id="restaurateurs" />
                 <Websites />
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a id="about" />

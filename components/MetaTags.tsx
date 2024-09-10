@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
+import Head from 'next/head';
 
 interface MetaTagsProps {
     title: string;
@@ -8,13 +8,13 @@ interface MetaTagsProps {
     featuredImage?: string;
 }
 
-const favIconUrl = 'https://codereroute.com/assets/sharing-meta-image.png';
+const defaultImage = 'https://codereroute.com/assets/sharing-meta-image.png';
 
 const MetaTags: React.FC<MetaTagsProps> = ({
     title,
     description,
     keywords,
-    featuredImage = favIconUrl,
+    featuredImage = defaultImage,
 }) => (
     <Head>
         <title>{title}</title>

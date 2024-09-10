@@ -34,14 +34,14 @@ const EmploymentFormFields: React.FC<FormFieldsProps> = (props) => (
         <Input
             required
             type="text"
-            id="bipoc"
-            placeholder="do you identify as BIPOC?"
+            id="work-with-us"
+            placeholder="why do you want to work with us?"
         />
         <Input
             required
             type="text"
-            id="work-with-us"
-            placeholder="why do you want to work with us?"
+            id="bipoc"
+            placeholder="where did you hear about us?"
         />
     </FormSlider>
 );

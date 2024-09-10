@@ -97,7 +97,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
                 {InstagramIcon}
             </a>
         </SocialMediaIconSlideUp>
-        <SocialMediaIconSlideUp
+        {/* <SocialMediaIconSlideUp
             className="icon-wrapper"
             time={socialMediaAnimationTime}
             delay={socialMediaAnimationDelayTime * 2}
@@ -110,7 +110,7 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({
             >
                 {FacebookIcon}
             </a>
-        </SocialMediaIconSlideUp>
+        </SocialMediaIconSlideUp> */}
         <SocialMediaIconSlideUp
             className="icon-wrapper"
             time={socialMediaAnimationTime}

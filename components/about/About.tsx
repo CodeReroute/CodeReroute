@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
         grid-template-columns: 1fr 1fr;
     }
     .about {
-        max-width: 600px;
+        max-width: 400px;
     }
     .laptop-grid {
         position: relative;
@@ -111,8 +111,8 @@ const About: React.FC = () => {
                         </ContentSlideUp>
                         <ContentSlideUp>
                             <LinkBox
-                                text={getInTouch}
-                                href="https://www.linkedin.com/in/danielle-dufour/"
+                                text="MAPPETIZER"
+                                href="http://mappetizer.com/"
                                 isLight
                                 hoverColor={black}
                                 hoverTextColor={darkWhite}
