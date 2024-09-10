@@ -22,7 +22,6 @@ const StyledDiv = styled.div`
         grid-template-columns: 1fr 1fr;
     }
     .about {
-        max-width: 400px;
     }
     .laptop-grid {
         position: relative;

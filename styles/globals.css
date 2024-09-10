@@ -27,7 +27,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Mulish', serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 h1,
@@ -89,6 +89,10 @@ h6 {
 
 .hidden {
     visibility: hidden;
+}
+
+.grecaptcha-badge {
+    display: none !important;
 }
 
 @media only screen and (max-width: 500px) {
