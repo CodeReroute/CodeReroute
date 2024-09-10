@@ -78,7 +78,6 @@ interface TextProps {
 }
 
 export const SanText = styled.div`
-    font-size: 16px;
     font-family: ${sanSerifFont};
     letter-spacing: 1.5px;
 `;
