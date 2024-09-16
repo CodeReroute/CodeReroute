@@ -39,7 +39,7 @@ const StyledDiv = styled.div`
         .mobile {
             position: absolute;
             left: 0;
-            bottom: 0px;
+            bottom: -90px;
             z-index: 9;
             width: auto;
             height: 600px;
@@ -49,6 +49,7 @@ const StyledDiv = styled.div`
     @media only screen and (max-width: ${largerBreakPoint}px) {
         .laptop-container {
             .mobile {
+                bottom: 0;
                 height: 444px;
             }
         }
