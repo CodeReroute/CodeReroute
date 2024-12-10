@@ -99,7 +99,7 @@ export const StyledButton = styled.button<{
 `;
 
 interface Box {
-    text: string;
+    text: string | JSX.Element;
     isLight: boolean;
     className?: string;
 }
