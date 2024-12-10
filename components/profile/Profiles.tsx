@@ -54,7 +54,7 @@ const StyledDiv = styled.div`
         padding: 32px;
         text-align: center;
         max-width: 575px;
-        margin: 32px auto;
+        margin: 60px auto;
         background-color: ${black};
     }
     .margin-top-0 {
