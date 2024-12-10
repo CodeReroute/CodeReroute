@@ -7,7 +7,7 @@ import { white } from '../styles/theme';
 
 const StyledDiv = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 90svh;
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
