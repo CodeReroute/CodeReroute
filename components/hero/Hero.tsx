@@ -12,10 +12,7 @@ const StyledDiv = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
     color: ${white};
-    background-image: linear-gradient(
-        rgba(94, 88, 88, 0.8),
-        rgba(94, 88, 88, 0.9)
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
     overflow: hidden;
     video {
         position: absolute;

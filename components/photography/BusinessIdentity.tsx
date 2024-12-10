@@ -5,7 +5,7 @@ import {
     ContentStyles,
     Heading,
     black,
-    darkWhite,
+    lightGray,
     photographyBreakPoint,
     tabletBreakPoint,
 } from '../styles/theme';
@@ -14,8 +14,9 @@ import FormButton from '../sliderPanel/FormButton';
 import EmploymentFormFields from '../employment/EmploymentFormFields';
 
 const StyledDiv = styled.div`
-    background-color: ${darkWhite};
+    background-color: ${lightGray};
     padding-bottom: 100px;
+    border-bottom: 1px solid ${black};
     .content-wrapper {
         padding-bottom: 0;
     }
@@ -80,8 +81,8 @@ const BusinessIdentity: React.FC = () => {
                             <FormButton
                                 name="Employment Apply Here Button"
                                 hoverColor={black}
-                                hoverTextColor={darkWhite}
-                                backgroundColor={darkWhite}
+                                hoverTextColor={lightGray}
+                                backgroundColor={lightGray}
                                 buttonText={buttonText}
                                 sectionRef={sectionRef}
                                 formSectionRef={formSectionRef}

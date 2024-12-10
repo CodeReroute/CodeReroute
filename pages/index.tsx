@@ -13,7 +13,7 @@ import { webConfig } from '../utils/webConfig';
 import ReCaptchaV3 from '../utils/ReCaptchaV3';
 
 const description =
-    'Code Reroute is a female-led tech company building innovative web and mobile apps.';
+    'Code Reroute is a female-led tech company building innovative web and mobile apps— mappetizer';
 const keywords =
     'software development, canada, agency, edmonton, alberta, consultations, web design, software engineering, digital, app development, communications, web application, mobile application';
 

@@ -7,7 +7,7 @@ import {
     sanSerifFont,
     largerBreakPoint,
     largerMobileBreakPoint,
-    darkWhite,
+    lightGray,
     tabletBreakPoint,
     black,
 } from '../styles/theme';
@@ -89,7 +89,7 @@ const phases: TimelinePhase[] = [
 ];
 
 const StyledDiv = styled.div`
-    background-color: ${darkWhite};
+    background-color: ${lightGray};
     .content {
         padding-bottom: 0;
     }
@@ -122,8 +122,8 @@ const StyledDiv = styled.div`
         padding-left: 19px;
     }
     .website-timeline {
-        padding-top: 168px;
-        padding-bottom: 238px;
+        padding-top: 268px;
+        padding-bottom: 338px;
     }
     .phase-four-mobile {
         display: none;
@@ -252,8 +252,8 @@ const Websites: React.FC = () => {
                                 href="https://www.linkedin.com/in/danielle-dufour/"
                                 isLight={false}
                                 hoverColor={black}
-                                hoverTextColor={darkWhite}
-                                backgroundColor={darkWhite}
+                                hoverTextColor={lightGray}
+                                backgroundColor={lightGray}
                             />
                         </ContentSlideUp>
                     </div>

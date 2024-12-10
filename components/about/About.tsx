@@ -15,9 +15,22 @@ import { useTranslate } from '../../utils/hooks/useTranslate';
 // import MobileImage from '../../public/assets/about/mobile.svg';
 import MobileImage from '../../public/assets/about/mobile.png';
 import { ContentSlideUp } from '../styles/ContentSlideUp';
+import { mappetizerIcon } from '../socialMedia/Icons';
 
 const StyledDiv = styled.div`
     background-color: ${lightGray};
+    border-bottom: 1px solid ${black};
+    .mappetizer {
+        svg {
+            width: 230px;
+            height: auto;
+            margin-left: -18px;
+            margin-bottom: -18px;
+        }
+        .cls-1 {
+            fill: #101010;
+        }
+    }
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -91,7 +104,7 @@ const About: React.FC = () => {
                 <div className="grid">
                     <div className="about">
                         <ContentSlideUp>
-                            <Heading>{heading}</Heading>
+                            <div className="mappetizer">{mappetizerIcon}</div>
                         </ContentSlideUp>
                         <ContentSlideUp>
                             <p>{descriptionOne}</p>

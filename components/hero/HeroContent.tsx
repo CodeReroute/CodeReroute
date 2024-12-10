@@ -6,8 +6,8 @@ import { useTranslate } from '../../utils/hooks/useTranslate';
 import { FadeIn } from '../styles/animations';
 import {
     ContentStyles,
+    Heading,
     largerMobileBreakPoint,
-    serifFont,
 } from '../styles/theme';
 import Logo from '../../public/assets/logo.png';
 
@@ -15,13 +15,9 @@ const StyledDiv = styled.div`
     display: flex;
     height: 100%;
     flex-direction: column;
-    h2 {
-        font-family: ${serifFont};
-    }
-    p.heading-one {
-        font-weight: 200;
-        margin-bottom: 4px;
-        max-width: 460px;
+    .heading-one {
+        font-size: 26px;
+        font-weight: 400;
     }
     p.heading-two {
         margin-top: 4px;
@@ -44,7 +40,7 @@ const StyledDiv = styled.div`
     }
     .text-content {
         margin: auto;
-        max-width: 800px;
+        max-width: 755px;
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
         .text {
@@ -80,8 +76,8 @@ const HeroContent: React.FC = () => {
             </FadeIn>
             <ContentStyles padding={0} contentMargin className="text">
                 <FadeIn className="text-content">
-                    <h2>{heading}</h2>
-                    <p className="heading-one">{contentOne}</p>
+                    {/* <h2>{heading}</h2> */}
+                    <Heading className="heading-one">{contentOne}</Heading>
                     {/* <p className="heading-two">
                         {contentTwo}
                         <i>{contentThree}</i>

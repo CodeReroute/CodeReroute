@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
     return (
         <StyledDiv ref={ref}>
-            <Language className="language-selector hidden" />
+            {/* <Language className="language-selector hidden" /> */}
             <div className="menu-wrapper">
                 <div className="menu">
                     <a href="#about" className="menu-item">
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
                     <a href="#employment" className="menu-item">
                         <h6>EMPLOYMENT</h6>
                     </a>
-                    <Language className="language-selector" />
+                    {/* <Language className="language-selector" /> */}
                 </div>
             </div>
         </StyledDiv>

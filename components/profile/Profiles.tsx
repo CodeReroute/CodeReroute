@@ -8,6 +8,7 @@ import {
     SanText,
     largerMobileBreakPoint,
     largerBreakPoint,
+    black,
 } from '../styles/theme';
 import { webConfig } from '../../utils/webConfig';
 import Avatar from './Avatar';
@@ -17,7 +18,7 @@ import MemberTitle from './MemberTitle';
 
 const StyledDiv = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url(${webConfig.basePath}/assets/laptop-table.png);
+        url(${webConfig.basePath}/assets/profile-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -32,20 +33,26 @@ const StyledDiv = styled.div`
         text-align: right;
         margin-right: 20px;
         line-height: 19px;
+        padding: 16px;
+        background-color: ${black};
     }
     .credit-danielle {
         line-height: 19px;
         margin-left: 20px;
+        padding: 16px;
+        background-color: ${black};
     }
     .hafiz {
         text-align: right;
         justify-content: flex-end;
     }
     .description {
+        padding: 32px;
         text-align: center;
         max-width: 575px;
         margin-left: auto;
         margin-right: auto;
+        background-color: ${black};
     }
     .margin-top-0 {
         margin-top: 0;
