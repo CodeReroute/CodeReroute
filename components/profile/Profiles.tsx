@@ -29,6 +29,9 @@ const StyledDiv = styled.div`
     .content-wrapper {
         padding: 0px 5rem;
     }
+    .danielle {
+        display: inline-flex;
+    }
     .credit-hafiz {
         text-align: right;
         margin-right: 20px;
@@ -37,6 +40,7 @@ const StyledDiv = styled.div`
         background-color: ${black};
     }
     .credit-danielle {
+        flex: 1;
         line-height: 19px;
         margin-left: 20px;
         padding: 16px;
@@ -87,7 +91,7 @@ const Profiles: React.FC = () => {
         <StyledDiv>
             <ContentStyles className="content-wrapper" padding={0}>
                 <ContentSlideUp>
-                    <FlexCenteredRow>
+                    <FlexCenteredRow className="danielle">
                         <Avatar
                             image={`${webConfig.basePath}/assets/danielle.jpeg`}
                             marginTop="-47px"
