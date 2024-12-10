@@ -14,7 +14,8 @@
         "spotify",
         "Temuri",
         "unmount",
-        "unselectable"
+        "unselectable",
+        "waitlist"
     ],
     "typescript.tsdk": "node_modules/typescript/lib"
 }
