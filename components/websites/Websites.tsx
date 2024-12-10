@@ -144,6 +144,9 @@ const StyledDiv = styled.div`
                 justify-self: left;
             }
         }
+        .get-in-touch-button {
+            padding: 18px 24px;
+        }
     }
     @media screen and (max-width: ${tabletBreakPoint}px) {
         .website-timeline-wrapper {
@@ -204,6 +207,8 @@ const StyledDiv = styled.div`
                         }
                         .phase-four-mobile {
                             display: block;
+                            min-width: 120px;
+                            margin-left: -9px;
                         }
                     }
                     .dot-wrapper:nth-child(5) .text.above {
@@ -254,6 +259,7 @@ const Websites: React.FC = () => {
                                 hoverColor={black}
                                 hoverTextColor={lightGray}
                                 backgroundColor={lightGray}
+                                className="get-in-touch-button"
                             />
                         </ContentSlideUp>
                     </div>

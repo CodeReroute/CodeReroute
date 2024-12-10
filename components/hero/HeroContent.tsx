@@ -43,6 +43,9 @@ const StyledDiv = styled.div`
         max-width: 755px;
     }
     @media only screen and (max-width: ${largerMobileBreakPoint}px) {
+        .heading-one {
+            font-size: 16px;
+        }
         .text {
             margin-left: 0;
         }
