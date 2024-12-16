@@ -24,11 +24,7 @@ const StyledDiv = styled.div`
         svg {
             width: 230px;
             height: auto;
-            margin-left: -18px;
-            margin-bottom: -18px;
-        }
-        .cls-1 {
-            fill: #101010;
+            margin-bottom: -5px;
         }
     }
     .grid {
