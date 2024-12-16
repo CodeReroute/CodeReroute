@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
     border-bottom: 1px solid ${black};
     .mappetizer {
         svg {
-            width: 230px;
+            width: 180px;
             height: auto;
             margin-bottom: -5px;
         }
