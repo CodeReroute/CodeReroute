@@ -1,5 +1,7 @@
 {
-  "name": "my-app",
+  "name": "code-reroute",
+  "productName": "code-reroute",
+  "description": "Code Reroute",
   "version": "0.1.0",
   "private": true,
   "scripts": {
