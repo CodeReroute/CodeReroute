@@ -1,15 +1,10 @@
-import React from 'react'
-
-const page = () => {
+export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-[#CDCCC8]">
-     <div className="text-black">
-      <h1 className="text-3xl font-goga">WE ARE UPDATING OUR SITE.</h1>
-      <h1 className="text-3xl font-goga">CHECK BACK EARLY FEB.</h1>
-     </div>
-
+    <div className="flex items-center justify-center h-full">
+      <h1 className="text-7xl font-bold tracking-wider text-white">
+        CODE REROUTE
+      </h1>
     </div>
   )
 }
 
-export default page
