@@ -1,15 +1,20 @@
-import React from 'react'
+import React from 'react';
+import style from './page.module.scss';
 
 const page = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-[#CDCCC8]">
-     <div className="text-black p-10">
-      <h1 className="text-3xl font-goga">WE ARE UPDATING OUR SITE.</h1>
-      <h1 className="text-3xl font-goga">CHECK BACK EARLY FEB.</h1>
-     </div>
-
+    <div className={style['main-wrapper']}>
+      <img
+        src="/code-reroute-logo.png"
+        alt="Code Reroute"
+        className={style['code-reroute-logo']}
+      />
+      <div className={style['main-text']}>
+        <h1 className="font-goga">WE ARE UPDATING OUR SITE.</h1>
+        <h1 className="font-goga">CHECK BACK EARLY FEB.</h1>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
