@@ -87,7 +87,6 @@ jobs:
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-        working-directory: your-directory
 
       # - name: Static HTML export with Next.js
       #   run: ${{ steps.detect-package-manager.outputs.runner }} next export
@@ -95,8 +94,9 @@ jobs:
       - name: Show current path directory
         run: |
           echo "Directories in the current path:"
-          ls -d */
-        working-directory: your-directory
+          ${{ steps.detect-package-manager.outputs.runner }} ls -d */
+          echo "PWD:"
+          ${{ steps.detect-package-manager.outputs.runner }} pwd
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
