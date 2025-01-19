@@ -1,5 +1,7 @@
 {
-  "name": "my-app",
+  "name": "code-reroute",
+  "productName": "code-reroute",
+  "description": "Code Reroute",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +17,8 @@
     "next": "15.1.4",
     "next-video": "^2.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sass": "^1.83.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

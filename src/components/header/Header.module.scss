@@ -1,0 +1,61 @@
+.nav {
+  padding: 1.5rem;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 1.5rem;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logoIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navLinks {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.middleLink {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.rightAlign {
+  width: 120px;
+  text-align: right;
+}
+
+// Add specific widths for the tech company link
+.navLinks > .link:first-child {
+  width: 140px;
+}

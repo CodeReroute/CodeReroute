@@ -1,0 +1,35 @@
+.footer {
+  padding: 1.5rem;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.15s;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}

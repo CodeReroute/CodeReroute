@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  padding-top: 80px; /* Adjust this value based on your header height */
-  padding-bottom: 80px; /* Adjust this value based on your footer height */
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 

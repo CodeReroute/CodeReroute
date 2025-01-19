@@ -5,6 +5,6 @@ export default function Home() {
         CODE REROUTE
       </h1>
     </div>
-  )
-}
+  );
+};
 
