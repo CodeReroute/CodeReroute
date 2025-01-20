@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import styles from './Footer.module.scss';
+import { Colors } from '@/constants/Colors';
 
 export default function Footer() {
   return (
@@ -18,7 +19,7 @@ export default function Footer() {
             href="https://instagram.com"
             className={styles.link}
           >
-            <div className={styles.iconContainer}>
+            <div className={styles.iconContainer} style={{ backgroundColor: Colors.Cream }}>
               <Instagram className={styles.icon} />
             </div>
             <span className="sr-only">Instagram</span>
@@ -27,7 +28,7 @@ export default function Footer() {
             href="https://facebook.com"
             className={styles.link}
           >
-            <div className={styles.iconContainer}>
+            <div className={styles.iconContainer} style={{ backgroundColor: Colors.Cream }}>
               <Facebook className={styles.icon} />
             </div>
             <span className="sr-only">Facebook</span>
@@ -36,7 +37,7 @@ export default function Footer() {
             href="https://linkedin.com"
             className={styles.link}
           >
-            <div className={styles.iconContainer}>
+            <div className={styles.iconContainer} style={{ backgroundColor: Colors.Cream }}>
               <Linkedin className={styles.icon} />
             </div>
             <span className="sr-only">LinkedIn</span>

@@ -6,7 +6,6 @@ export default function Header() {
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        {/* Logo - Positioned absolutely to the left */}
         <Link
           href="/"
           className={styles.logo}
@@ -22,7 +21,7 @@ export default function Header() {
           </svg>
         </Link>
 
-        {/* Centered Navigation Links */}
+        
         <div className={styles.navLinks}>
           <Link
             href="/tech-company"
