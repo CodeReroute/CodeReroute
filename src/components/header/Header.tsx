@@ -41,7 +41,7 @@ export default function Header() {
           </div>
           <Link
             href="/work-here"
-            className={`${styles.link} ${pathname === '/work-here' ? styles.active : ''}`}
+            className={`${styles.link} ${pathname.startsWith('/work-here') ? styles.active : ''}`}
           >
             WORK HERE
           </Link>

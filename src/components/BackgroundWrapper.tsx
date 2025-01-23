@@ -8,7 +8,8 @@ export default function Background() {
     pathname === '/tech-company' ||
     pathname === '/' ||
     pathname === '/inquiery' ||
-    pathname === '/mappetizer';
+    pathname === '/mappetizer' ||
+    pathname === '/work-here';
 
   if (!showBackground) return null;
 
