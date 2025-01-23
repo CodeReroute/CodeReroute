@@ -21,7 +21,7 @@ export default function Layout({
       <body className={inter.className}>
         <div
           className="min-h-screen flex flex-col bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('')" }} // For now don't have background image
+          style={{}} // For now don't have background image
         >
           <Header />
           <main className="h-[100vh]">{children}</main>

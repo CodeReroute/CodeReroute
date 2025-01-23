@@ -1,8 +1,11 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.scss';
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
@@ -21,25 +24,24 @@ export default function Header() {
           </svg>
         </Link>
 
-        
         <div className={styles.navLinks}>
           <Link
             href="/tech-company"
-            className={styles.link}
+            className={`${styles.link} ${pathname === '/tech-company' ? styles.active : ''}`}
           >
             TECH COMPANY
           </Link>
           <div className={styles.middleLink}>
             <Link
               href="/mappetizer"
-              className={styles.link}
+              className={`${styles.link} ${pathname === '/mappetizer' ? styles.active : ''}`}
             >
               MAPPETIZER
             </Link>
           </div>
           <Link
             href="/work-here"
-            className={`${styles.link} ${styles.rightAlign}`}
+            className={`${styles.link} ${pathname === '/work-here' ? styles.active : ''}`}
           >
             WORK HERE
           </Link>

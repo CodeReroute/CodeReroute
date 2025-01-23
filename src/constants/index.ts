@@ -1,50 +1,52 @@
 import { TeamMember } from "@/types";
 
 
+
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Haseeb Khalid',
     role: 'UI Designer',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/haseeb.png',
   },
   {
     name: 'Usman Ahmed',
     role: 'Software Engineer',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/usman.png',
   },
   {
     name: 'Ahmed Ashfaq',
     role: 'Software Engineer',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/ahmed.png',
   },
   {
     name: 'Danielle Dufour',
     role: 'CEO',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/danielle.png',
   },
   {
     name: 'Hafiz Temuri',
     role: 'CTO',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/hafiz.png',
   },
   {
     name: 'Bilal Siddique',
     role: 'Software Engineer',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/bilal.png',
   },
   {
     name: 'Naeem Raza',
     role: 'Software Engineer',
     image:
-      'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+      '/profileImages/naeem.png',
   },
 ];
+
 
 
 

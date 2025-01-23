@@ -17,6 +17,28 @@
 }
 
 .link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -10px;
+    left: -8px;
+    right: -8px;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+    border-radius: 1.5px;
+  }
+
+  &:hover::after,
+  &.active::after {
+    width: calc(100% + 16px);
+  }
+
   &:hover {
     opacity: 0.8;
     transition: opacity 0.15s;
@@ -27,6 +49,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  .link::after {
+    display: none; // Disable underline effect for social links
+  }
 }
 
 .iconContainer {
@@ -36,6 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #F5F5F5;
 }
 
 .icon {
@@ -43,3 +70,4 @@
   height: 1.0rem;
   color: #000;
 }
+

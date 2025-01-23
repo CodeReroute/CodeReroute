@@ -37,10 +37,26 @@
 }
 
 .link {
-  transition: opacity 0.2s;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
 
-  &:hover {
-    opacity: 0.8;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-radius: 30px;
+    height: 3px; 
+    bottom: -8px;
+    left: -8px; 
+    right: -8px;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after,
+  &.active::after {
+    width: calc(100% + 16px); /* Adjust width to account for left/right extension */
   }
 }
 
@@ -50,12 +66,7 @@
   margin: 0 1rem;
 }
 
-.rightAlign {
-  width: 120px;
-  text-align: right;
-}
-
-
 .navLinks > .link:first-child {
   width: 140px;
 }
+
