@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-
+import Background from '@/components/BackgroundWrapper';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -11,17 +11,14 @@ export const metadata: Metadata = {
   description: 'Code Reroute',
 };
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Background />
         <div
-          className="min-h-screen flex flex-col bg-cover bg-center bg-fixed"
-          style={{}} // For now don't have background image
+          className="min-h-screen flex flex-col bg-cover bg-center bg-fixed relative z-10"
+          style={{}}
         >
           <Header />
           <main className="h-[100vh]">{children}</main>
