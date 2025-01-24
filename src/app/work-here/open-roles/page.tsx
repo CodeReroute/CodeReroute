@@ -7,7 +7,7 @@ import { OpenRole } from '@/types';
 
 const page = () => {
   return (
-    <div className="fixed inset-0 w-full h-full z-0">
+    <div className="w-full h-full">
       <div className="flex h-full justify-center items-center">
         <div className="w-1/2 flex flex-col justify-center items-center">
           {OPEN_ROLES.map((role: OpenRole, index: number) => (
