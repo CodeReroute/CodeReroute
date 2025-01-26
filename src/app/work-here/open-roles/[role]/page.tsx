@@ -5,7 +5,7 @@ import React from 'react';
 const page = () => {
   return (
     <div className="w-full h-full">
-      <div className="flex h-full justify-center items-center">
+      <div className="flex flex-col lg:flex-row h-full justify-center items-center">
         {/* Left Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
           <div className="flex-1">
@@ -13,10 +13,10 @@ const page = () => {
           </div>
         </div>
         {/* Vertical Line */}
-        <div className="w-px h-[80%] bg-white/20 mx-8" />
+        <div className="w-px h-[80%] hidden lg:block bg-white/20 mx-8" />
         {/* Right Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
-          <div className="flex-1 w-[80%]">
+          <div className="flex-1 m-10 lg:w-[80%]">
             <ApplicationForm />
           </div>
         </div>

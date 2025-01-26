@@ -6,7 +6,7 @@ import Link from 'next/link';
 const page = () => {
   return (
     <div className="fixed inset-0 w-full h-full z-0">
-      <div className="flex h-full justify-center items-center">
+      <div className="flex flex-col-reverse lg:flex-row h-full justify-center items-center">
         {/* Left Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
           <Link
