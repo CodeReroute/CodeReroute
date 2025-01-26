@@ -1,6 +1,6 @@
 import { Colors } from '@/constants/Colors';
 import React from 'react';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 const page = () => {
   return (

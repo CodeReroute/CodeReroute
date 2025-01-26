@@ -1,6 +1,6 @@
 import { Colors } from '@/constants/Colors';
 import React from 'react';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 import { OPEN_ROLES } from '@/constants';
 import Link from 'next/link';
 import { OpenRole } from '@/types';

@@ -1,18 +1,59 @@
-.section {
-  padding: 4rem 1rem;
+@mixin small {
+  @media (min-width: 40rem) {
+    @content;
+  }
 }
 
-.container {
-  max-width: 72rem;
-  margin: 0 auto;
-  position: relative;
+@mixin medium {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin xLarge {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
+.section {
+  padding: 0rem 1rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include large {
+    padding: 4rem 1rem;
+    height: 100%;
+  }
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 100%;
   place-items: center;
+  margin: 0 auto;
+
+  @include small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include large {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
 
 .memberCard {
@@ -67,14 +108,4 @@
 .memberRole {
   color: #9ca3af;
   font-size: 0.75rem;
-}
-
-@media (min-width: 768px) {
-  .memberName {
-    font-size: 1.25rem;
-  }
-
-  .memberRole {
-    font-size: 0.875rem;
-  }
 }

@@ -5,5 +5,8 @@ export const Colors = {
   text: {
     white: '#FFFFFF',
     black: '#101010',
-  }
+  },
+
+
+
 };

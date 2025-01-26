@@ -6,7 +6,7 @@ export default function RoleDetails() {
   return (
     <div className="space-y-8 flex flex-col items-center justify-center">
       <Link
-        href="/work-here/open-roles"
+        href=""
         className={styles.button}
         style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
       >
