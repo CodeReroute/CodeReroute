@@ -1,3 +1,27 @@
+@mixin small {
+  @media (min-width: 40rem) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin xLarge {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
 .footer {
   padding: 1.5rem;
   background-color: transparent;
@@ -6,6 +30,11 @@
   left: 0;
   right: 0;
   z-index: 10;
+  display: none;
+
+  @include large {
+    display: block;
+  }
 }
 
 .container {
@@ -62,12 +91,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .icon {
-  width: 1.0rem;
-  height: 1.0rem;
+  width: 1rem;
+  height: 1rem;
   color: #000;
 }
-
