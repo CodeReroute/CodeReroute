@@ -72,7 +72,7 @@ export default function ApplicationForm() {
   };
 
   return (
-    <div className="w-full mx-auto bg-green-500 flex flex-col items-center justify-center lg:h-[300px]">
+    <div className="w-full mx-auto flex flex-col items-center justify-center lg:h-[300px]">
       <form
         onSubmit={handleSubmit}
         className="w-full flex flex-wrap gap-4"
