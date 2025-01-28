@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import styles from './Footer.module.scss';
+import Image from 'next/image';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -23,7 +23,13 @@ export default function Footer() {
             className={styles.link}
           >
             <div className={styles.iconContainer}>
-              <Instagram className={styles.icon} />
+              <Image
+                src="/icons/insta.png"
+                alt="TikTok"
+                width={20}
+                height={20}
+                className={styles.icon}
+              />
             </div>
             <span className="sr-only">Instagram</span>
           </Link>
@@ -32,16 +38,28 @@ export default function Footer() {
             className={styles.link}
           >
             <div className={styles.iconContainer}>
-              <Facebook className={styles.icon} />
+              <Image
+                src="/icons/tiktok.png"
+                alt="TikTok"
+                width={20}
+                height={20}
+                className={styles.icon}
+              />
             </div>
-            <span className="sr-only">Facebook</span>
+            <span className="sr-only">TikTok</span>
           </Link>
           <Link
             href="https://linkedin.com"
             className={styles.link}
           >
             <div className={styles.iconContainer}>
-              <Linkedin className={styles.icon} />
+              <Image
+                src="/icons/linkedin.png"
+                alt="TikTok"
+                width={20}
+                height={20}
+                className={styles.icon}
+              />
             </div>
             <span className="sr-only">LinkedIn</span>
           </Link>
