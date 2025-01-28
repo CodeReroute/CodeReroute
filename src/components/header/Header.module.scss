@@ -1,0 +1,106 @@
+@mixin small {
+  @media (min-width: 40rem) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin xLarge {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
+.nav {
+  padding: 1.5rem;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+
+  @include large {
+    display: block;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 1.5rem;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logoIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navLinks {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 98%;
+    border-radius: 30px;
+    height: 3px;
+    bottom: -3px;
+    left: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.3s ease-in-out;
+  }
+
+  &:hover::after,
+  &.active::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.middleLink {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.navLinks > .link:first-child {
+  width: 140px;
+}

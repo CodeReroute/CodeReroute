@@ -1,20 +1,15 @@
-import React from 'react';
-import style from './page.module.scss';
+import { Colors } from '@/constants/Colors';
+import styles from './page.module.scss';
 
-const page = () => {
+export default function Home() {
   return (
-    <div className={style['main-wrapper']}>
-      <img
-        src="/code-reroute-logo.png"
-        alt="Code Reroute"
-        className={style['code-reroute-logo']}
-      />
-      <div className={style['main-text']}>
-        <h1 className="font-goga">WE ARE UPDATING OUR SITE.</h1>
-        <h1 className="font-goga">CHECK BACK EARLY FEB.</h1>
-      </div>
+    <div className={styles.container}>
+      <h1
+        className={styles.title}
+        style={{ color: Colors.text.white }}
+      >
+        CODE REROUTE
+      </h1>
     </div>
   );
-};
-
-export default page;
+}
