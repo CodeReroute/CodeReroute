@@ -2,70 +2,66 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.scss';
-import { useState } from 'react';
 import { Menu } from 'lucide-react';
+import { useState } from 'react';
 import { MobileSidebar } from './MobileHeader';
 
 export default function Header() {
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   return (
-    <nav className={styles.nav}>
-      <div className={styles.container}>
-        <button
-          onClick={() => setIsSidebarOpen(true)}
-          className="lg:hidden rounded-lg p-2 hover:bg-gray-100 md:block"
-        >
-          <Menu className="h-6 w-6" />
-          <span className="sr-only">Open menu</span>
-        </button>
-        <div className={styles.navLinks}>
-          <Link
-            href="/"
-            className={styles.logo}
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className={styles.logoIcon}
-            >
-              <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-            </svg>
-          </Link>
-
-          <Link
-            href="/tech-company"
-            className={`${styles.link} ${pathname === '/tech-company' ? styles.active : ''}`}
-          >
-            TECH COMPANY
-          </Link>
-          <div className={styles.middleLink}>
-            <Link
-              href="/mappetizer"
-              className={`${styles.link} ${pathname === '/mappetizer' ? styles.active : ''}`}
-            >
-              MAPPETIZER
-            </Link>
-          </div>
-          <Link
-            href="/work-here"
-            className={`${styles.link} ${pathname.startsWith('/work-here') ? styles.active : ''}`}
-          >
-            WORK HERE
-          </Link>
-        </div>
-      </div>
-      {isSidebarOpen && (
-        <div className="lg:hidden">
-          <MobileSidebar
-            isOpen={isSidebarOpen}
-            onClose={() => setIsSidebarOpen(false)}
+    <>
+      <MobileSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
+      <nav className={styles.nav}>
+        <div className="flex justify-end lg:hidden">
+          <Menu
+            className="h-6 w-6"
+            onClick={() => setIsSidebarOpen(true)}
           />
         </div>
-      )}
-    </nav>
+        <div className={styles.container}>
+          <div className={styles.navLinks}>
+            <Link
+              href="/"
+              className={styles.logo}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className={styles.logoIcon}
+              >
+                <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+              </svg>
+            </Link>
+
+            <Link
+              href="/tech-company"
+              className={`${styles.link} ${pathname === '/tech-company' ? styles.active : ''}`}
+            >
+              TECH COMPANY
+            </Link>
+            <div className={styles.middleLink}>
+              <Link
+                href="/mappetizer"
+                className={`${styles.link} ${pathname === '/mappetizer' ? styles.active : ''}`}
+              >
+                MAPPETIZER
+              </Link>
+            </div>
+            <Link
+              href="/work-here"
+              className={`${styles.link} ${pathname.startsWith('/work-here') ? styles.active : ''}`}
+            >
+              WORK HERE
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 }
