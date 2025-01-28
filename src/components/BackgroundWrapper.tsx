@@ -19,6 +19,7 @@ export default function Background() {
         {/* Black background - hidden on mobile for tech-company, visible elsewhere */}
         <div
           className={`w-1/2 bg-[#101010] ${
+            pathname === '/' ||
             pathname === '/tech-company' ||
             pathname === '/mappetizer' ||
             pathname === '/inquiery'

@@ -6,7 +6,6 @@ import { TeamMember } from '@/types';
 import { Colors } from '@/constants/Colors';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { floatingAnimation } from '@/lib/animations';
 import styles from './TeamSection.module.scss';
 
 export default function TeamSection() {
@@ -44,16 +43,26 @@ export default function TeamSection() {
           <motion.div
             key={member.name}
             className={styles.memberCard}
-            initial="initial"
-            animate="animate"
-            variants={floatingAnimation}
-            custom={index}
             style={{
               marginTop: getMarginTop(index),
             }}
           >
             <div className={styles.imageContainer}>
-              <div className={styles.imageWrapper}>
+              <motion.div
+                className={styles.imageWrapper}
+                animate={{
+                  y: [0, -15, 0, -8, 0],
+                  x: [-8, 5, -3, 8, -8],
+                  transition: {
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    repeatType: 'mirror',
+                    delay: Math.random() * 2,
+                    times: [0, 0.2, 0.5, 0.8, 1],
+                  },
+                }}
+              >
                 <Image
                   src={member.image}
                   width={100}
@@ -61,7 +70,7 @@ export default function TeamSection() {
                   alt={`${member.name}'s avatar`}
                   className={styles.image}
                 />
-              </div>
+              </motion.div>
               <div className={styles.memberInfo}>
                 <h3 className={styles.memberName}>{member.name}</h3>
                 <p className={styles.memberRole}>{member.role}</p>

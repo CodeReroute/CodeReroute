@@ -7,6 +7,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
     image: '/profileImages/haseeb.png',
   },
   {
+    name: 'Danielle Dufour',
+    role: 'CEO',
+    image: '/profileImages/danielle.png',
+  },
+  {
     name: 'Usman Ahmed',
     role: 'Software Engineer',
     image: '/profileImages/usman.png',
@@ -16,11 +21,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Software Engineer',
     image: '/profileImages/ahmed.png',
   },
-  {
-    name: 'Danielle Dufour',
-    role: 'CEO',
-    image: '/profileImages/danielle.png',
-  },
+
   {
     name: 'Hafiz Temuri',
     role: 'CTO',

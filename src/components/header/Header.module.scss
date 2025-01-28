@@ -60,6 +60,7 @@
 .navLinks {
   max-width: 720px;
   margin: 0 auto;
+  padding-right: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,21 +74,24 @@
   &::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 98%;
     border-radius: 30px;
     height: 3px;
-    bottom: -8px;
-    left: -8px;
-    right: -8px;
+    bottom: -3px;
+    left: 2px;
     background-color: currentColor;
-    transition: width 0.3s ease-in-out;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.3s ease-in-out;
   }
 
   &:hover::after,
   &.active::after {
-    width: calc(
-      100% + 16px
-    ); /* Adjust width to account for left/right extension */
+    transform: scaleX(1);
+    opacity: 1;
   }
 }
 

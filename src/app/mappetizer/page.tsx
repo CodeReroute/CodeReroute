@@ -1,4 +1,3 @@
-import { Colors } from '@/constants/Colors';
 import React from 'react';
 import styles from './page.module.scss';
 
@@ -11,12 +10,7 @@ const page = () => {
           Be among the first app users. Join the waitlist.
         </h1>
       </div>
-      <button
-        className={styles.button}
-        style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
-      >
-        TO THE SITE
-      </button>
+      <button className={styles.button}>TO THE SITE</button>
     </div>
   );
 };

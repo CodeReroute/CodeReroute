@@ -39,6 +39,7 @@
 
 .container {
   margin: 0 auto;
+
   max-width: 720px;
   display: flex;
   justify-content: space-between;
@@ -50,27 +51,27 @@
   text-decoration: none;
   padding-bottom: 2px;
 
-  &::after {
+&::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 98%;
+    border-radius: 30px;
     height: 3px;
-    bottom: -10px;
-    left: -8px;
-    right: -8px;
+    bottom: -3px;
+    left: 2px;
     background-color: currentColor;
-    transition: width 0.3s ease-in-out;
-    border-radius: 1.5px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.3s ease-in-out;
   }
 
   &:hover::after,
   &.active::after {
-    width: calc(100% + 16px);
-  }
-
-  &:hover {
-    opacity: 0.8;
-    transition: opacity 0.15s;
+    transform: scaleX(1);
+    opacity: 1;
   }
 }
 
