@@ -2,13 +2,24 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.scss';
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import { MobileSidebar } from './MobileHeader';
 
 export default function Header() {
   const pathname = usePathname();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          className="lg:hidden rounded-lg p-2 hover:bg-gray-100 md:block"
+        >
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Open menu</span>
+        </button>
         <div className={styles.navLinks}>
           <Link
             href="/"
@@ -47,6 +58,14 @@ export default function Header() {
           </Link>
         </div>
       </div>
+      {isSidebarOpen && (
+        <div className="lg:hidden">
+          <MobileSidebar
+            isOpen={isSidebarOpen}
+            onClose={() => setIsSidebarOpen(false)}
+          />
+        </div>
+      )}
     </nav>
   );
 }
