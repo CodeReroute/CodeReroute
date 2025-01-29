@@ -6,6 +6,7 @@ import { useState } from 'react';
 import styles from './component.module.scss';
 import { z } from 'zod';
 import ReCaptchaV3, { requestRecaptchaV3Token } from '@/utils/RecaptchaV3';
+import { webConfig } from '@/utils/webConfig';
 
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
 const ACCEPTED_FILE_TYPES = [
@@ -42,14 +43,14 @@ type ApplicationFormData = z.infer<typeof applicationSchema>;
 
 export default function ApplicationForm() {
   const [formData, setFormData] = useState<ApplicationFormData>({
-    role: '',
-    email: '',
-    firstName: '',
-    lastName: '',
-    pronouns: '',
-    city: '',
-    whyUs: '',
-    hearAbout: '',
+    role: 'a',
+    email: 'ahmedashfaq6777@gmail.com',
+    firstName: 'ahmed',
+    lastName: 'ashfaq',
+    pronouns: 'he/him',
+    city: 'karachi',
+    whyUs: 'i want to work here because i am a good developer',
+    hearAbout: 'i heard about it from google',
     portfolio: null as File | null,
     portfolioUrl: '',
     portfolioName: '',
@@ -74,24 +75,32 @@ export default function ApplicationForm() {
           return;
         }
 
-        console.log(token);
-
         try {
           // Validate the form data
           const validatedData = applicationSchema.parse(formData);
 
           // If validation passes, proceed with form submission
           const formDataToSend = new FormData();
+          formDataToSend.append('token', token);
           Object.entries(validatedData).forEach(([key, value]) => {
             if (value !== null) {
               formDataToSend.append(key, value);
             }
           });
 
-          const response = await fetch('/api/submit-application', {
-            method: 'POST',
-            body: formDataToSend,
-          });
+        
+
+          const response = await fetch(
+            `${webConfig.baseUrl}/employment/create`,
+            {
+              method: 'POST',
+              body: formDataToSend,
+             /*  headers: {
+                'Content-Type': 'multipart/form-data',
+              }, */
+            },
+          );
+          console.log(response)
 
           if (!response.ok) {
             throw new Error('Submission failed');

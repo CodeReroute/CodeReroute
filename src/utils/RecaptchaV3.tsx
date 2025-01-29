@@ -69,7 +69,7 @@ const ReCaptchaV3: React.FC<{ className?: string; hideText?: boolean }> = ({
   }
 
   return (
-    <div className="recaptcha">
+   /*  <div className="recaptcha">
       This site is protected by reCAPTCHA and the Google{' '}
       <a
         href={'https://policies.google.com/privacy'}
@@ -87,7 +87,8 @@ const ReCaptchaV3: React.FC<{ className?: string; hideText?: boolean }> = ({
         Terms of Service
       </a>{' '}
       apply.
-    </div>
+    </div> */
+    <></>
   );
 };
 
