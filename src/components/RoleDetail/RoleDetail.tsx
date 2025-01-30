@@ -13,7 +13,7 @@ export default function RoleDetails() {
         APPLY FOR OPEN ROLES
       </Link>
 
-      <div className="space-y-6 text-sm text-white w-[350px] lg:w-[500px]">
+      <div className="space-y-6 text-[18px] text-white w-[350px] lg:w-[500px]">
         <p className="">
           I review all skills as listed by the applicant and decide if they are
           applicable to the position. If they are, great we move to the next

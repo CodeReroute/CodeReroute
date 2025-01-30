@@ -32,17 +32,17 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.25rem;
   font-weight: 800;
   color: white;
 
   @include small {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   @include medium {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   @include large {
@@ -79,28 +79,15 @@
   }
 }
 
-.secondText {
-  /* composes: text; */
-  background-color: #101010;
-  padding: 8px;
-  display: inline;
-  border-radius: 0.375rem;
-  max-width: 20px;
-  text-align: center;
-  font-size: 1rem;
-
+.textContainer {
   @include small {
-    font-size: 1.2rem;
-    padding: 8px;
   }
 
   @include medium {
-    font-size: 1.3rem;
-    padding: 9px;
+    width: 670px;
   }
 
   @include large {
-    font-size: 1.4rem;
-    padding: 12px;
+    width: 700px;
   }
 }

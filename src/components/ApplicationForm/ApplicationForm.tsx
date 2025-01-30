@@ -20,11 +20,11 @@ const applicationSchema = z.object({
   email: z.string().email('Invalid email address'),
   firstName: z.string().min(1, 'First name is required'),
   lastName: z.string().min(1, 'Last name is required'),
-  pronouns: z.string().optional(),
+  pronoun: z.string(),
   city: z.string().min(1, 'City is required'),
-  whyUs: z.string().min(1, 'Please tell us why you want to work here'),
-  hearAbout: z.string().min(1, 'Please tell us how you heard about us'),
-  portfolio: z
+  whyWorkWithUs: z.string().min(1, 'Please tell us why you want to work here'),
+  hearAboutUs: z.string().min(1, 'Please tell us how you heard about us'),
+  resume: z
     .instanceof(File)
     .refine(
       (file) => file.size <= MAX_FILE_SIZE,
@@ -35,25 +35,24 @@ const applicationSchema = z.object({
       'Only PDF and Word documents are accepted',
     )
     .nullable(),
-  portfolioUrl: z.string(),
-  portfolioName: z.string(),
+  experience: z.string(),
 });
 
 type ApplicationFormData = z.infer<typeof applicationSchema>;
 
 export default function ApplicationForm() {
+  const [portfolioName, setPortfolioName] = useState('');
   const [formData, setFormData] = useState<ApplicationFormData>({
     role: 'a',
     email: 'ahmedashfaq6777@gmail.com',
     firstName: 'ahmed',
     lastName: 'ashfaq',
-    pronouns: 'he/him',
+    pronoun: 'he/him',
     city: 'karachi',
-    whyUs: 'i want to work here because i am a good developer',
-    hearAbout: 'i heard about it from google',
-    portfolio: null as File | null,
-    portfolioUrl: '',
-    portfolioName: '',
+    whyWorkWithUs: 'i want to work here because i am a good developer',
+    hearAboutUs: 'i heard about it from google',
+    experience: 'I have extensive',
+    resume: null as File | null,
   });
   const [errors, setErrors] = useState<
     Partial<Record<keyof ApplicationFormData, string>>
@@ -81,26 +80,24 @@ export default function ApplicationForm() {
 
           // If validation passes, proceed with form submission
           const formDataToSend = new FormData();
-          formDataToSend.append('token', token);
           Object.entries(validatedData).forEach(([key, value]) => {
             if (value !== null) {
               formDataToSend.append(key, value);
             }
           });
-
-        
+          console.log('token', token);
 
           const response = await fetch(
-            `${webConfig.baseUrl}/employment/create`,
+            `${webConfig.baseUrl}/employment/create?token=${token}`,
             {
               method: 'POST',
               body: formDataToSend,
-             /*  headers: {
-                'Content-Type': 'multipart/form-data',
-              }, */
+              // headers: {
+              //   'Content-Type': 'multipart/form-data',
+              // },
             },
           );
-          console.log(response)
+          console.log(response);
 
           if (!response.ok) {
             throw new Error('Submission failed');
@@ -112,13 +109,12 @@ export default function ApplicationForm() {
             email: '',
             firstName: '',
             lastName: '',
-            pronouns: '',
+            pronoun: '',
             city: '',
-            whyUs: '',
-            hearAbout: '',
-            portfolio: null,
-            portfolioUrl: '',
-            portfolioName: '',
+            whyWorkWithUs: '',
+            hearAboutUs: '',
+            resume: null as File | null,
+            experience: '',
           });
           setSubmitSuccess(true);
         } catch (error) {
@@ -166,10 +162,11 @@ export default function ApplicationForm() {
 
       setFormData({
         ...formData,
-        portfolio: file,
-        portfolioName: file.name,
-        portfolioUrl: URL.createObjectURL(file),
+        resume: file,
+        //  portfolioName: file.name,
+        // portfolioUrl: URL.createObjectURL(file),
       });
+      setPortfolioName(file.name);
     }
   };
 
@@ -185,11 +182,6 @@ export default function ApplicationForm() {
 
   return (
     <div className="w-full mx-auto flex flex-col items-center justify-center lg:h-[300px]">
-      {submitSuccess && (
-        <div className="mb-4 text-green-500 font-semibold">
-          Application submitted successfully!
-        </div>
-      )}
       <ReCaptchaV3 />
 
       <form
@@ -282,16 +274,16 @@ export default function ApplicationForm() {
               type="text"
               placeholder="PRONOUNS"
               className={`w-full h-full bg-transparent border-none outline-none text-white placeholder:text-white placeholder:text-[13px] placeholder:text-center placeholder:font-[600] px-3 ${
-                errors.pronouns ? 'border-red-500 text-xs' : ''
+                errors.pronoun ? 'border-red-500 text-xs' : ''
               }`}
-              value={formData.pronouns}
+              value={formData.pronoun}
               onChange={(e) =>
-                setFormData({ ...formData, pronouns: e.target.value })
+                setFormData({ ...formData, pronoun: e.target.value })
               }
             />
           </div>
-          {errors.pronouns && (
-            <span className="text-red-500 text-xs mt-1">{errors.pronouns}</span>
+          {errors.pronoun && (
+            <span className="text-red-500 text-xs mt-1">{errors.pronoun}</span>
           )}
         </div>
 
@@ -320,16 +312,18 @@ export default function ApplicationForm() {
               type="text"
               placeholder="WHY DO YOU WANT TO WORK HERE?"
               className={`w-full h-full bg-transparent border-none outline-none text-white placeholder:text-white placeholder:text-[13px] placeholder:text-center placeholder:font-[600] px-3 ${
-                errors.whyUs ? 'border-red-500' : ''
+                errors.whyWorkWithUs ? 'border-red-500' : ''
               }`}
-              value={formData.whyUs}
+              value={formData.whyWorkWithUs}
               onChange={(e) =>
-                setFormData({ ...formData, whyUs: e.target.value })
+                setFormData({ ...formData, whyWorkWithUs: e.target.value })
               }
             />
           </div>
-          {errors.whyUs && (
-            <span className="text-red-500 text-xs mt-1">{errors.whyUs}</span>
+          {errors.whyWorkWithUs && (
+            <span className="text-red-500 text-xs mt-1">
+              {errors.whyWorkWithUs}
+            </span>
           )}
         </div>
 
@@ -339,17 +333,17 @@ export default function ApplicationForm() {
               type="text"
               placeholder="HOW DID YOU HEAR ABOUT US?"
               className={`w-full h-full bg-transparent border-none outline-none text-white placeholder:text-white placeholder:text-[13px] placeholder:text-center placeholder:font-[600] px-3 ${
-                errors.hearAbout ? 'border-red-500' : ''
+                errors.hearAboutUs ? 'border-red-500' : ''
               }`}
-              value={formData.hearAbout}
+              value={formData.hearAboutUs}
               onChange={(e) =>
-                setFormData({ ...formData, hearAbout: e.target.value })
+                setFormData({ ...formData, hearAboutUs: e.target.value })
               }
             />
           </div>
-          {errors.hearAbout && (
+          {errors.hearAboutUs && (
             <span className="text-red-500 text-xs mt-1">
-              {errors.hearAbout}
+              {errors.hearAboutUs}
             </span>
           )}
         </div>
@@ -357,12 +351,12 @@ export default function ApplicationForm() {
         <div className="w-[200px] h-[45px] rounded-md border-[3.5px] flex items-center justify-center border-white">
           <label className="group cursor-pointer w-full">
             <div className="w-full px-2 border-none outline-none flex items-center gap-2 transition-colors">
-              {getFileTypeIcon(formData.portfolio)}
+              {getFileTypeIcon(formData.resume)}
               <span
                 className="text-white text-sm font-light placeholder:text-[13px] placeholder:text-center
               placeholder:font-[600] px-3 truncate"
               >
-                {formData.portfolioName || 'ATTACH PORTFOLIO'}
+                {portfolioName || 'ATTACH PORTFOLIO'}
               </span>
             </div>
             <input
@@ -382,8 +376,11 @@ export default function ApplicationForm() {
       >
         {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
       </button>
+      {submitSuccess && (
+        <div className="mt-4 text-green-500 font-semibold">
+          Application submitted successfully!
+        </div>
+      )}
     </div>
   );
 }
-
-/*  */

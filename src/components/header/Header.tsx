@@ -19,7 +19,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <div className="flex justify-end lg:hidden">
           <Menu
-            className="h-6 w-6"
+            className="h-10 w-10"
             onClick={() => setIsSidebarOpen(true)}
           />
         </div>
@@ -29,20 +29,11 @@ export default function Header() {
               href="/"
               className={styles.logo}
             >
-              {/* <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className={styles.logoIcon}
-              >
-                <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-              </svg> */}
               <Image
                 src="/mappetizer.svg"
                 alt="logo"
-                width={30}
-                height={30}
+                width={45}
+                height={45}
               />
             </Link>
 

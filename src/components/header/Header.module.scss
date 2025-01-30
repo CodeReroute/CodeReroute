@@ -36,6 +36,7 @@
   margin: 0 auto;
   position: relative;
   display: none;
+  margin-top: 1rem;
 
   @include large {
     display: block;
@@ -70,6 +71,7 @@
   position: relative;
   text-decoration: none;
   padding-bottom: 2px;
+  font-size: 1rem;
 
   &::after {
     content: '';
@@ -84,7 +86,7 @@
     transform: scaleX(0);
     transform-origin: center;
     transition:
-      transform 0.5s ease-in-out,
+      transform 0.3s ease-in-out,
       opacity 0.3s ease-in-out;
   }
 
@@ -99,6 +101,7 @@
   display: flex;
   align-items: center;
   margin: 0 1rem;
+  padding-left: 1.5rem;
 }
 
 .navLinks > .link:first-child {

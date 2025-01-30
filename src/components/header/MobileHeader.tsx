@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import { X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import styles from './Header.module.scss';
 
 interface NavItem {
   label: string;
@@ -39,11 +41,23 @@ export function MobileSidebar({
     >
       <div className="flex h-full flex-col p-6">
         <div className="flex items-center justify-end">
+          <Link
+            href="/"
+            className={styles.logo}
+            onClick={onClose}
+          >
+            <Image
+              src="/mappetizer.svg"
+              alt="logo"
+              width={50}
+              height={50}
+            />
+          </Link>
           <button
             onClick={onClose}
             className="rounded-lg p-2 text-white hover:bg-white/10"
           >
-            <X className="h-6 w-6" />
+            <X className="h-10 w-10" />
           </button>
         </div>
 
