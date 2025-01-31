@@ -7,36 +7,10 @@ interface PageProps {
   role: string | undefined;
 }
 
-export const generateStaticParams = () => {
+export function generateStaticParams() {
   return OPEN_ROLES_IDS.map((id) => ({ id }));
-};
+}
 
-// export const getStaticProps: GetStaticProps<PageProps> = async (context) => {
-//   const { params } = context;
-//   if (!params) {
-//     return {
-//       props: {
-//         role: undefined,
-//       },
-//     };
-//   }
-//   const { role } = params;
-//   const roleString = typeof role === 'string' ? role : undefined;
-//   return {
-//     props: {
-//       role: roleString,
-//     },
-//   };
-// };
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const paths = OPEN_ROLES_IDS.map((id) => ({
-//     params: { id },
-//   }));
-//   return { paths, fallback: false };
-// };
-
-// const Page: React.FC<PageProps> = ({ role }) => {
 async function Page({ params }: { params: Promise<PageProps> }) {
   const { role } = await params;
   if (!role) {
