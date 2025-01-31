@@ -1,0 +1,46 @@
+@mixin small {
+  @media (min-width: 40rem) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin xLarge {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+  color: white;
+
+  @include small {
+    font-size: 2.5rem;
+  }
+
+  @include medium {
+    font-size: 4rem;
+  }
+
+  @include large {
+    font-size: 4rem;
+  }
+
+  @include xLarge {
+    font-size: 4rem;
+  }
+}

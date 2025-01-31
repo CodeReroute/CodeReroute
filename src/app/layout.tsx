@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+
 import './globals.css';
-import Script from 'next/script';
-import { webConfig } from './webConfig';
+import localFont from 'next/font/local';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Background from '@/components/BackgroundWrapper';
 
 const goga = localFont({
   src: [
@@ -19,124 +21,31 @@ const description =
 const keywords =
   'software development, canada, agency, edmonton, alberta, consultations, web design, software engineering, digital, app development, communications, web application, mobile application';
 const featuredImage = 'https://codereroute.com/assets/sharing-meta-image.png';
+
 export const metadata: Metadata = {
   title,
   description,
+  keywords,
+  openGraph: {
+    title,
+    description,
+    images: [featuredImage],
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* <!-- Google / Search Engine Tags --> */}
-        <meta
-          itemProp="name"
-          content={title}
-        />
-        <meta
-          itemProp="description"
-          content={description}
-        />
-        <meta
-          name="keywords"
-          content={keywords}
-        />
-        <meta
-          itemProp="image"
-          content={featuredImage}
-        />
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta
-          property="og:url"
-          content="https://codereroute.com"
-        />
-        <meta
-          property="og:type"
-          content="website"
-        />
-        <meta
-          property="og:title"
-          content={title}
-        />
-        <meta
-          property="og:description"
-          content={description}
-        />
-        <meta
-          property="og:image"
-          content={featuredImage}
-        />
-        <meta
-          property="og:image:alt"
-          content={title}
-        />
-        <meta
-          property="fb:app_id"
-          content="811203999437355"
-        />
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
-        <meta
-          property="twitter:url"
-          content="https://codereroute.com"
-        />
-        <meta
-          property="twitter:title"
-          content={title}
-        />
-        <meta
-          property="twitter:image"
-          content={featuredImage}
-        />
-        <meta
-          property="twitter:description"
-          content={description}
-        />
-        <meta
-          name="twitter:title"
-          content={title}
-        />
-        <meta
-          name="twitter:description"
-          content={description}
-        />
-        <meta
-          name="twitter:image"
-          content={featuredImage}
-        />
-        <link
-          rel="icon"
-          type="image/x-icon"
-          href="/arrow-icon-light.png"
-          media="(prefers-color-scheme: dark)"
-        />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${webConfig.gaTrackingId}`}
-        ></script>
-        <Script
-          async
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${webConfig.gaTrackingId}');
-            `,
-          }}
-        />
-      </head>
-      <body className={`${goga.variable} font-sans antialiased`}>
-        {children}
+      <body className={`${goga.variable} font-sans`}>
+        <Background />
+        <div
+          className="min-h-screen flex flex-col bg-cover bg-center bg-fixed relative z-10"
+          style={{}}
+        >
+          <Header />
+          <main className="h-[100vh]">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
