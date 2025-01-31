@@ -6,6 +6,7 @@ export interface TeamMember {
 }
 
 export interface OpenRole {
+  id: string;
   title: string;
   initialReview: string[] | string;
   process: string[];

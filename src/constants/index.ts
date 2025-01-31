@@ -44,8 +44,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
 ];
 
+export const OPEN_ROLES_IDS: string[] = [
+  'Senior-UI-UX-Designer-Position-February-2025',
+];
 export const OPEN_ROLES: OpenRole[] = [
   {
+    id: OPEN_ROLES_IDS[0],
     title: 'Senior UI/UX Designer Position',
     initialReview: [
       'We’re building an ambitious project called mappetizer— a new social media platform for restaurant discovery, easy reservations, trustworthy reviews + more.',
@@ -57,7 +61,7 @@ export const OPEN_ROLES: OpenRole[] = [
       'Candidate should have figma expertise',
     ],
     endLines: '',
-    roleUrl: '/work-here/Senior-UI-UX-Designer-Position-February-2025',
+    roleUrl: `/work-here/${OPEN_ROLES_IDS[0]}`,
   },
 ];
 
