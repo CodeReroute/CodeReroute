@@ -12,3 +12,9 @@ export interface OpenRole {
   endLines: string[] | string;
   roleUrl: string;
 }
+
+export interface SocialLink {
+  href: string;
+  icon: string;
+  platform: string;
+}

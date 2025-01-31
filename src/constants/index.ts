@@ -1,4 +1,4 @@
-import { OpenRole, TeamMember } from '@/types';
+import { OpenRole, SocialLink, TeamMember } from '@/types';
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
@@ -48,16 +48,33 @@ export const OPEN_ROLES: OpenRole[] = [
   {
     title: 'Senior UI/UX Designer Position',
     initialReview: [
-      'Searching for a Senior UI/UX Designer to join our team.',
       'We’re building an ambitious project called mappetizer— a new social media platform for restaurant discovery, easy reservations, trustworthy reviews + more.',
     ],
     process: [
       'This is a fully remote and full-time position',
       'There is a mandatory daily standup but otherwise, working hours can happen at any time',
-      'Offering 15 vacation days (+ your country’s national holidays)',
-      'Candidate should be a figma expert',
+      'Offering 15 vacation days',
+      'Candidate should have figma expertise',
     ],
     endLines: '',
     roleUrl: '/work-here/Senior-UI-UX-Designer-Position-February-2025',
+  },
+];
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    href: 'https://www.instagram.com/code_reroute/',
+    icon: 'insta',
+    platform: 'Instagram',
+  },
+  {
+    href: 'https://www.tiktok.com/@mappetizer',
+    icon: 'tiktok',
+    platform: 'TikTok',
+  },
+  {
+    href: 'https://www.linkedin.com/company/code-reroute/',
+    icon: 'linkedin',
+    platform: 'LinkedIn',
   },
 ];

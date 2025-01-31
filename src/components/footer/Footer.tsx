@@ -2,8 +2,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Footer.module.scss';
-import Image from 'next/image';
-
+import SocialLink from '../SocialLink/SocialLink';
+import { SOCIAL_LINKS } from '@/constants';
+import { SocialLink as SocialLinkType } from '@/types';
 export default function Footer() {
   const pathname = usePathname();
 
@@ -18,51 +19,12 @@ export default function Footer() {
         </Link>
 
         <div className={styles.socialLinks}>
-          <Link
-            href="https://www.instagram.com/code_reroute/"
-            className={styles.link}
-          >
-            <div className={styles.iconContainer}>
-              <Image
-                src="/icons/insta.png"
-                alt="TikTok"
-                width={20}
-                height={20}
-                className={styles.icon}
-              />
-            </div>
-            <span className="sr-only">Instagram</span>
-          </Link>
-          <Link
-            href="https://www.tiktok.com/@mappetizer"
-            className={styles.link}
-          >
-            <div className={styles.iconContainer}>
-              <Image
-                src="/icons/tiktok.png"
-                alt="TikTok"
-                width={20}
-                height={20}
-                className={styles.icon}
-              />
-            </div>
-            <span className="sr-only">TikTok</span>
-          </Link>
-          <Link
-            href="https://www.linkedin.com/company/code-reroute/"
-            className={styles.link}
-          >
-            <div className={styles.iconContainer}>
-              <Image
-                src="/icons/linkedin.png"
-                alt="TikTok"
-                width={20}
-                height={20}
-                className={styles.icon}
-              />
-            </div>
-            <span className="sr-only">LinkedIn</span>
-          </Link>
+          {SOCIAL_LINKS.map((link: SocialLinkType) => (
+            <SocialLink
+              key={link.platform}
+              {...link}
+            />
+          ))}
         </div>
 
         <Link

@@ -95,7 +95,6 @@ export function MobileSidebar({
               rel="noopener noreferrer"
             >
               <span className="relative z-10 py-1">{item.label}</span>
-              {/* <span className="absolute inset-0 border-[12px] border-white opacity-0 transition-all duration-300 group-hover:inset-[-8px] group-hover:opacity-100" /> */}
             </Link>
           ))}
         </nav>

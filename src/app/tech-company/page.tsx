@@ -1,23 +1,19 @@
-import { Colors } from '@/constants/Colors';
 import React from 'react';
 import styles from './page.module.scss';
+import { Heading } from '@/components/Heading/Heading';
+import { TextBlock } from '@/components/TextBlock/TextBlock';
 
-const page = () => {
+const TechCompany = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>CODE REROUTE</h1>
-      <div className={styles.textContainer}>
-        <h1
-          className={styles.text}
-          style={{ backgroundColor: Colors.Black, lineHeight: '2' }}
-        >
-          Hi, we&apos;re a female-led tech company building the world&apos;s
-          biggest restaurant app called mappetizer. We&apos;re nerdy, cool and
-          mega-talented.
-        </h1>
-      </div>
+      <Heading>CODE REROUTE</Heading>
+      <TextBlock>
+        Hi, we&apos;re a female-led tech company building the world&apos;s
+        biggest restaurant app called mappetizer. We&apos;re nerdy, cool and
+        mega-talented.
+      </TextBlock>
     </div>
   );
 };
 
-export default page;
+export default TechCompany;

@@ -2,15 +2,15 @@
 import React from 'react';
 import styles from './page.module.scss';
 import Link from 'next/link';
+import { TextBlock } from '@/components/TextBlock/TextBlock';
 
-const Page = () => {
+const Mappetizer = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>CODE REROUTE</h1>
       <div>
-        <h1 className={styles.subtitle}>
+        <TextBlock width={{ medium: '440px', large: '470px' }}>
           Be among the first app users. Join the waitlist.
-        </h1>
+        </TextBlock>
       </div>
       <Link href="https://www.mappetizer.com/">
         <button className={styles.button}>TO THE SITE</button>
@@ -19,4 +19,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Mappetizer;

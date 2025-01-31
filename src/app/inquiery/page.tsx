@@ -1,18 +1,16 @@
-import { Colors } from '@/constants/Colors';
 import React from 'react';
 import styles from './page.module.scss';
+import { Heading } from '@/components/Heading/Heading';
+import { TextBlock } from '@/components/TextBlock/TextBlock';
 
 const page = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>CODE REROUTE</h1>
+      <Heading>CODE REROUTE</Heading>
       <div>
-        <h1
-          className={styles.email}
-          style={{ backgroundColor: Colors.Black }}
-        >
+        <TextBlock width={{ medium: '260px', large: '300px' }}>
           press@codereroute.com
-        </h1>
+        </TextBlock>
       </div>
     </div>
   );

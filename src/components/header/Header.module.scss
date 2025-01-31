@@ -71,8 +71,8 @@
   position: relative;
   text-decoration: none;
   padding-bottom: 2px;
-  font-size: 1.4rem;
-
+  font-size: 1.2rem;
+  font-weight: 600;
 
   &::after {
     content: '';
@@ -115,7 +115,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: white; // or your preferred background color
+  background: white;
   z-index: 50;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;

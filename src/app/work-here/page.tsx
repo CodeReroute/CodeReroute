@@ -4,6 +4,7 @@ import { Colors } from '@/constants/Colors';
 import Link from 'next/link';
 import { OPEN_ROLES } from '@/constants';
 import { OpenRole } from '@/types';
+import { TextBlock } from '@/components/TextBlock/TextBlock';
 
 const page = () => {
   return (
@@ -18,7 +19,7 @@ const page = () => {
               className={styles.button}
               style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
             >
-              {role.title}
+              {role.title.toUpperCase()}
             </Link>
           ))}
         </div>
@@ -26,33 +27,24 @@ const page = () => {
         <div className="w-1/2 flex flex-col justify-center items-center">
           <div className={styles.textContainer}>
             <div>
-              <h1
-                className={styles.text}
-                style={{ backgroundColor: Colors.Black }}
-              >
+              <TextBlock width={{ medium: '350px', large: '500px' }}>
                 Work in an exciting atmosphere with a team that makes an impact.
                 Fully remote and flexible hours.
-              </h1>
+              </TextBlock>
             </div>
             <div>
-              <h1
-                className={styles.text}
-                style={{ backgroundColor: Colors.Black }}
-              >
+              <TextBlock width={{ medium: '350px', large: '500px' }}>
                 Together, we are focused on building innovative tech and writing
                 clean code. We are highly collaborative, self-motivated, and
                 constantly curious.
-              </h1>
+              </TextBlock>
             </div>
             <div>
-              <h1
-                className={styles.text}
-                style={{ backgroundColor: Colors.Black }}
-              >
+              <TextBlock width={{ medium: '350px', large: '500px' }}>
                 We value open communication, helping each other with complex
                 logic and mentoring each other to be the best
                 developers/designers in the industry.
-              </h1>
+              </TextBlock>
             </div>
           </div>
         </div>

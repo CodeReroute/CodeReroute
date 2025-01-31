@@ -1,0 +1,66 @@
+@mixin small {
+  @media (min-width: 40rem) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin xLarge {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
+.text {
+  padding: 8px 15px;
+  display: inline;
+  border-radius: 0.375rem;
+  max-width: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+
+  @include small {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  @include medium {
+    font-size: 1.3rem;
+    padding: 9px;
+  }
+
+  @include large {
+    font-size: 1.4rem;
+    padding: 12px;
+  }
+}
+
+.textContainer {
+  background-color: #101010;
+//   background-color: red;
+  border-radius: 10px;
+  padding: 10px 1px;
+  margin: 0px 13px;
+  @include small {
+  }
+
+  @include medium {
+    width: var(--medium-width, 670px);
+  }
+
+  @include large {
+    width: var(--large-width, 700px);
+  }
+}

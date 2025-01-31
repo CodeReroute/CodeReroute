@@ -12,12 +12,12 @@ export default function RoleDetails({
   formattedRole: string;
 }) {
   return (
-    <div className="space-y-8 mt-60 md:mt-0 lg:mt-0 flex flex-col items-center justify-center">
+    <div className="space-y-8 flex flex-col items-center justify-center">
       <Link
         href=""
         style={{ color: Colors.text.white, fontWeight: 'bold' }}
       >
-        {formattedRole}
+        {formattedRole.toUpperCase()}
       </Link>
 
       <div className="space-y-6 text-[18px] text-white w-[350px] lg:w-[500px]">

@@ -4,12 +4,25 @@ import { usePathname } from 'next/navigation';
 import styles from './Header.module.scss';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import { MobileSidebar } from './MobileHeader';
+
 import Image from 'next/image';
+import { MobileSidebar } from './MobileHeader';
 
 export default function Header() {
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const navLinks = [
+    { href: '/tech-company', label: 'TECH COMPANY', exact: true },
+    {
+      href: '/mappetizer',
+      label: 'MAPPETIZER',
+      exact: true,
+      className: styles.middleLink,
+    },
+    { href: '/work-here', label: 'WORK HERE', exact: false },
+  ];
+
   return (
     <>
       <MobileSidebar
@@ -37,26 +50,25 @@ export default function Header() {
               />
             </Link>
 
-            <Link
-              href="/tech-company"
-              className={`${styles.link} ${pathname === '/tech-company' ? styles.active : ''}`}
-            >
-              TECH COMPANY
-            </Link>
-            <div className={styles.middleLink}>
-              <Link
-                href="/mappetizer"
-                className={`${styles.link} ${pathname === '/mappetizer' ? styles.active : ''}`}
-              >
-                MAPPETIZER
-              </Link>
-            </div>
-            <Link
-              href="/work-here"
-              className={`${styles.link} ${pathname.startsWith('/work-here') ? styles.active : ''}`}
-            >
-              WORK HERE
-            </Link>
+            {navLinks.map(({ href, label, exact, className }) => {
+              const isActive = exact
+                ? pathname === href
+                : pathname.startsWith(href);
+
+              return (
+                <div
+                  key={href}
+                  className={className}
+                >
+                  <Link
+                    href={href}
+                    className={`${styles.link} ${isActive ? styles.active : ''}`}
+                  >
+                    {label}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </nav>
