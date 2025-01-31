@@ -51,14 +51,14 @@ export default function ApplicationForm({ id }: { id: string }) {
   const [response, setResponse] = useState<BaseResponse | null>(null);
   const [formData, setFormData] = useState<ApplicationFormData>({
     jobId: id,
-    email: 'ahmedashfaq6777@gmail.com',
-    firstName: 'ahmed',
-    lastName: 'ashfaq',
-    pronoun: 'he/him',
-    city: 'karachi',
-    whyWorkWithUs: 'i want to work here because i am a good developer',
-    hearAboutUs: 'i heard about it from google',
-    experience: 'I have extensive',
+    email: '',
+    firstName: '',
+    lastName: '',
+    pronoun: '',
+    city: '',
+    whyWorkWithUs: '',
+    hearAboutUs: '',
+    experience: '',
     resume: null as File | null,
   });
   const [errors, setErrors] = useState<
