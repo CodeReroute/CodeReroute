@@ -14,7 +14,7 @@ const Page = () => {
   const formattedRole = formatting.slice(0, -2).join('-').replace(/-/g, ' ');
 
   return (
-    <div className="w-full h-full mt-[180px] sm:mt-0">
+    <div className="w-full h-full mt-[120px] sm:mt-0">
       <div className="flex flex-col lg:flex-row h-full justify-center items-center">
         {/* Left Side */}
         <div className="w-1/2 flex lg:pl-10 flex-col justify-center items-center">
