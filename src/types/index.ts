@@ -2,12 +2,13 @@ export interface TeamMember {
   name: string;
   role: string;
   image: string;
+  mobileInfo?: string;
 }
 
 export interface OpenRole {
   title: string;
-  initialReview: string;
+  initialReview: string[] | string;
   process: string[];
-  endLines: string;
+  endLines: string[] | string;
   roleUrl: string;
 }

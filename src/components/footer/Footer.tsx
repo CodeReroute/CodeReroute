@@ -19,7 +19,7 @@ export default function Footer() {
 
         <div className={styles.socialLinks}>
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/code_reroute/"
             className={styles.link}
           >
             <div className={styles.iconContainer}>
@@ -34,7 +34,7 @@ export default function Footer() {
             <span className="sr-only">Instagram</span>
           </Link>
           <Link
-            href="https://facebook.com"
+            href="https://www.tiktok.com/@mappetizer"
             className={styles.link}
           >
             <div className={styles.iconContainer}>
@@ -49,7 +49,7 @@ export default function Footer() {
             <span className="sr-only">TikTok</span>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/code-reroute/"
             className={styles.link}
           >
             <div className={styles.iconContainer}>

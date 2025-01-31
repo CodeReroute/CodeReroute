@@ -37,33 +37,27 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Software Engineer',
     image: '/profileImages/naeem.png',
   },
+  {
+    name: 'Your Photo Here',
+    role: 'Apply Now',
+    image: '/profileImages/deafultAvatar.jpg',
+  },
 ];
 
 export const OPEN_ROLES: OpenRole[] = [
   {
-    title: 'Software Engineer',
-    initialReview:
-      'We are looking for a Software Engineer to join our team. The ideal candidate will have experience in JavaScript, React, and Node.js.',
-    process: [
-      'first round of interviews',
-      'second round of interviews',
-      'third round of interviews',
+    title: 'Senior UI/UX Designer Position',
+    initialReview: [
+      'Searching for a Senior UI/UX Designer to join our team.',
+      'We’re building an ambitious project called mappetizer— a new social media platform for restaurant discovery, easy reservations, trustworthy reviews + more.',
     ],
-    endLines: 'We will get back to you within 24 hours.',
-    roleUrl: '/work-here/open-roles/software-engineer',
-  },
-  {
-    title: 'UI Designer',
-    initialReview: 'We are looking for a UI Designer to join our team.',
-    process: ['first round of interviews', 'second round of interviews'],
-    endLines: 'We will get back to you within 24 hours.',
-    roleUrl: '/work-here/open-roles/ui-designer',
-  },
-  {
-    title: 'Product Manager',
-    initialReview: 'We are looking for a Product Manager to join our team.',
-    process: ['first round of interviews', 'second round of interviews'],
-    endLines: 'We will get back to you within 24 hours.',
-    roleUrl: '/work-here/open-roles/product-manager',
+    process: [
+      'This is a fully remote and full-time position',
+      'There is a mandatory daily standup but otherwise, working hours can happen at any time',
+      'Offering 15 vacation days (+ your country’s national holidays)',
+      'Candidate should be a figma expert',
+    ],
+    endLines: '',
+    roleUrl: '/work-here/Senior-UI-UX-Designer-Position-February-2025',
   },
 ];

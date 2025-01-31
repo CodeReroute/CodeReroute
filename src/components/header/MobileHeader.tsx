@@ -19,9 +19,9 @@ const mainNavItems: NavItem[] = [
 ];
 
 const socialNavItems: NavItem[] = [
-  { label: 'INSTAGRAM', href: 'https://instagram.com' },
-  { label: 'LINKEDIN', href: 'https://linkedin.com' },
-  { label: 'TIKTOK', href: 'https://tiktok.com' },
+  { label: 'INSTAGRAM', href: 'https://www.instagram.com/code_reroute/' },
+  { label: 'LINKEDIN', href: 'https://www.linkedin.com/company/code-reroute/' },
+  { label: 'TIKTOK', href: 'https://www.tiktok.com/@mappetizer' },
 ];
 
 export function MobileSidebar({

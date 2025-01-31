@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './page.module.scss';
 import { Colors } from '@/constants/Colors';
 import Link from 'next/link';
+import { OPEN_ROLES } from '@/constants';
+import { OpenRole } from '@/types';
 
 const page = () => {
   return (
@@ -9,20 +11,16 @@ const page = () => {
       <div className="flex flex-col-reverse lg:flex-row h-full justify-center items-center">
         {/* Left Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
-          <Link
-            href="/work-here/open-roles"
-            className={styles.button}
-            style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
-          >
-            APPLY FOR OPEN ROLES
-          </Link>
-          <Link
-            href=""
-            className={styles.button}
-            style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
-          >
-            APPLY FOR FUTURE ROLES
-          </Link>
+          {OPEN_ROLES.map((role: OpenRole, index: number) => (
+            <Link
+              key={index}
+              href={role.roleUrl}
+              className={styles.button}
+              style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
+            >
+              {role.title}
+            </Link>
+          ))}
         </div>
         {/* Right Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">

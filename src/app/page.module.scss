@@ -2,15 +2,6 @@
   @media (min-width: 40rem) {
     @content;
   }
-  @media screen and (max-width: 500px) {
-    .main-text {
-      padding: 1rem;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
 }
 
 @mixin medium {
@@ -39,18 +30,17 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.25rem;
   font-weight: 800;
   color: white;
-  font-family: var(--font-goga);
 
   @include small {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   @include medium {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   @include large {

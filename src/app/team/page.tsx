@@ -39,45 +39,47 @@ export default function TeamSection() {
     >
       {/* <div className={styles.container}></div> */}
       <div className={styles.grid}>
-        {TEAM_MEMBERS.map((member: TeamMember, index: number) => (
-          <motion.div
-            key={member.name}
-            className={styles.memberCard}
-            style={{
-              marginTop: getMarginTop(index),
-            }}
-          >
-            <div className={styles.imageContainer}>
-              <motion.div
-                className={styles.imageWrapper}
-                animate={{
-                  y: [0, -15, 0, -8, 0],
-                  x: [-8, 5, -3, 8, -8],
-                  transition: {
-                    duration: 12,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    repeatType: 'mirror',
-                    delay: Math.random() * 2,
-                    times: [0, 0.2, 0.5, 0.8, 1],
-                  },
-                }}
-              >
-                <Image
-                  src={member.image}
-                  width={100}
-                  height={100}
-                  alt={`${member.name}'s avatar`}
-                  className={styles.image}
-                />
-              </motion.div>
-              <div className={styles.memberInfo}>
-                <h3 className={styles.memberName}>{member.name}</h3>
-                <p className={styles.memberRole}>{member.role}</p>
+        {(windowWidth <= 1024 ? TEAM_MEMBERS : TEAM_MEMBERS.slice(0, -1)).map(
+          (member: TeamMember, index: number) => (
+            <motion.div
+              key={member.name}
+              className={styles.memberCard}
+              style={{
+                marginTop: getMarginTop(index),
+              }}
+            >
+              <div className={styles.imageContainer}>
+                <motion.div
+                  className={styles.imageWrapper}
+                  animate={{
+                    y: [0, -25, 0, -15, 0],
+                    x: [-15, 10, -8, 15, -15],
+                    transition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      repeatType: 'mirror',
+                      delay: Math.random() * 2,
+                      times: [0, 0.2, 0.5, 0.8, 1],
+                    },
+                  }}
+                >
+                  <Image
+                    src={member.image}
+                    width={100}
+                    height={100}
+                    alt={`${member.name}'s avatar`}
+                    className={styles.image}
+                  />
+                </motion.div>
+                <div className={styles.memberInfo}>
+                  <h3 className={styles.memberName}>{member.name}</h3>
+                  <p className={styles.memberRole}>{member.role}</p>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ),
+        )}
       </div>
     </div>
   );

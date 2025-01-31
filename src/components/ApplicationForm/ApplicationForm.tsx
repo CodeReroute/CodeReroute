@@ -15,8 +15,14 @@ const ACCEPTED_FILE_TYPES = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
 
+export interface BaseResponse {
+  success: boolean;
+  message?: string;
+  error?: string;
+}
+
 const applicationSchema = z.object({
-  role: z.string().min(1, 'Role is required'),
+  jobId: z.string().min(1, 'Id is required'),
   email: z.string().email('Invalid email address'),
   firstName: z.string().min(1, 'First name is required'),
   lastName: z.string().min(1, 'Last name is required'),
@@ -40,10 +46,11 @@ const applicationSchema = z.object({
 
 type ApplicationFormData = z.infer<typeof applicationSchema>;
 
-export default function ApplicationForm() {
+export default function ApplicationForm({ id }: { id: string }) {
   const [portfolioName, setPortfolioName] = useState('');
+  const [response, setResponse] = useState<BaseResponse | null>(null);
   const [formData, setFormData] = useState<ApplicationFormData>({
-    role: 'a',
+    jobId: id,
     email: 'ahmedashfaq6777@gmail.com',
     firstName: 'ahmed',
     lastName: 'ashfaq',
@@ -58,16 +65,16 @@ export default function ApplicationForm() {
     Partial<Record<keyof ApplicationFormData, string>>
   >({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  // const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
     setIsSubmitting(true);
-    setSubmitSuccess(false);
+    // setSubmitSuccess(false);
+    setResponse(null); // Reset response state
 
     try {
-      // Request a ReCaptcha token
       await requestRecaptchaV3Token(async (token) => {
         if (!token) {
           alert('reCAPTCHA verification failed. Please try again.');
@@ -85,38 +92,43 @@ export default function ApplicationForm() {
               formDataToSend.append(key, value);
             }
           });
-          console.log('token', token);
 
           const response = await fetch(
             `${webConfig.baseUrl}/employment/create?token=${token}`,
             {
               method: 'POST',
               body: formDataToSend,
-              // headers: {
-              //   'Content-Type': 'multipart/form-data',
-              // },
             },
           );
-          console.log(response);
 
-          if (!response.ok) {
-            throw new Error('Submission failed');
+          const data = await response.json();
+
+          if (response.ok) {
+            setResponse({
+              success: true,
+              message: 'Application submitted successfully!',
+            });
+            // setSubmitSuccess(true);
+            // Clear form data
+            setFormData({
+              jobId: '',
+              email: '',
+              firstName: '',
+              lastName: '',
+              pronoun: '',
+              city: '',
+              whyWorkWithUs: '',
+              hearAboutUs: '',
+              resume: null,
+              experience: '',
+            });
+          } else {
+            setResponse({
+              success: false,
+              error: data.message || 'Something went wrong. Please try again.',
+            });
+            // setSubmitSuccess(false);
           }
-
-          // Clear form data on success
-          setFormData({
-            role: '',
-            email: '',
-            firstName: '',
-            lastName: '',
-            pronoun: '',
-            city: '',
-            whyWorkWithUs: '',
-            hearAboutUs: '',
-            resume: null as File | null,
-            experience: '',
-          });
-          setSubmitSuccess(true);
         } catch (error) {
           throw error;
         }
@@ -188,25 +200,6 @@ export default function ApplicationForm() {
         onSubmit={handleSubmit}
         className="w-full flex flex-wrap gap-[19px]"
       >
-        <div className="w-[290px] flex flex-col">
-          <div className="h-[45px] rounded-md border-[3.5px] border-white">
-            <input
-              type="text"
-              placeholder="WHICH ROLE ARE YOU APPLYING FOR?"
-              className={`w-full h-full bg-transparent border-none outline-none text-white placeholder:text-white placeholder:text-[13px] placeholder:text-center placeholder:font-[600] px-3 ${
-                errors.role ? 'border-red-500' : ''
-              }`}
-              value={formData.role}
-              onChange={(e) =>
-                setFormData({ ...formData, role: e.target.value })
-              }
-            />
-          </div>
-          {errors.role && (
-            <span className="text-red-500 text-xs mt-1">{errors.role}</span>
-          )}
-        </div>
-
         <div className="w-[110px] flex flex-col">
           <div className="h-[45px] rounded-md border-[3.5px] border-white">
             <input
@@ -376,9 +369,13 @@ export default function ApplicationForm() {
       >
         {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
       </button>
-      {submitSuccess && (
-        <div className="mt-4 text-green-500 font-semibold">
-          Application submitted successfully!
+      {response && (
+        <div
+          className={`mt-4 font-semibold ${
+            response.success ? 'text-green-500' : 'text-red-500'
+          }`}
+        >
+          {response.success ? response.message : response.error}
         </div>
       )}
     </div>

@@ -11,7 +11,7 @@ const page = () => {
           className={styles.email}
           style={{ backgroundColor: Colors.Black }}
         >
-          hello@coderoute.com
+          press@codereroute.com
         </h1>
       </div>
     </div>
