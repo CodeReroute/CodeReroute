@@ -4,20 +4,21 @@ import ApplicationForm from '@/components/ApplicationForm/ApplicationForm';
 import { OPEN_ROLES_IDS } from '@/constants';
 
 interface PageProps {
-  role: string | undefined;
+  id: string | undefined;
 }
 
 export function generateStaticParams() {
   return OPEN_ROLES_IDS.map((id) => ({ id }));
 }
 
-async function Page({ params }: { params: Promise<PageProps> }) {
-  const { role } = await params;
-  if (!role) {
+export default async function Page({ params }: { params: Promise<PageProps> }) {
+  const { id } = await params;
+
+  if (!id) {
     return <div>No role found</div>;
   }
 
-  const formatting = role.split('-');
+  const formatting = id.split('-');
 
   const formattedRole = formatting.slice(0, -2).join('-').replace(/-/g, ' ');
 
@@ -35,12 +36,10 @@ async function Page({ params }: { params: Promise<PageProps> }) {
         {/* Right Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
           <div className="flex-1 m-10 lg:w-[80%]">
-            <ApplicationForm id={role} />
+            <ApplicationForm id={id} />
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-export default Page;
