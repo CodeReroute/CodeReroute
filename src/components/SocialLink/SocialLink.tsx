@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../Footer/Footer.module.scss'; // You might want to create a separate styles file
+import styles from '@/components/Footer/Footer.module.scss'; // You might want to create a separate styles file
 
 interface SocialLinkProps {
   href: string;
