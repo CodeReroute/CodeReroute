@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 import localFont from 'next/font/local';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 import Background from '@/components/BackgroundWrapper';
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 
 const goga = localFont({
   src: [
