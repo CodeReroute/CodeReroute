@@ -7,7 +7,7 @@ const TechCompany = () => {
   return (
     <div className={styles.container}>
       <Heading>CODE REROUTE</Heading>
-      <TextBlock>
+      <TextBlock width={{ large: '725px' }}>
         Hi, we&apos;re a female-led tech company building the world&apos;s
         biggest restaurant app called mappetizer. We&apos;re nerdy, cool and
         mega-talented.

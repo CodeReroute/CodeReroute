@@ -34,6 +34,8 @@ export default function Background() {
           }`}
           style={{
             backgroundImage: 'url(/background.png)',
+            boxShadow:
+              'rgb(16 16 16 / var(--tw-bg-opacity, 1)) 18px 0px 17px inset',
           }}
         ></div>
       </div>

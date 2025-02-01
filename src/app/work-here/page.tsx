@@ -27,20 +27,20 @@ const page = () => {
         <div className="w-1/2 flex flex-col justify-center items-center">
           <div className={styles.textContainer}>
             <div>
-              <TextBlock width={{ medium: '350px', large: '500px' }}>
+              <TextBlock width={{ medium: '350px', large: '533px' }}>
                 Work in an exciting atmosphere with a team that makes an impact.
                 Fully remote and flexible hours.
               </TextBlock>
             </div>
             <div>
-              <TextBlock width={{ medium: '350px', large: '500px' }}>
+              <TextBlock width={{ medium: '350px', large: '533px' }}>
                 Together, we are focused on building innovative tech and writing
                 clean code. We are highly collaborative, self-motivated, and
                 constantly curious.
               </TextBlock>
             </div>
             <div>
-              <TextBlock width={{ medium: '350px', large: '500px' }}>
+              <TextBlock width={{ medium: '350px', large: '533px' }}>
                 We value open communication, helping each other with complex
                 logic and mentoring each other to be the best
                 developers/designers in the industry.
