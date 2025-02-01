@@ -5,7 +5,6 @@ import localFont from 'next/font/local';
 import Background from '@/components/BackgroundWrapper';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-import { headers } from 'next/headers';
 
 const goga = localFont({
   src: [
