@@ -16,11 +16,10 @@ const goga = localFont({
 });
 
 const title = 'Code Reroute';
-const description =
-  'Code Reroute is a female-led tech company building innovative web and mobile apps— mappetizer';
+const description = 'Female-led tech company';
 const keywords =
   'software development, canada, agency, edmonton, alberta, consultations, web design, software engineering, digital, app development, communications, web application, mobile application';
-const featuredImage = 'https://codereroute.com/assets/sharing-meta-image.png';
+const featuredImage = 'https://codereroute.com/sharing-meta-image.png';
 
 export const metadata: Metadata = {
   title,
@@ -29,7 +28,12 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    images: [featuredImage],
+    images: [
+      {
+        alt: title,
+        url: featuredImage,
+      },
+    ],
   },
 };
 
