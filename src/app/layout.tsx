@@ -43,11 +43,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body className={`${goga.variable} font-sans`}>
         <Background />
         <div
-          className="min-h-screen flex flex-col bg-cover bg-center bg-fixed relative z-10"
+          className="min-h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10"
           style={{}}
         >
           <Header />
-          <main className="h-[100vh]">{children}</main>
+          <main className="h-[100svh]">{children}</main>
           <Footer />
         </div>
       </body>

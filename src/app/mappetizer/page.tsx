@@ -8,7 +8,7 @@ const Mappetizer = () => {
   return (
     <div className={styles.container}>
       <div>
-        <TextBlock width={{ medium: '200px', large: '250px' }}>
+        <TextBlock width={{ medium: '200px', large: '200px' }}>
           Join the waitlist.
         </TextBlock>
       </div>

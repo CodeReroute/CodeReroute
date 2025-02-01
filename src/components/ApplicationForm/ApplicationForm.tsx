@@ -18,7 +18,7 @@ import {
 
 export default function ApplicationForm({ id }: { id: string }) {
   const [portfolioName, setPortfolioName] = useState('');
-  const [response, setResponse] = useState<BaseResponse | null>(null);
+  const [response, setResponse] = useState<BaseResponse | null>();
   const [formData, setFormData] = useState<ApplicationFormData>({
     jobId: id,
     email: '',
@@ -246,7 +246,7 @@ export default function ApplicationForm({ id }: { id: string }) {
 
       {response && (
         <div
-          className={`mt-[-70px] font-semibold ${response.success ? 'text-green-500' : 'text-red-500'}`}
+          className={`mr-auto mt-[-70px] font-semibold ${response.success ? 'text-green-500' : 'text-red-500'}`}
         >
           {response.success ? response.message : response.error}
         </div>
