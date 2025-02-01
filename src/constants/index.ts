@@ -52,7 +52,7 @@ export const OPEN_ROLES: OpenRole[] = [
     id: OPEN_ROLES_IDS[0],
     title: 'Senior UI/UX Designer Position',
     initialReview: [
-      'We’re building an ambitious project called mappetizer— a new social media platform for restaurant discovery, easy reservations, trustworthy reviews + more.',
+      'We’re building an ambitious project called mappetizer— a reimagined social media platform for restaurant discovery, easy reservations, trustworthy reviews + more.',
     ],
     process: [
       'This is a fully remote and full-time position',
