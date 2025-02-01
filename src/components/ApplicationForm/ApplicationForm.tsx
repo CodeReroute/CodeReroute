@@ -246,7 +246,8 @@ export default function ApplicationForm({ id }: { id: string }) {
 
       {response && (
         <div
-          className={`mr-auto mt-[-70px] font-semibold ${response.success ? 'text-green-500' : 'text-red-500'}`}
+          className="mr-auto mt-[-70px] font-semibold uppercase"
+          style={{ color: response.success ? '#D0F29B' : '#FF5757' }}
         >
           {response.success ? response.message : response.error}
         </div>
