@@ -25,9 +25,15 @@ export const metadata: Metadata = {
   title,
   description,
   keywords,
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     title,
     description,
+    url: 'https://codereroute.com',
     images: [
       {
         alt: title,
@@ -40,6 +46,14 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/arrow-icon-light.png"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
       <body className={`${goga.variable} font-sans`}>
         <Background />
         <div className="min-h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10">
