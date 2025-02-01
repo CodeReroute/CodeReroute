@@ -20,7 +20,7 @@ export default function RoleDetails({
         {formattedRole.toUpperCase()}
       </Link>
 
-      <div className="space-y-6 text-[18px] text-white w-[350px] lg:w-[500px]">
+      <div className="space-y-6 text-[18px] text-white w-[350px] lg:w-[500px] text-base">
         <div className="space-y-2">
           {Array.isArray(role.initialReview) ? (
             role.initialReview.map((review: string) => (

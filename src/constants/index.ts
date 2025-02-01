@@ -38,7 +38,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     image: '/profileImages/naeem.png',
   },
   {
-    name: 'Your Photo Here',
+    name: 'You',
     role: 'Apply Now',
     image: '/profileImages/deafultAvatar.jpg',
   },
