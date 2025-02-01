@@ -20,7 +20,7 @@ export function FormInput({
         <input
           type="text"
           placeholder={placeholder}
-          className={`w-full h-full bg-transparent border-none outline-none text-white placeholder:text-white placeholder:text-[13px] placeholder:text-center placeholder:font-[600] px-3 ${
+          className={`w-full h-full bg-transparent border-none outline-none text-white placeholder:text-white placeholder:text-[13px] placeholder:font-[600] px-3 ${
             error ? 'border-red-500' : ''
           }`}
           value={value}
