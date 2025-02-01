@@ -7,6 +7,7 @@ import { Colors } from '@/constants/Colors';
 import TeamMemberCard from '../../components/TeamMemberCard';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 import styles from './TeamSection.module.scss';
+import { useRouter } from 'next/navigation';
 
 // Loading component for better UX
 function TeamSectionLoading() {
@@ -24,9 +25,15 @@ function TeamSectionLoading() {
 }
 
 function TeamSectionContent() {
+  const { push } = useRouter();
   const windowWidth = useWindowWidth();
   const isMobile = windowWidth <= 1024;
   const displayedMembers = isMobile ? TEAM_MEMBERS : TEAM_MEMBERS.slice(0, -1);
+  const lastIndex = displayedMembers.length - 1;
+
+  const pushWorkHere = () => {
+    push('/work-here');
+  };
 
   return (
     <div className={styles.grid}>
@@ -36,12 +43,12 @@ function TeamSectionContent() {
           member={member}
           index={index}
           isMobile={isMobile}
+          onClick={isMobile && index === lastIndex ? pushWorkHere : undefined}
         />
       ))}
     </div>
   );
 }
-
 
 export default function TeamSection() {
   return (

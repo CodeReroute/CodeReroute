@@ -9,7 +9,7 @@ const Mappetizer = () => {
     <div className={styles.container}>
       <div>
         <TextBlock width={{ medium: '440px', large: '480px' }}>
-          Be among the first app users. Join the waitlist.
+          Join the waitlist.
         </TextBlock>
       </div>
       <Link href="https://www.mappetizer.com/">

@@ -7,9 +7,10 @@ interface TeamMemberCardProps {
   member: TeamMember;
   index: number;
   isMobile: boolean;
+  onClick?: () => void;
 }
 
-const floatingAnimation = {
+const floatingAnimation = () => ({
   y: [0, -25, 0, -15, 0],
   x: [-15, 10, -8, 15, -15],
   transition: {
@@ -20,12 +21,13 @@ const floatingAnimation = {
     delay: Math.random() * 2,
     times: [0, 0.2, 0.5, 0.8, 1],
   },
-};
+});
 
 export default function TeamMemberCard({
   member,
   index,
   isMobile,
+  onClick,
 }: TeamMemberCardProps) {
   const getMarginTop = () => {
     if (isMobile) return '0rem';
@@ -36,11 +38,12 @@ export default function TeamMemberCard({
     <motion.div
       className={styles.memberCard}
       style={{ marginTop: getMarginTop() }}
+      onClick={onClick}
     >
       <div className={styles.imageContainer}>
         <motion.div
           className={styles.imageWrapper}
-          animate={floatingAnimation}
+          animate={floatingAnimation()}
         >
           <Image
             src={member.image}

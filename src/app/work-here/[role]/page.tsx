@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: Promise<PageProps> }) {
   const formattedRole = formatting.slice(0, -2).join('-').replace(/-/g, ' ');
 
   return (
-    <div className="w-full h-full mt-[250px] sm:mt-0">
+    <div className="w-full h-full mt-[150px] sm:mt-0">
       <div className="flex flex-col lg:flex-row h-full justify-center items-center">
         {/* Left Side */}
         <div className="w-1/2 flex lg:pl-10 flex-col justify-center items-center">
