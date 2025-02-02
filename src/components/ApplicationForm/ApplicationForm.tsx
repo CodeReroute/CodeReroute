@@ -215,7 +215,7 @@ export default function ApplicationForm({ id }: { id: string }) {
             setFormData({ ...formData, whyWorkWithUs: value })
           }
           error={errors.whyWorkWithUs}
-          className="w-[300px]"
+          className="w-[265px]"
         />
 
         <FormInput

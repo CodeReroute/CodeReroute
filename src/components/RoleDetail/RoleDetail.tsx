@@ -21,7 +21,7 @@ export default function RoleDetails({
       </Link>
 
       <div className="space-y-6 text-[18px] text-white w-[350px] lg:w-[500px] text-base sm:text-[1.4rem]">
-        <div className="space-y-2">
+        <div className="space-y-2 text-center lg:text-left">
           {Array.isArray(role.initialReview) ? (
             role.initialReview.map((review: string) => (
               <p key={review}>{review}</p>

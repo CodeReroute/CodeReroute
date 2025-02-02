@@ -9,7 +9,7 @@ const page = () => {
       <Heading>CODE REROUTE</Heading>
       <div>
         <TextBlock width={{ medium: '260px', large: '300px' }}>
-          press@codereroute.com
+          <a href="mailto:press@codereroute.com">press@codereroute.com</a>
         </TextBlock>
       </div>
     </div>
