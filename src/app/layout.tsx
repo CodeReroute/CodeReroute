@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import Background from '@/components/BackgroundWrapper';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
+import { webConfig } from '@/utils/webConfig';
 
 const goga = localFont({
   src: [
@@ -47,6 +48,27 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
+        {webConfig.isProduction && webConfig.gaTrackingId && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${webConfig.gaTrackingId}`}
+            />
+            <script
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${webConfig.gaTrackingId}', {
+                      page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
         <link
           rel="icon"
           type="image/x-icon"
