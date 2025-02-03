@@ -48,7 +48,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
-        {webConfig.isProduction && webConfig.gaTrackingId && (
+        {webConfig.gaTrackingId && (
           <>
             <script
               async
