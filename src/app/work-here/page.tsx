@@ -27,7 +27,7 @@ const page = () => {
         <div className="w-1/2 flex flex-col justify-center items-center">
           <div className={styles.textContainer}>
             <div>
-              <TextBlock width={{ medium: '350px', large: '533px' }}>
+              <TextBlock width={{ medium: '350px', large: '538px' }}>
                 Work in an exciting atmosphere with a team that makes an impact.
                 Fully remote and flexible hours.
               </TextBlock>

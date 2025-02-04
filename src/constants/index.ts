@@ -5,42 +5,50 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Haseeb Khalid',
     role: 'UI Designer',
     image: '/profileImages/haseeb.png',
+    blurDataURL: '/profileImages/haseeb_optimized.png',
   },
   {
     name: 'Danielle Dufour',
     role: 'CEO',
     image: '/profileImages/danielle.png',
+    blurDataURL: '/profileImages/danielle_optimized.png',
   },
   {
     name: 'Usman Ahmed',
     role: 'Software Engineer',
     image: '/profileImages/usman.png',
+    blurDataURL: '/profileImages/usman_optimized.png',
   },
   {
     name: 'Ahmed Ashfaq',
     role: 'Software Engineer',
     image: '/profileImages/ahmed.png',
+    blurDataURL: '/profileImages/ahmed_optimized.png',
   },
 
   {
     name: 'Hafiz Temuri',
     role: 'CTO',
     image: '/profileImages/hafiz.png',
+    blurDataURL: '/profileImages/hafiz_optimized.png',
   },
   {
     name: 'Bilal Siddique',
     role: 'Software Engineer',
     image: '/profileImages/bilal.png',
+    blurDataURL: '/profileImages/bilal_optimized.png',
   },
   {
     name: 'Naeem Raza',
     role: 'Software Engineer',
     image: '/profileImages/naeem.png',
+    blurDataURL: '/profileImages/naeem_optimized.png',
   },
   {
     name: 'You',
     role: 'Apply Now',
     image: '/profileImages/deafultAvatar.jpg',
+    blurDataURL: '/profileImages/deafultAvatar_optimized.jpg',
   },
 ];
 
