@@ -13,6 +13,16 @@ body {
   background: #101010;
 }
 
+::-moz-selection {
+  color: #101010;
+  background: rgb(var(--foreground-rgb));
+}
+
+::selection {
+  color: #101010;
+  background: rgb(var(--foreground-rgb));
+}
+
 main {
   padding-top: 80px;
   padding-bottom: 80px;
