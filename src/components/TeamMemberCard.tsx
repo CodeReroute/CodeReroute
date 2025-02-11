@@ -51,6 +51,8 @@ export default function TeamMemberCard({
             height={100}
             alt={`${member.name}'s avatar`}
             className={styles.image}
+            placeholder="blur"
+            blurDataURL={member.blurDataURL}
           />
         </motion.div>
         <div className={styles.memberInfo}>
