@@ -1,9 +1,5 @@
 import React from 'react';
 import styles from './page.module.scss';
-import { Colors } from '@/constants/Colors';
-import Link from 'next/link';
-import { OPEN_ROLES } from '@/constants';
-import { OpenRole } from '@/types';
 import { TextBlock } from '@/components/TextBlock/TextBlock';
 
 const page = () => {
@@ -12,7 +8,7 @@ const page = () => {
       <div className="flex flex-col-reverse lg:flex-row h-full justify-center items-center">
         {/* Left Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
-          {OPEN_ROLES.map((role: OpenRole, index: number) => (
+          {/*  {OPEN_ROLES.map((role: OpenRole, index: number) => (
             <Link
               key={index}
               href={role.roleUrl}
@@ -21,7 +17,11 @@ const page = () => {
             >
               {role.title.toUpperCase()}
             </Link>
-          ))}
+          ))} */}
+          {/* add a white text that No open positions at this time */}
+          <div className="text-white lg:text-xl font-bold">
+            No open positions at this time
+          </div>
         </div>
         {/* Right Side */}
         <div className="w-1/2 flex flex-col justify-center items-center">
