@@ -52,6 +52,8 @@ jobs:
           static_site_generator: next
       - name: Clear NPM Cache
         run: npm cache clean --force
+      - name: Verify NPM Cache
+        run: npm cache verify
       - name: Restore cache
         uses: actions/cache@v4
         with:
