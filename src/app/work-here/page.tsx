@@ -19,7 +19,7 @@ const page = () => {
             </Link>
           ))} */}
           {/* add a white text that No open positions at this time */}
-          <div className="text-white lg:text-xl font-bold">
+          <div className="text-white text-[12px] mt-5 lg:mt-0 lg:text-xl font-bold">
             No open positions at this time
           </div>
         </div>
