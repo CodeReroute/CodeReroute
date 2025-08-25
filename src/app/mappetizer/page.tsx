@@ -2,20 +2,19 @@
 import React from 'react';
 import styles from './page.module.scss';
 import Link from 'next/link';
-import { TextBlock } from '@/components/TextBlock/TextBlock';
 
 const Mappetizer = () => {
   return (
     <div className={styles.container}>
-      <div>
+      {/* <div>
         <TextBlock
           width={{ medium: '200px', large: '200px' }}
           style={{ paddingLeft: 0, paddingRight: 0 }}
         >
           Join the waitlist.
         </TextBlock>
-      </div>
-      <Link href="https://www.mappetizer.com/">
+      </div> */}
+      <Link href="https://mappetizer.com/">
         <button className={styles.button}>TO THE SITE</button>
       </Link>
     </div>
