@@ -53,12 +53,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
 ];
 
 export const OPEN_ROLES_IDS: string[] = [
-  'Senior-UI-UX-Designer-Position-February-2025',
+  'Frontend-Developer-Position-August-2025',
 ];
 export const OPEN_ROLES: OpenRole[] = [
   {
     id: OPEN_ROLES_IDS[0],
-    title: 'Senior UI/UX Designer Position',
+    title: 'Frontend Developer Position',
     initialReview: [
       'We’re building an ambitious project called mappetizer— a reimagined social media platform for restaurant discovery, easy reservations, trustworthy reviews + more.',
     ],
@@ -67,7 +67,7 @@ export const OPEN_ROLES: OpenRole[] = [
       'Full-time hours',
       'Mandatory daily standup',
       '15 vacation days + 15 stat holidays',
-      'Searching for a figma expert',
+      'Searching for a React Native developer',
     ],
     endLines: '',
     roleUrl: `/work-here/${OPEN_ROLES_IDS[0]}`,
