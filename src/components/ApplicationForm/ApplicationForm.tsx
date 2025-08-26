@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Colors } from '@/constants/Colors';
 import styles from './ApplicationForm.module.scss';
-import { requestRecaptchaV3Token } from '@/utils/RecaptchaV3';
+import ReCaptchaV3, { requestRecaptchaV3Token } from '@/utils/RecaptchaV3';
 import { webConfig } from '@/utils/webConfig';
 import { FormInput } from './FormInput';
 import { FileUpload } from './FileUpload';
@@ -156,6 +156,8 @@ export default function ApplicationForm({ id }: { id: string }) {
 
   return (
     <div className="w-full mx-auto flex flex-col items-center justify-center lg:mt-20 lg:h-[300px]">
+      <ReCaptchaV3 />
+
       <form
         onSubmit={handleSubmit}
         className="w-full flex flex-wrap gap-[19px]"

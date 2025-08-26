@@ -7,18 +7,16 @@ const DISABLE_CAPTCHA = false;
 declare global {
   interface Window {
     grecaptcha?: {
-      enterprise: {
-        ready: (func: () => unknown) => unknown;
-        execute: (
-          key: string | undefined,
-          options: object,
-        ) => Promise<string | undefined>;
-      };
+      ready: (func: () => unknown) => unknown;
+      execute: (
+        key: string | undefined,
+        options: object,
+      ) => Promise<string | undefined>;
     };
   }
 }
 
-const defaultSubmitAction = { action: 'LOGIN' };
+const defaultSubmitAction = { action: 'submit' };
 export const requestRecaptchaV3Token = (
   callback: (token: string | undefined) => unknown,
   options: object = defaultSubmitAction,
@@ -31,13 +29,12 @@ export const requestRecaptchaV3Token = (
     }
     return callback(undefined);
   }
-  grecaptcha.enterprise.ready(() => {
+  grecaptcha.ready(() => {
+    console.log(webConfig.recaptchaV3Key);
     try {
-      grecaptcha.enterprise
-        .execute(webConfig.recaptchaV3Key, options)
-        .then(callback);
+      grecaptcha.execute(webConfig.recaptchaV3Key, options).then(callback);
     } catch (e) {
-      console.error(webConfig.recaptchaV3Key, e);
+      console.error(e);
       callback(undefined);
     }
   });

@@ -48,12 +48,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
-        {webConfig.recaptchaV3Key && (
-          <script
-            async
-            src={`https://www.google.com/recaptcha/enterprise.js?render=${webConfig.recaptchaV3Key}`}
-          />
-        )}
         {webConfig.gaTrackingId && (
           <>
             <script
