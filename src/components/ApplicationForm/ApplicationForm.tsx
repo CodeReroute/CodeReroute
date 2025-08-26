@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Colors } from '@/constants/Colors';
 import styles from './ApplicationForm.module.scss';
-import ReCaptchaV3, { requestRecaptchaV3Token } from '@/utils/RecaptchaV3';
+import { requestRecaptchaV3Token } from '@/utils/RecaptchaV3';
 import { webConfig } from '@/utils/webConfig';
 import { FormInput } from './FormInput';
 import { FileUpload } from './FileUpload';

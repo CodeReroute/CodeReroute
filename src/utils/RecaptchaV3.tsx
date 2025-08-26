@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-const defaultSubmitAction = { action: 'submit' };
+const defaultSubmitAction = { action: 'LOGIN' };
 export const requestRecaptchaV3Token = (
   callback: (token: string | undefined) => unknown,
   options: object = defaultSubmitAction,
@@ -34,7 +34,7 @@ export const requestRecaptchaV3Token = (
   grecaptcha.enterprise.ready(() => {
     try {
       grecaptcha.enterprise
-        .execute(webConfig.recaptchaV3Key, { action: 'LOGIN' })
+        .execute(webConfig.recaptchaV3Key, options)
         .then(callback);
     } catch (e) {
       console.error(webConfig.recaptchaV3Key, e);

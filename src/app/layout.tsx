@@ -50,6 +50,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         {webConfig.recaptchaV3Key && (
           <script
+            async
             src={`https://www.google.com/recaptcha/enterprise.js?render=${webConfig.recaptchaV3Key}`}
           />
         )}
@@ -60,7 +61,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               src={`https://www.googletagmanager.com/gtag/js?id=${webConfig.gaTrackingId}`}
             />
             <script
-              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
