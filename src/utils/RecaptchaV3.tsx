@@ -30,11 +30,6 @@ export const requestRecaptchaV3Token = (
     return callback(undefined);
   }
   grecaptcha.ready(() => {
-    console.log(
-      webConfig.baseUrl,
-      webConfig.gaTrackingId,
-      webConfig.recaptchaV3Key,
-    );
     try {
       grecaptcha.execute(webConfig.recaptchaV3Key, options).then(callback);
     } catch (e) {
