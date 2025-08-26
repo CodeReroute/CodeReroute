@@ -31,7 +31,16 @@ export const requestRecaptchaV3Token = (
   }
 
   grecaptcha.ready(() => {
-    grecaptcha.execute(webConfig.recaptchaV3Key, options).then(callback);
+    console.log(webConfig.recaptchaV3Key);
+    try {
+      grecaptcha.execute(webConfig.recaptchaV3Key, options).then(callback);
+    } catch (e) {
+      callback(undefined);
+      console.log('Recaptcha failed');
+      console.log(webConfig.recaptchaV3Key);
+      console.log(options);
+      console.error(e);
+    }
   });
 };
 
@@ -69,7 +78,7 @@ const ReCaptchaV3: React.FC<{ className?: string; hideText?: boolean }> = ({
   }
 
   return (
-   /*  <div className="recaptcha">
+    /*  <div className="recaptcha">
       This site is protected by reCAPTCHA and the Google{' '}
       <a
         href={'https://policies.google.com/privacy'}
