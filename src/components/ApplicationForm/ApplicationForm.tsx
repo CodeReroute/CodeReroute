@@ -40,6 +40,7 @@ export default function ApplicationForm({ id }: { id: string }) {
     e.preventDefault();
     setErrors({});
     setResponse(null);
+    setIsSubmitting(true);
 
     try {
       // Validate form data before proceeding with submission
@@ -49,8 +50,6 @@ export default function ApplicationForm({ id }: { id: string }) {
         handleSubmitError(validationResult.error);
         return; // Stop submission if validation fails
       }
-
-      setIsSubmitting(true);
 
       await requestRecaptchaV3Token(async (token) => {
         if (!token) {
@@ -86,11 +85,18 @@ export default function ApplicationForm({ id }: { id: string }) {
             });
           }
         } catch (error) {
-          throw error;
+          setResponse({
+            success: false,
+            error: 'Unable to submit your application. Please try again.',
+          });
+          return;
         }
       });
     } catch (error) {
-      handleSubmitError(error);
+      setResponse({
+        success: false,
+        error: 'Unable to submit your application. Please try again.',
+      });
     } finally {
       setIsSubmitting(false);
     }
