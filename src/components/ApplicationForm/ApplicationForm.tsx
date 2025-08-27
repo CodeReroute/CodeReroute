@@ -53,7 +53,10 @@ export default function ApplicationForm({ id }: { id: string }) {
 
       await requestRecaptchaV3Token(async (token) => {
         if (!token) {
-          alert('reCAPTCHA verification failed. Please try again.');
+          setResponse({
+            success: false,
+            error: 'reCAPTCHA verification failed. Please try again.',
+          });
           return;
         }
 
