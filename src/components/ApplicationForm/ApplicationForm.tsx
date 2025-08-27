@@ -69,13 +69,11 @@ export default function ApplicationForm({ id }: { id: string }) {
             }
           });
 
-          const response = await fetch(
-            `${webConfig.baseUrl}/employment/create?token=${token}`,
-            {
-              method: 'POST',
-              body: formDataToSend,
-            },
-          );
+          const url = `${webConfig.baseUrl}/employment/create?token=${token}`;
+          const response = await fetch(url, {
+            method: 'POST',
+            body: formDataToSend,
+          });
 
           const data = await response.json();
 
