@@ -249,7 +249,11 @@ export default function ApplicationForm({ id }: { id: string }) {
         style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
         disabled={isSubmitting || response?.success}
       >
-        {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
+        {isSubmitting
+          ? 'SUBMITTING...'
+          : response?.success
+            ? 'SUBMITTED'
+            : 'SUBMIT'}
       </button>
 
       {response && (
