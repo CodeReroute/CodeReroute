@@ -93,6 +93,7 @@ export default function ApplicationForm({ id }: { id: string }) {
           });
           return;
         }
+        setIsSubmitting(false);
       });
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
@@ -100,8 +101,6 @@ export default function ApplicationForm({ id }: { id: string }) {
         success: false,
         error: 'Unable to submit your application. Please try again.',
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -110,8 +109,8 @@ export default function ApplicationForm({ id }: { id: string }) {
       success: true,
       message: 'Application submitted successfully!',
     });
-    setFormData({
-      jobId: '',
+    setFormData((s) => ({
+      jobId: s.jobId,
       email: '',
       firstName: '',
       lastName: '',
@@ -121,7 +120,7 @@ export default function ApplicationForm({ id }: { id: string }) {
       hearAboutUs: '',
       resume: null,
       experience: '',
-    });
+    }));
   };
 
   const handleSubmitError = (error: unknown) => {
@@ -248,7 +247,7 @@ export default function ApplicationForm({ id }: { id: string }) {
         onClick={handleSubmit}
         className={styles.button}
         style={{ backgroundColor: Colors.Cream, color: Colors.Black }}
-        disabled={isSubmitting}
+        disabled={isSubmitting || response?.success}
       >
         {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
       </button>
