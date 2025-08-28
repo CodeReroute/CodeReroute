@@ -85,6 +85,7 @@ export default function ApplicationForm({ id }: { id: string }) {
               error: data.message || 'Something went wrong. Please try again.',
             });
           }
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
           setResponse({
             success: false,
@@ -93,6 +94,7 @@ export default function ApplicationForm({ id }: { id: string }) {
           return;
         }
       });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setResponse({
         success: false,
