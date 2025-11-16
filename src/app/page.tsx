@@ -1,10 +1,11 @@
-import { Heading } from '@/components/Heading/Heading';
-import styles from './page.module.scss';
+import React from 'react';
+import { MobileHome, DesktopHome } from '@/components/Home';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Heading>CODE REROUTE</Heading>
+    <div className="relative flex flex-col lg:flex-row h-full">
+      <MobileHome />
+      <DesktopHome />
     </div>
   );
 }
