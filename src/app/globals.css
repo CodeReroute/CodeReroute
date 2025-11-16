@@ -23,11 +23,6 @@ body {
   background: rgb(var(--foreground-rgb));
 }
 
-main {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
 .grecaptcha-badge {
   visibility: hidden !important;
 }

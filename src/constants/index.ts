@@ -91,3 +91,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
     platform: 'LinkedIn',
   },
 ];
+
+export interface NavItem {
+  href: string;
+  label: string;
+  exact?: boolean;
+  external?: boolean;
+}
+
+export const NAV_ITEMS: NavItem[] = [
+  { href: '/tech-company', label: 'TECH AGENCY', exact: true },
+  { href: '/mappetizer', label: 'MAPPETIZER', exact: true },
+  { href: '/work-here', label: 'WORK HERE', exact: false },
+];

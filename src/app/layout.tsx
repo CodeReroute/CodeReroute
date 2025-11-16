@@ -2,9 +2,7 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 import localFont from 'next/font/local';
-import Background from '@/components/BackgroundWrapper';
-import Header from '@/components/header/Header';
-import Footer from '@/components/footer/Footer';
+import { Header } from '@/components/ui';
 import { webConfig } from '@/utils/webConfig';
 
 const goga = localFont({
@@ -76,11 +74,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body className={`${goga.variable} font-sans`}>
-        <Background />
         <div className="min-h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10">
           <Header />
-          <main className="h-[100svh]">{children}</main>
-          <Footer />
+          <main className="h-[100svh] sm:py-20 w-full lg:w-11/12 mx-auto">{children}</main>
         </div>
       </body>
     </html>
