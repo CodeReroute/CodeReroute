@@ -27,11 +27,11 @@ const variantStyles: Record<TextVariant, string> = {
   'heading-md': 'text-3xl md:text-4xl font-bold leading-tight',
   'heading-sm': 'text-2xl md:text-3xl font-semibold leading-tight',
   subheading: 'text-xl md:text-2xl font-medium leading-relaxed',
-  'body-lg': 'text-lg md:text-xl leading-relaxed',
-  body: 'text-base md:text-lg leading-relaxed',
-  'body-sm': 'text-sm md:text-base leading-relaxed',
+  'body-lg': 'text-lg md:text-xl font-thin leading-relaxed',
+  body: 'text-base md:text-lg font-thin leading-relaxed',
+  'body-sm': 'text-sm md:text-base font-thin leading-relaxed',
   caption: 'text-xs md:text-sm leading-normal',
-  'nav-link': 'text-lg md:text-xl font-semibold tracking-wide uppercase',
+  'nav-link': 'text-base md:text-lg  tracking-wide uppercase',
 };
 
 const defaultElements: Record<TextVariant, TextProps['as']> = {

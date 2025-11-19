@@ -1,55 +1,71 @@
 import { OpenRole, SocialLink, TeamMember } from '@/types';
 
+// Profile images for work-here page grid
+import danielle from '../../public/profileImages/danielle.png';
+import usman from '../../public/profileImages/usman.png';
+import naeem from '../../public/profileImages/naeem.png';
+import hafiz from '../../public/profileImages/hafiz.png';
+import bilal from '../../public/profileImages/bilal.png';
+import shoaib from '../../public/profileImages/shoaib.png';
+import haseeb from '../../public/profileImages/haseeb.png';
+
+
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Haseeb Khalid',
     role: 'UI Designer',
-    image: '/profileImages/haseeb.png',
+    image: haseeb.src,
     blurDataURL: '/profileImages/haseeb_optimized.png',
   },
   {
     name: 'Danielle Dufour',
     role: 'CEO',
-    image: '/profileImages/danielle.png',
+    image: danielle.src,
     blurDataURL: '/profileImages/danielle_optimized.png',
   },
   {
     name: 'Usman Ahmed',
     role: 'Software Engineer',
-    image: '/profileImages/usman.png',
+    image: usman.src,
     blurDataURL: '/profileImages/usman_optimized.png',
   },
-  {
-    name: 'Ahmed Ashfaq',
-    role: 'Software Engineer',
-    image: '/profileImages/ahmed.png',
-    blurDataURL: '/profileImages/ahmed_optimized.png',
-  },
+  // {
+  //   name: 'Ahmed Ashfaq',
+  //   role: 'Software Engineer',
+  //   image: ahmed.src,
+  //   blurDataURL: '/profileImages/ahmed_optimized.png',
+  // },
 
   {
     name: 'Hafiz Temuri',
     role: 'CTO',
-    image: '/profileImages/hafiz.png',
+    image: hafiz.src,
     blurDataURL: '/profileImages/hafiz_optimized.png',
   },
   {
     name: 'Bilal Siddique',
     role: 'Software Engineer',
-    image: '/profileImages/bilal.png',
+    image: bilal.src,
     blurDataURL: '/profileImages/bilal_optimized.png',
+  },
+  {
+    name: 'Shoaib Ahmed',
+    role: 'Senior UI Designer',
+    image: shoaib.src,
+    blurDataURL: '/profileImages/shoaib_optimized.png',
   },
   {
     name: 'Naeem Raza',
     role: 'Software Engineer',
-    image: '/profileImages/naeem.png',
+    image: naeem.src,
     blurDataURL: '/profileImages/naeem_optimized.png',
   },
-  {
-    name: 'You',
-    role: 'Apply Now',
-    image: '/profileImages/deafultAvatar.jpg',
-    blurDataURL: '/profileImages/deafultAvatar_optimized.jpg',
-  },
+  // {
+  //   name: 'You',
+  //   role: 'Apply Now',
+  //   image: '/profileImages/deafultAvatar.jpg',
+  //   blurDataURL: '/profileImages/deafultAvatar_optimized.jpg',
+  // },
 ];
 
 export const OPEN_ROLES_IDS: string[] = [
@@ -76,7 +92,7 @@ export const OPEN_ROLES: OpenRole[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: 'https://www.instagram.com/code_reroute/',
+    href: 'https://www.instagram.com/_mappetizer/',
     icon: 'insta',
     platform: 'Instagram',
   },

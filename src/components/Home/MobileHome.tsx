@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Heading } from '@/components/Heading/Heading';
+import { Text } from '@/components/ui';
 import backgroundImage from '../../../public/background-v2.png';
 
 export const MobileHome: React.FC = () => {
@@ -16,7 +16,7 @@ export const MobileHome: React.FC = () => {
         priority
       />
       <div className="absolute inset-0 flex justify-center items-center">
-        <Heading>CODE REROUTE</Heading>
+        <Text variant="heading-md">CODE REROUTE</Text>
       </div>
     </div>
   );

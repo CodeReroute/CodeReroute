@@ -59,14 +59,14 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({ isOpen }) => {
           />
 
           <nav
-            className="mt-14 px-1 flex flex-col gap-4"
+            className="mt-14 px-1 flex flex-col space-y-4"
             aria-label="Social media links"
           >
             {socialNavItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group relative block w-fit text-xl font-bold text-white hover:opacity-80 transition-opacity"
+                className="group relative block w-fit text-base font-semibold text-white hover:opacity-80 transition-opacity"
                 target="_blank"
                 rel="noopener noreferrer"
               >

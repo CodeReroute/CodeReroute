@@ -76,7 +76,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className={`${goga.variable} font-sans`}>
         <div className="min-h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10">
           <Header />
-          <main className="h-[100svh] sm:py-20 w-full lg:w-11/12 mx-auto">{children}</main>
+          <main className="h-[100svh] sm:py-20 w-full lg:w-11/12 mx-auto">
+            {children}
+          </main>
         </div>
       </body>
     </html>

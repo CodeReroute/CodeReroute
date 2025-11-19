@@ -1,6 +1,5 @@
 import React from 'react';
-import { Heading } from '@/components/Heading/Heading';
-import { DesktopImage } from '@/components/ui';
+import { DesktopImage, Text } from '@/components/ui';
 import backgroundImage from '../../../public/background-v2.png';
 
 export const DesktopHome: React.FC = () => {
@@ -8,7 +7,7 @@ export const DesktopHome: React.FC = () => {
     <>
       {/* Desktop: Left Side - Content */}
       <div className="hidden lg:flex flex-[0_0_50%] justify-center items-center">
-        <Heading>CODE REROUTE</Heading>
+        <Text variant="heading-md">CODE REROUTE</Text>
       </div>
 
       {/* Desktop: Right Side - Image */}
