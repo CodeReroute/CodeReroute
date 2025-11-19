@@ -7,11 +7,10 @@ export const MobileHome: React.FC = () => {
   return (
     <div className="relative w-full h-full lg:hidden">
       <Image
-        src={backgroundImage.src}
+        src={backgroundImage}
         alt="Background"
         fill
         placeholder="blur"
-        blurDataURL={backgroundImage.blurDataURL}
         className="object-cover"
         priority
       />

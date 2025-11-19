@@ -12,9 +12,8 @@ export const DesktopHome: React.FC = () => {
 
       {/* Desktop: Right Side - Image */}
       <DesktopImage
-        src={backgroundImage.src}
+        src={backgroundImage}
         alt="Background"
-        blurDataURL={backgroundImage.blurDataURL}
         className="lg:flex flex-[0_0_50%]"
         priority
       />

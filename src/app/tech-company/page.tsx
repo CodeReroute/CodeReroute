@@ -27,18 +27,12 @@ const TechCompany = () => {
       </div>
 
       {/* Mobile: Image */}
-      <MobileImage
-        src={backgroundMobile.src}
-        alt="Code Reroute"
-        blurDataURL={backgroundMobile.blurDataURL}
-        priority
-      />
+      <MobileImage src={backgroundMobile} alt="Code Reroute" priority />
 
       {/* Desktop: Image */}
       <DesktopImage
-        src={backgroundDesktop.src}
+        src={backgroundDesktop}
         alt="Code Reroute"
-        blurDataURL={backgroundDesktop.blurDataURL}
         className="sm:flex flex-[0_0_50%]"
         priority
       />

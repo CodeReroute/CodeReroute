@@ -1,9 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/components/lib/utils';
 
 export interface DesktopImageProps {
-  src: string;
+  src: StaticImageData | string;
   alt: string;
   blurDataURL?: string;
   className?: string;
@@ -25,7 +25,7 @@ export const DesktopImage: React.FC<DesktopImageProps> = ({
         src={src}
         alt={alt}
         fill
-        placeholder={blurDataURL ? 'blur' : 'empty'}
+        placeholder={typeof src !== 'string' || blurDataURL ? 'blur' : 'empty'}
         blurDataURL={blurDataURL}
         className={cn('bg-center bg-cover object-cover', imageClassName)}
         style={{

@@ -9,57 +9,48 @@ import bilal from '../../public/profileImages/bilal.png';
 import shoaib from '../../public/profileImages/shoaib.png';
 import haseeb from '../../public/profileImages/haseeb.png';
 
-
 export const TEAM_MEMBERS: TeamMember[] = [
-  {
-    name: 'Haseeb Khalid',
-    role: 'UI Designer',
-    image: haseeb.src,
-    blurDataURL: '/profileImages/haseeb_optimized.png',
-  },
   {
     name: 'Danielle Dufour',
     role: 'CEO',
-    image: danielle.src,
-    blurDataURL: '/profileImages/danielle_optimized.png',
+    image: danielle,
   },
   {
     name: 'Usman Ahmed',
     role: 'Software Engineer',
-    image: usman.src,
-    blurDataURL: '/profileImages/usman_optimized.png',
-  },
-  // {
-  //   name: 'Ahmed Ashfaq',
-  //   role: 'Software Engineer',
-  //   image: ahmed.src,
-  //   blurDataURL: '/profileImages/ahmed_optimized.png',
-  // },
-
-  {
-    name: 'Hafiz Temuri',
-    role: 'CTO',
-    image: hafiz.src,
-    blurDataURL: '/profileImages/hafiz_optimized.png',
-  },
-  {
-    name: 'Bilal Siddique',
-    role: 'Software Engineer',
-    image: bilal.src,
-    blurDataURL: '/profileImages/bilal_optimized.png',
-  },
-  {
-    name: 'Shoaib Ahmed',
-    role: 'Senior UI Designer',
-    image: shoaib.src,
-    blurDataURL: '/profileImages/shoaib_optimized.png',
+    image: usman,
   },
   {
     name: 'Naeem Raza',
     role: 'Software Engineer',
-    image: naeem.src,
-    blurDataURL: '/profileImages/naeem_optimized.png',
+    image: naeem,
   },
+  {
+    name: 'Hafiz Temuri',
+    role: 'CTO',
+    image: hafiz,
+  },
+  {
+    name: 'Bilal Siddique',
+    role: 'Software Engineer',
+    image: bilal,
+  },
+  {
+    name: 'Shoaib Ahmed',
+    role: 'Senior UI Designer',
+    image: shoaib,
+  },
+  {
+    name: 'Haseeb Khalid',
+    role: 'UI Designer',
+    image: haseeb,
+  },
+  // {
+  //   name: 'Ahmed Ashfaq',
+  //   role: 'Software Engineer',
+  //   image: ahmed,
+  //   blurDataURL: '/profileImages/ahmed_optimized.png',
+  // },
   // {
   //   name: 'You',
   //   role: 'Apply Now',

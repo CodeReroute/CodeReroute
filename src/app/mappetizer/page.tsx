@@ -23,18 +23,12 @@ const Mappetizer = () => {
       </div>
 
       {/* Mobile: Image */}
-      <MobileImage
-        src={mappetizerImage.src}
-        alt="Code Reroute"
-        blurDataURL={mappetizerImage.blurDataURL}
-        priority
-      />
+      <MobileImage src={mappetizerImage} alt="Code Reroute" priority />
 
       {/* Desktop: Image */}
       <DesktopImage
-        src={mappetizerImage.src}
+        src={mappetizerImage}
         alt="Code Reroute"
-        blurDataURL={mappetizerImage.blurDataURL}
         className="sm:flex flex-[0_0_50%]"
         priority
       />

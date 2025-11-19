@@ -1,8 +1,10 @@
+import { StaticImageData } from 'next/image';
+
 export interface TeamMember {
   name: string;
   role: string;
-  image: string;
-  blurDataURL: string;
+  image: StaticImageData | string;
+  blurDataURL?: string;
   mobileInfo?: string;
 }
 

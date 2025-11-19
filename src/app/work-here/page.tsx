@@ -81,6 +81,7 @@ const page = () => {
                 className="object-cover"
                 placeholder="blur"
                 priority
+                {...(image.blurDataURL && { blurDataURL: image.blurDataURL })}
               />
             </div>
           ))}
