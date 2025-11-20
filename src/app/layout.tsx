@@ -74,11 +74,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body className={`${goga.variable} font-sans`}>
-        <div className="min-h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10">
+        <div className="min-h-[100svh] h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10 w-full lg:w-11/12 mx-auto">
           <Header />
-          <main className="h-[100svh] sm:py-20 w-full lg:w-11/12 mx-auto">
-            {children}
-          </main>
+          <main className="flex-1 overflow-hidden ">{children}</main>
         </div>
       </body>
     </html>

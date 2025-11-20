@@ -39,8 +39,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 w-full lg:w-11/12 mx-auto',
-          'px-6 py-6',
+          'relative z-50 w-full',
+          'px-4 py-3 lg:py-6 sm:px-6 lg:px-0',
           className,
           bgColor
         )}
