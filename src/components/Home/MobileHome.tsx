@@ -1,22 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
-import { Heading } from '@/components/Heading/Heading';
+import { Text } from '@/components/ui';
 import backgroundImage from '../../../public/background-v2.png';
 
 export const MobileHome: React.FC = () => {
   return (
     <div className="relative w-full h-full lg:hidden">
       <Image
-        src={backgroundImage.src}
+        src={backgroundImage}
         alt="Background"
         fill
         placeholder="blur"
-        blurDataURL={backgroundImage.blurDataURL}
         className="object-cover"
         priority
       />
       <div className="absolute inset-0 flex justify-center items-center">
-        <Heading>CODE REROUTE</Heading>
+        <Text variant="heading-md">CODE REROUTE</Text>
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   items,
   className,
   orientation = 'horizontal',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   variant = 'desktop',
 }) => {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ export const Navigation: React.FC<NavigationProps> = ({
     'flex',
     orientation === 'horizontal'
       ? 'flex-row items-center space-x-8'
-      : 'flex-col space-y-2',
+      : 'flex-col space-y-4',
     className
   );
 
@@ -35,17 +36,12 @@ export const Navigation: React.FC<NavigationProps> = ({
         const isActive = exact ? pathname === href : pathname.startsWith(href);
 
         const linkStyles = cn(
-          'relative pb-0.5 text-xl font-semibold no-underline transition-all duration-300 text-white block',
-          // Desktop underline effect
-          variant === 'desktop' &&
-            'after:content-[""] after:absolute after:w-[98%] after:rounded-[30px] after:h-[3px] after:bottom-[-3px] after:left-[2px] after:bg-current after:opacity-0 after:scale-x-0 after:origin-center after:transition-all after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:opacity-100',
-          variant === 'desktop' &&
-            isActive &&
-            'after:scale-x-100 after:opacity-100',
-          // Mobile styling
-          variant === 'mobile' && isActive && 'border-2 border-white p-2',
-          variant === 'mobile' &&
-            'hover:border-2 hover:border-white hover:p-2 border-2 border-transparent p-2 transition-all duration-300'
+          'inline-block font-semibold no-underline text-white',
+          'hover:scale-125 transition-all duration-300 ease-in-out',
+          '!border-0 !border-none !outline-none !shadow-none',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50',
+          '[&:not(:focus-visible)]:ring-0',
+          isActive ? 'opacity-100 font-normal' : 'opacity-80 hover:opacity-100 font-thin'
         );
 
         return (

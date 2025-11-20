@@ -1,9 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/components/lib/utils';
 
 export interface MobileImageProps {
-  src: string;
+  src: StaticImageData | string;
   alt: string;
   blurDataURL?: string;
   className?: string;
@@ -27,7 +27,7 @@ export const MobileImage: React.FC<MobileImageProps> = ({
         src={src}
         alt={alt}
         fill
-        placeholder={blurDataURL ? 'blur' : 'empty'}
+        placeholder={typeof src !== 'string' || blurDataURL ? 'blur' : 'empty'}
         blurDataURL={blurDataURL}
         className={cn('object-cover object-center', imageClassName)}
         priority={priority}

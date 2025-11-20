@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
-        mappetizer: 'bg-[#cdccc8] text-[#101010] hover:scale-[1.05]',
+        mappetizer: 'bg-white text-[#101010] hover:scale-[1.05]',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
@@ -34,7 +34,7 @@ const buttonVariants = cva(
       {
         variant: 'mappetizer',
         class:
-          'mt-[1.2rem] h-auto px-[30px] py-[10px] md:px-[50px] text-base font-extrabold tracking-[0.02em] text-center uppercase duration-[400ms] ease-in-out',
+          'h-auto px-[30px] py-[10px] md:px-[50px] text-base font-extrabold tracking-[0.02em] text-center uppercase duration-[400ms] ease-in-out',
       },
     ],
     defaultVariants: {
