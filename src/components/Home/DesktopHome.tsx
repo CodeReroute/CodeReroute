@@ -7,7 +7,7 @@ export const DesktopHome: React.FC = () => {
     <>
       {/* Desktop: Left Side - Content */}
       <div className="hidden lg:flex flex-[0_0_50%] justify-center items-center">
-        <Text variant="heading-md">CODE REROUTE</Text>
+        <Text variant="heading-lg">CODE REROUTE</Text>
       </div>
 
       {/* Desktop: Right Side - Image */}

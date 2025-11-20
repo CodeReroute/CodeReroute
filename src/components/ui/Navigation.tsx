@@ -41,7 +41,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           '!border-0 !border-none !outline-none !shadow-none',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50',
           '[&:not(:focus-visible)]:ring-0',
-          isActive ? 'opacity-100 font-normal' : 'opacity-80 hover:opacity-100 font-thin'
+          isActive ? 'opacity-100' : 'opacity-80 hover:opacity-100'
         );
 
         return (
@@ -53,7 +53,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             aria-current={isActive ? 'page' : undefined}
           >
             <Text variant="nav-link">
-              <span>{label}</span>
+              {label}
             </Text>
           </Link>
         );

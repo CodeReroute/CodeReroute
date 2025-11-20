@@ -111,3 +111,6 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/mappetizer', label: 'MAPPETIZER', exact: true },
   { href: '/work-here', label: 'WORK HERE', exact: false },
 ];
+
+// Export shared styles
+export * from './styles';

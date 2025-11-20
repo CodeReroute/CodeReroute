@@ -31,7 +31,7 @@ const variantStyles: Record<TextVariant, string> = {
   body: 'text-base md:text-lg font-thin leading-relaxed',
   'body-sm': 'text-sm md:text-base font-thin leading-relaxed',
   caption: 'text-xs md:text-sm leading-normal',
-  'nav-link': 'text-base md:text-lg  tracking-wide uppercase',
+  'nav-link': 'text-base tracking-wide uppercase',
 };
 
 const defaultElements: Record<TextVariant, TextProps['as']> = {
