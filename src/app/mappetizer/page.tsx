@@ -34,9 +34,9 @@ const Mappetizer = () => {
             DINE OUT
           </Text>
           <Text variant="body-sm">
-            ‘Going out to eat’ requires fragmented steps—saving a restaurant on
-            social media, to googling the menu; reading unreliable online
-            reviews to sending a link to the group chat and then making a
+            ‘Going out to eat’ requires fragmented steps—from saving a
+            restaurant on social media, to googling the menu; reading unreliable
+            online reviews to sending a link to the group chat and then making a
             reservation.
             <br />
             <br />
