@@ -5,6 +5,8 @@ import { cn } from '@/components/lib/utils';
 import { MobileHeader } from './MobileHeader';
 import { DesktopHeader } from './DesktopHeader';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export interface HeaderProps {
   className?: string;
@@ -42,12 +44,26 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
           'relative z-50 w-full',
           'px-4 py-3 lg:py-6 sm:px-6 lg:px-0',
           className,
-          bgColor
+          bgColor,
         )}
       >
         <div className="w-full">
           {/* Mobile Menu Button */}
-          <div className="flex justify-end w-full lg:hidden">
+          <div className="flex justify-between w-full lg:hidden">
+            <div className="flex-shrink-0">
+              <Link
+                href="/"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/mappetizer.svg"
+                  alt="Code Reroute Logo"
+                  width={45}
+                  height={45}
+                  priority
+                />
+              </Link>
+            </div>
             <button
               onClick={toggleMobileMenu}
               className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"

@@ -13,7 +13,7 @@ export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const navLinks = [
-    { href: '/tech-company', label: 'TECH COMPANY', exact: true },
+    { href: '/tech-agency', label: 'TECH AGENCY', exact: true },
     {
       href: '/mappetizer',
       label: 'MAPPETIZER',

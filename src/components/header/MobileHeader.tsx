@@ -11,11 +11,9 @@ interface NavItem {
 }
 
 const mainNavItems: NavItem[] = [
-  { label: 'TECH COMPANY', href: '/tech-company' },
+  { label: 'TECH AGENCY', href: '/tech-agency' },
   { label: 'MAPPETIZER', href: '/mappetizer' },
   { label: 'WORK HERE', href: '/work-here' },
-  { label: 'THE TEAM', href: '/team' },
-  { label: 'SAY HI', href: '/inquiery' },
 ];
 
 const socialNavItems: NavItem[] = [

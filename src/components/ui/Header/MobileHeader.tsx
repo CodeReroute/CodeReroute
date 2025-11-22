@@ -23,18 +23,18 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({ isOpen }) => {
         'fixed inset-0 z-50 bg-[#101010] backdrop-blur-sm transition-all duration-300 lg:hidden',
         isOpen
           ? 'opacity-100 pointer-events-auto'
-          : 'opacity-0 pointer-events-none'
+          : 'opacity-0 pointer-events-none',
       )}
       aria-hidden={!isOpen}
     >
       <div
         className={cn(
           'h-full flex flex-col p-6 transform transition-transform duration-300',
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          isOpen ? 'translate-x-0' : 'translate-x-full',
         )}
       >
         {/* Mobile Header */}
-        <div className="flex items-center justify-start mb-12">
+        <div className="flex items-center justify-start mb-12 invisible">
           <Link
             href="/"
             className="hover:opacity-80 transition-opacity"

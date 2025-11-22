@@ -9,7 +9,11 @@ const TechCompany = () => {
   return (
     <div className={getPageContainerStyles('sm')}>
       {/* Mobile: Image */}
-      <MobileImage src={backgroundMobile} alt="Code Reroute" priority />
+      <MobileImage
+        src={backgroundMobile}
+        alt="Code Reroute"
+        priority
+      />
 
       {/* Desktop: Image */}
       <DesktopImage
@@ -22,20 +26,23 @@ const TechCompany = () => {
       {/* Desktop: Right Side - Content */}
       <div className="flex flex-1 sm:px-10 justify-center">
         <div className={contentWrapperStyles}>
-          <Text className="-mb-5" variant="heading-md" as="h1">
+          <Text
+            className="-mb-5"
+            variant="heading-md"
+            as="h1"
+          >
             ABOUT US
           </Text>
           <Text variant="body-sm">
-            We&apos;re a fast-paced startup building new tech for <br />
-            <strong>restaurant discovery.</strong>
+            A female-led tech agency currently building mappetizer. The ‘going
+            out to eat’ app.
           </Text>
-          <Text variant="body-sm">
-            Made in-house and from scratch, mappetizer is <br /> transforming
-            the restaurant industry and <br /> the way we go out to eat.
-          </Text>
-          <Text variant="body-sm">Launching soon.</Text>
-          <Link href="mailto:press@mappetizer.com" className="hover:underline">
-            <Text variant="body-sm">press@mappetizer.com</Text>
+          <Text variant="body-sm">Coming soon.</Text>
+          <Link
+            href="mailto:danielle@codereroute.com"
+            className="hover:underline"
+          >
+            <Text variant="body-sm">danielle@codereroute.com</Text>
           </Link>
         </div>
       </div>

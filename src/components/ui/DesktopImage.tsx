@@ -27,7 +27,10 @@ export const DesktopImage: React.FC<DesktopImageProps> = ({
         fill
         placeholder={typeof src !== 'string' || blurDataURL ? 'blur' : 'empty'}
         blurDataURL={blurDataURL}
-        className={cn('bg-center bg-cover object-cover py-10', imageClassName)}
+        className={cn(
+          'bg-center bg-cover object-contain py-10',
+          imageClassName,
+        )}
         style={{
           boxShadow:
             'rgb(16 16 16 / var(--tw-bg-opacity, 1)) 18px 0px 17px inset',

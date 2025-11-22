@@ -27,7 +27,7 @@ export const Navigation: React.FC<NavigationProps> = ({
     orientation === 'horizontal'
       ? 'flex-row items-center space-x-8'
       : 'flex-col space-y-4',
-    className
+    className,
   );
 
   return (
@@ -37,11 +37,12 @@ export const Navigation: React.FC<NavigationProps> = ({
 
         const linkStyles = cn(
           'inline-block font-semibold no-underline text-white',
-          'hover:scale-125 transition-all duration-300 ease-in-out',
+          'transition-all duration-300 ease-in-out',
           '!border-0 !border-none !outline-none !shadow-none',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50',
           '[&:not(:focus-visible)]:ring-0',
-          isActive ? 'opacity-100' : 'opacity-80 hover:opacity-100'
+          isActive ? 'opacity-100' : 'opacity-80 hover:opacity-100',
+          isActive ? '' : 'hover:scale-125',
         );
 
         return (
@@ -52,9 +53,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
             aria-current={isActive ? 'page' : undefined}
           >
-            <Text variant="nav-link">
-              {label}
-            </Text>
+            <Text variant="nav-link">{label}</Text>
           </Link>
         );
       })}

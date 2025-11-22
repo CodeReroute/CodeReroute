@@ -107,7 +107,7 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { href: '/tech-company', label: 'TECH AGENCY', exact: true },
+  { href: '/tech-agency', label: 'TECH AGENCY', exact: true },
   { href: '/mappetizer', label: 'MAPPETIZER', exact: true },
   { href: '/work-here', label: 'WORK HERE', exact: false },
 ];

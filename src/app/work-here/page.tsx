@@ -25,7 +25,10 @@ const page = () => {
       >
         <div className={cn('w-full lg:w-fit h-auto', teamGridStyles)}>
           {TEAM_MEMBERS.map((image: TeamMember) => (
-            <div key={image.name} className={teamImageStyles}>
+            <div
+              key={image.name}
+              className={teamImageStyles}
+            >
               <Image
                 src={image.image}
                 alt={image.name}
@@ -34,7 +37,7 @@ const page = () => {
                 className="object-cover"
                 placeholder="blur"
                 priority
-                blurDataURL={image.blurDataURL ?  image.blurDataURL : undefined}
+                blurDataURL={image.blurDataURL ? image.blurDataURL : undefined}
               />
             </div>
           ))}
@@ -44,13 +47,16 @@ const page = () => {
       {/* Content Section */}
       <section className="flex flex-1 sm:justify-center sm:px-4 lg:px-0">
         <div className={contentWrapperStyles}>
-          <Text className="-mb-5" variant="heading-md" as="h1">
+          <Text
+            className="-mb-5"
+            variant="heading-md"
+            as="h1"
+          >
             JOIN US
           </Text>
 
           <Text variant="body-sm">
-            We&apos;re a fast-paced startup with a <strong>mission</strong> to
-            build the <br /> world&apos;s biggest restaurant app.
+            We’re on a mission to build powerful restaurant discovery tech.
           </Text>
 
           <Text variant="body-sm">
@@ -66,7 +72,10 @@ const page = () => {
             </Link>
           ))} */}
 
-          <Text variant="body-sm" className="font-normal">
+          <Text
+            variant="body-sm"
+            className="font-normal"
+          >
             No open positions at this time.
           </Text>
         </div>
