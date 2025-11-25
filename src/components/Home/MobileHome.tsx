@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { Text } from '@/components/ui';
+import { Header, Text } from '@/components/ui';
 import backgroundImage from '../../../public/background-v2.png';
 
 export const MobileHome: React.FC = () => {
   return (
     <div className="relative w-full h-full lg:hidden">
+      <Header />
       <Image
         src={backgroundImage}
         alt="Background"

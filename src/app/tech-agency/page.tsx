@@ -3,14 +3,19 @@ import { DesktopImage, MobileImage, Text } from '@/components/ui';
 import backgroundDesktop from '../../../public/background-v2.png';
 import backgroundMobile from '../../../public/background-mobile.png';
 import Link from 'next/link';
-import { contentWrapperStyles, getPageContainerStyles } from '@/constants';
+import {
+  contentWrapperStyles,
+  headingStyles,
+  pageContainerStyles,
+} from '@/constants';
 
 const TechCompany = () => {
   return (
-    <div className={getPageContainerStyles('sm')}>
+    <div className={pageContainerStyles}>
       {/* Mobile: Image */}
       <MobileImage
         src={backgroundMobile}
+        height="h-[40vh]"
         alt="Code Reroute"
         priority
       />
@@ -27,7 +32,7 @@ const TechCompany = () => {
       <div className="flex flex-1 sm:px-10 justify-center">
         <div className={contentWrapperStyles}>
           <Text
-            className="-mb-5"
+            className={headingStyles}
             variant="heading-md"
             as="h1"
           >

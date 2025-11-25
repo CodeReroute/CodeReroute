@@ -7,6 +7,7 @@ import {
   contentWrapperStyles,
   teamGridStyles,
   teamImageStyles,
+  headingStyles,
 } from '@/constants';
 import { cn } from '@/components/lib/utils';
 import { TeamMember } from '@/types';
@@ -48,7 +49,7 @@ const page = () => {
       <section className="flex flex-1 sm:justify-center sm:px-4 lg:px-0">
         <div className={contentWrapperStyles}>
           <Text
-            className="-mb-5"
+            className={headingStyles}
             variant="heading-md"
             as="h1"
           >

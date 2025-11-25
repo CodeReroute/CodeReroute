@@ -3,7 +3,11 @@ import React from 'react';
 import { Button, DesktopImage, MobileImage, Text } from '@/components/ui';
 import mappetizerImage from '../../../public/mappetizer-mobile.png';
 import Link from 'next/link';
-import { pageContainerStyles, contentWrapperStyles } from '@/constants';
+import {
+  pageContainerStyles,
+  contentWrapperStyles,
+  headingStyles,
+} from '@/constants';
 
 const Mappetizer = () => {
   return (
@@ -11,14 +15,15 @@ const Mappetizer = () => {
       {/* Mobile: Image */}
       <MobileImage
         src={mappetizerImage}
-        alt="Code Reroute"
+        height="h-[40vh] flex-none"
+        alt="mappetizer"
         priority
       />
 
       {/* Desktop: Image */}
       <DesktopImage
         src={mappetizerImage}
-        alt="Code Reroute"
+        alt="mappetizer"
         className="sm:flex flex-1"
         priority
       />
@@ -29,7 +34,7 @@ const Mappetizer = () => {
           <Text
             variant="heading-md"
             as="h1"
-            className="-mb-5"
+            className={headingStyles}
           >
             DINE OUT
           </Text>
@@ -53,10 +58,11 @@ const Mappetizer = () => {
           <Link
             target="_blank"
             href="https://mappetizer.com"
+            className="!mt-5"
           >
             <Button
               variant="outline"
-              className="p-5"
+              className="p-5 mb-5"
             >
               VISIT THE SITE
             </Button>

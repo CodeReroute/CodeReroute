@@ -12,8 +12,9 @@ export const pageContainerVariants = cva(
   cn(
     'relative flex flex-col h-full',
     'px-4 py-3 sm:px-6',
-    'lg:p-0',
-    'gap-3 lg:gap-0'
+    'pb-5 lg:p-0',
+    'gap-3 lg:gap-0',
+    'overflow-auto lg:overflow-hidden',
   ),
   {
     variants: {
@@ -25,7 +26,7 @@ export const pageContainerVariants = cva(
     defaultVariants: {
       flexBreakpoint: 'sm',
     },
-  }
+  },
 );
 
 export type PageContainerVariants = VariantProps<typeof pageContainerVariants>;
@@ -52,8 +53,8 @@ export const pageContainerStyles = getPageContainerStyles('sm');
  */
 export const contentWrapperStyles = cn(
   'space-y-4 sm:space-y-6',
-  'flex flex-col items-start justify-center',
-  'w-full lg:w-2/3'
+  'flex flex-col items-start lg:justify-center',
+  'w-full lg:w-2/3',
 );
 
 /**
@@ -76,7 +77,7 @@ export const teamGridStyles = cn(
   // Gaps
   'gap-3 sm:gap-5 2xl:gap-10',
   // Overflow
-  'lg:overflow-hidden'
+  'lg:overflow-hidden',
 );
 
 /**
@@ -90,5 +91,7 @@ export const teamImageStyles = cn(
   'sm:w-36 sm:h-36',
   // Desktop sizes
   'lg:w-44 lg:h-44',
-  'xl:w-50 xl:h-50'
+  'xl:w-50 xl:h-50',
 );
+
+export const headingStyles = 'mt-5 lg:-mb-5';

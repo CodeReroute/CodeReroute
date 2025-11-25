@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 import localFont from 'next/font/local';
-import { Header } from '@/components/ui';
 import { webConfig } from '@/utils/webConfig';
+import { RootShell } from '@/components/layout/RootShell';
 
 const goga = localFont({
   src: [
@@ -161,10 +161,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body className={`${goga.variable} font-sans`}>
-        <div className="min-h-[100svh] h-[100svh] flex flex-col bg-cover bg-center bg-fixed relative z-10 w-full lg:w-11/12 mx-auto">
-          <Header />
-          <main className="flex-1 overflow-hidden ">{children}</main>
-        </div>
+        <RootShell>{children}</RootShell>
       </body>
     </html>
   );
