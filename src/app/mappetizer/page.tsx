@@ -9,6 +9,56 @@ import {
   headingStyles,
 } from '@/constants';
 
+const Content = () => {
+  // Desktop: Right Side - Content
+  return (
+    <div className="flex flex-1 sm:px-10 justify-center">
+      <div className={contentWrapperStyles}>
+        <Text
+          variant="heading-md"
+          as="h1"
+          className={headingStyles}
+        >
+          DINING OUT IS DRY
+        </Text>
+        <Text variant="body-sm">
+          It’s true.
+          <div className="h-2" />
+          We did the research and restaurants are reporting less in-person
+          dining, so we made it our mission to fix that.
+          <div className="h-2" />
+          First, we cooked up a new and powerful AI search experience— pulling
+          data from local activity and the friends you follow.
+          <div className="h-2" />
+          The outcome? Restaurant recommendations that are social proof and
+          personal. It’s word-of-mouth but better.
+          <div className="h-2" />
+          Next, we centralized and improved all ‘going out to eat’ steps so you
+          can discover, save, plan and go.
+          <div className="h-2" />
+          Then, we sprinkled in an interactive mapping system to track visited
+          restaurants and to save new spots for next time.
+          <div className="h-2" />
+          Simply open the app, type in what you want to eat and our tech does
+          the rest.
+        </Text>
+        <Link
+          target="_blank"
+          href="https://mappetizer.com"
+          className="!mt-5"
+        >
+          <Button
+            variant="outline"
+            className="p-5 mb-5"
+          >
+            COMING SOON
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
 const Mappetizer = () => {
   return (
     <div className={pageContainerStyles}>
@@ -27,48 +77,7 @@ const Mappetizer = () => {
         className="sm:flex flex-1"
         priority
       />
-
-      {/* Desktop: Right Side - Content */}
-      <div className="flex flex-1 sm:px-10 justify-center">
-        <div className={contentWrapperStyles}>
-          <Text
-            variant="heading-md"
-            as="h1"
-            className={headingStyles}
-          >
-            DINE OUT
-          </Text>
-          <Text variant="body-sm">
-            ‘Going out to eat’ requires fragmented steps—from saving a
-            restaurant on social media, to googling the menu; reading unreliable
-            online reviews to sending a link to the group chat and then making a
-            reservation.
-            <br />
-            <br />
-            It’s annoying figuring out <strong>where</strong> to eat.
-            <br />
-            <br />
-            So, we built powerful <strong>restaurant discovery</strong> tech and
-            streamlined the dining out process.
-            <br />
-            <br />
-            Simply open the app, type in what you want to eat and our tech does
-            the rest.
-          </Text>
-          <Link
-            target="_blank"
-            href="https://mappetizer.com"
-            className="!mt-5"
-          >
-            <Button
-              variant="outline"
-              className="p-5 mb-5"
-            >
-              VISIT THE SITE
-            </Button>
-          </Link>
-        </div>
-      </div>
+      <Content />
     </div>
   );
 };

@@ -81,6 +81,7 @@ export const OPEN_ROLES: OpenRole[] = [
   },
 ];
 
+export const companyLinkedIn = 'https://www.linkedin.com/company/code-reroute/';
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     href: 'https://www.instagram.com/_mappetizer/',
@@ -93,7 +94,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     platform: 'TikTok',
   },
   {
-    href: 'https://www.linkedin.com/company/code-reroute/',
+    href: companyLinkedIn,
     icon: 'linkedin',
     platform: 'LinkedIn',
   },

@@ -94,4 +94,4 @@ export const teamImageStyles = cn(
   'xl:w-50 xl:h-50',
 );
 
-export const headingStyles = 'mt-5 lg:-mb-5';
+export const headingStyles = 'mt-5 lg:-mb-5 lg:mt-0';

@@ -36,11 +36,15 @@ const TechCompany = () => {
             variant="heading-md"
             as="h1"
           >
-            ABOUT US
+            FEMALE-LED TECH AGENCY
           </Text>
           <Text variant="body-sm">
-            A female-led tech agency currently building mappetizer. The ‘going
-            out to eat’ app.
+            We’re a fast-paced startup building new tech for restaurant
+            discovery.
+            <br />
+            <br />
+            Made in-house and from scratch, our product (mappetizer) is
+            transforming the restaurant industry and the way we go out to eat.
           </Text>
           <Text variant="body-sm">Coming soon.</Text>
           <Link

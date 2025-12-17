@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Text } from '@/components/ui';
+import { Button, Text } from '@/components/ui';
 import {
   TEAM_MEMBERS,
   getPageContainerStyles,
@@ -8,9 +8,11 @@ import {
   teamGridStyles,
   teamImageStyles,
   headingStyles,
+  companyLinkedIn,
 } from '@/constants';
 import { cn } from '@/components/lib/utils';
 import { TeamMember } from '@/types';
+import Link from 'next/link';
 // import { OPEN_ROLES } from '@/constants';
 // import { OpenRole } from '@/types';
 // import Link from 'next/link';
@@ -53,7 +55,7 @@ const page = () => {
             variant="heading-md"
             as="h1"
           >
-            JOIN US
+            WE WANT YOU
           </Text>
 
           <Text variant="body-sm">
@@ -62,9 +64,9 @@ const page = () => {
 
           <Text variant="body-sm">
             If you are a <strong>problem solver</strong>, an excellent{' '}
-            <strong>communicator</strong>, a <br />{' '}
-            <strong>logical thinker</strong> and an awesome{' '}
-            <strong>team player</strong>, we want to <br /> work with you.
+            <strong>communicator</strong>, a <strong>logical thinker</strong>{' '}
+            and an awesome <strong>team player</strong>, we want to work with
+            you.
           </Text>
 
           {/* {OPEN_ROLES.map((role: OpenRole, index: number) => (
@@ -79,6 +81,26 @@ const page = () => {
           >
             No open positions at this time.
           </Text>
+          <Text
+            variant="body-sm"
+            className="font-normal"
+          >
+            Be sure to follow our LinkedIn for job postings and updates. When we
+            post an open position, we will open our employment portal on this
+            site.
+          </Text>
+          <Link
+            target="_blank"
+            href={companyLinkedIn}
+            className="!mt-5"
+          >
+            <Button
+              variant="outline"
+              className="p-5 mb-5"
+            >
+              SAY HI
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

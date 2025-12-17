@@ -11,20 +11,22 @@ interface RootShellProps {
 
 export const RootShell: React.FC<RootShellProps> = ({ children }) => {
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const showHeader = pathname === '/';
 
   return (
     <>
       <div
         className={cn(
           'min-h-[100svh] h-[100svh] flex-col bg-cover bg-center bg-fixed relative z-10 w-full lg:w-11/12 mx-auto',
-          isHome ? 'hidden lg:flex' : 'flex',
+          showHeader ? 'hidden lg:flex' : 'flex',
         )}
       >
         <Header />
         <main className="flex-1 overflow-hidden ">{children}</main>
       </div>
-      {isHome && <div className="lg:hidden h-[100svh] w-full">{children}</div>}
+      {showHeader && (
+        <div className="lg:hidden h-[100svh] w-full">{children}</div>
+      )}
     </>
   );
 };
