@@ -15,9 +15,9 @@ export const MobileHome: React.FC = () => {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 flex justify-center items-center">
+      {/* <div className="absolute inset-0 flex justify-center items-center">
         <Text variant="heading-md">CODE REROUTE</Text>
-      </div>
+      </div> */}
     </div>
   );
 };

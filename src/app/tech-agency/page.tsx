@@ -8,18 +8,11 @@ import {
   headingStyles,
   pageContainerStyles,
 } from '@/constants';
+import styles from '@/components/global.module.scss';
 
 const TechCompany = () => {
   return (
     <div className={pageContainerStyles}>
-      {/* Mobile: Image */}
-      <MobileImage
-        src={backgroundMobile}
-        height="h-[40vh]"
-        alt="Code Reroute"
-        priority
-      />
-
       {/* Desktop: Image */}
       <DesktopImage
         src={backgroundDesktop}
@@ -29,7 +22,7 @@ const TechCompany = () => {
       />
 
       {/* Desktop: Right Side - Content */}
-      <div className="flex flex-1 sm:px-10 justify-center">
+      <div className="md:flex md:flex-1 sm:px-10 justify-center">
         <div className={contentWrapperStyles}>
           <Text
             className={headingStyles}
@@ -38,23 +31,31 @@ const TechCompany = () => {
           >
             FEMALE-LED TECH AGENCY
           </Text>
-          <Text variant="body-sm">
+          <Text
+            variant="body-sm"
+            className={styles.mobileText}
+          >
             We’re a fast-paced startup building new tech for restaurant
             discovery.
-            <br />
-            <br />
+            <div className="h-4" />
             Made in-house and from scratch, our product (mappetizer) is
             transforming the restaurant industry and the way we go out to eat.
           </Text>
-          <Text variant="body-sm">Coming soon.</Text>
           <Link
             href="mailto:danielle@codereroute.com"
-            className="hover:underline"
+            className="hover:underline !mb-3 lg:!mb-0"
           >
             <Text variant="body-sm">danielle@codereroute.com</Text>
           </Link>
         </div>
       </div>
+      {/* Mobile: Image */}
+      <MobileImage
+        src={backgroundMobile}
+        height="h-[40vh]"
+        alt="Code Reroute"
+        priority
+      />
     </div>
   );
 };

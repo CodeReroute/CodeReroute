@@ -8,6 +8,7 @@ import {
   contentWrapperStyles,
   headingStyles,
 } from '@/constants';
+import styles from '@/components/global.module.scss';
 
 const Content = () => {
   // Desktop: Right Side - Content
@@ -21,7 +22,10 @@ const Content = () => {
         >
           DINING OUT IS DRY
         </Text>
-        <Text variant="body-sm">
+        <Text
+          variant="body-sm"
+          className={styles.mobileText}
+        >
           It’s true.
           <div className="h-2" />
           We did the research and restaurants are reporting less in-person
@@ -62,14 +66,6 @@ const Content = () => {
 const Mappetizer = () => {
   return (
     <div className={pageContainerStyles}>
-      {/* Mobile: Image */}
-      <MobileImage
-        src={mappetizerImage}
-        height="h-[40vh] flex-none"
-        alt="mappetizer"
-        priority
-      />
-
       {/* Desktop: Image */}
       <DesktopImage
         src={mappetizerImage}
@@ -78,6 +74,13 @@ const Mappetizer = () => {
         priority
       />
       <Content />
+      {/* Mobile: Image */}
+      <MobileImage
+        src={mappetizerImage}
+        height="h-[40vh] flex-none"
+        alt="mappetizer"
+        priority
+      />
     </div>
   );
 };

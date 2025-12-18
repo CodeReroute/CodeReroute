@@ -29,7 +29,7 @@ const variantStyles: Record<TextVariant, string> = {
   subheading: 'text-xl md:text-2xl font-medium leading-relaxed',
   'body-lg': 'text-lg md:text-xl font-thin leading-relaxed',
   body: 'text-base md:text-lg font-thin leading-relaxed',
-  'body-sm': 'text-sm md:text-base font-thin leading-relaxed',
+  'body-sm': 'text-sm md:text-base font-thin leading-relaxed font-normal',
   caption: 'text-xs md:text-sm leading-normal',
   'nav-link': 'text-base tracking-wide uppercase',
 };
@@ -62,6 +62,6 @@ export const Text: React.FC<TextProps> = ({
       className: cn(variantStyles[variant], className),
       style,
     },
-    children
+    children,
   );
 };
