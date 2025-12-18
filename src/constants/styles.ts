@@ -69,6 +69,7 @@ export const contentWrapperStyles = cn(
 export const teamGridStyles = cn(
   // Grid layout
   'grid place-items-center',
+  'justify-self-center',
   // Responsive columns
   'grid-cols-[repeat(auto-fit,minmax(100px,1fr))]',
   'sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))]',

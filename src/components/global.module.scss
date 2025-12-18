@@ -3,6 +3,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .teamWrapper {
+    padding-top: 0;
+  }
   .mobileText {
     margin-top: 8px !important;
   }
