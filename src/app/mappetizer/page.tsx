@@ -28,20 +28,20 @@ const Content = () => {
         >
           It’s true.
           <div className="h-2" />
-          We did the research and restaurants are reporting less in-person
-          dining, so we made it our mission to fix that.
+          Restaurants are reporting less in-person dining, so we made it our
+          mission to fix that.
           <div className="h-2" />
-          First, we cooked up a new and powerful AI search experience— pulling
-          data from local activity and the friends you follow.
+          We built a powerful AI search experience— pulling data from local
+          activity and the friends you follow.
           <div className="h-2" />
-          The outcome? Restaurant recommendations that are social proof and
-          personal. It’s word-of-mouth but better.
+          The outcome? Recommendations that are personal. It’s word-of-mouth but
+          better.
           <div className="h-2" />
-          Next, we centralized and improved all ‘going out to eat’ steps so you
+          Next, we centralized and improved all ‘going out to eat’ steps so we
           can discover, save, plan and go.
           <div className="h-2" />
-          Then, we sprinkled in an interactive mapping system to track visited
-          restaurants and to save new spots for next time.
+          Then, we integrated a mapping system to track visited restaurants and
+          to save new spots for next time.
           <div className="h-2" />
           Simply open the app, type in what you want to eat and our tech does
           the rest.
