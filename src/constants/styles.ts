@@ -90,7 +90,7 @@ export const teamImageStyles = cn(
   'w-24 h-24',
   'sm:w-36 sm:h-36',
   // Desktop sizes
-  'lg:w-44 lg:h-44',
+  'lg:w-40 lg:h-40',
   'xl:w-50 xl:h-50',
 );
 

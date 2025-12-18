@@ -25,6 +25,7 @@ const Team: React.FC<{ className?: string }> = ({ className }) => {
     <section
       className={cn(
         'flex flex-1 h-full items-center justify-center',
+        styles.teamWrapper,
         className,
       )}
       aria-label="Team photos"
