@@ -37,7 +37,7 @@ const Content = () => {
           The outcome? Recommendations that are personal. It’s word-of-mouth but
           better.
           <div className="h-2" />
-          Next, we centralized and improved all ‘going out to eat’ steps so we
+          Next, we centralized and improved all ‘going out to eat’ steps so you
           can discover, save, plan and go.
           <div className="h-2" />
           Then, we integrated a mapping system to track visited restaurants and
