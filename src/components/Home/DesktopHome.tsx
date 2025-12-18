@@ -14,7 +14,8 @@ export const DesktopHome: React.FC = () => {
       <DesktopImage
         src={backgroundImage}
         alt="Background"
-        className="lg:flex flex-[0_0_50%]"
+        className="w-full lg:flex flex-[0_0_50%]"
+        imageClassName="object-cover w-full h-full py-0"
         priority
       />
     </>
