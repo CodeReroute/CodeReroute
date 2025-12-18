@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Header, Text } from '@/components/ui';
+import { Header } from '@/components/ui';
 import backgroundImage from '../../../public/background-v2.png';
 
 export const MobileHome: React.FC = () => {
